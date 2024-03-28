@@ -11,7 +11,7 @@ PySide2
 statsmodels
 torch
 sklearn
--U scikit-learn
+scikit-learn
 flask
 flask_sqlalchemy
 openpyxl
