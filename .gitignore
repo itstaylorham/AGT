@@ -1,0 +1,15 @@
+env/
+journal/
+version/
+__pycache__/
+__files__/export/
+__files__/metrics/
+__files__/predict/
+__files__/read_files/
+__files__/reports/
+__files__/scan_files/
+.test_predictions.npy
+.trained_model.pth
+.X_train
+.y_test
+.y_train

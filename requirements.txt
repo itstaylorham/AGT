@@ -1,0 +1,20 @@
+
+pip
+pandas
+numpy
+bluepy
+matplotlib
+PyQt6
+PySide6
+PyQt5
+PySide2
+statsmodels
+torch
+sklearn
+-U scikit-learn
+flask
+flask_sqlalchemy
+openpyxl
+npm
+chart.js
+tqdm

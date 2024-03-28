@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agrotech - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='table_data.js') }}"></script>
+    <script src="{{ url_for('static', filename='data.js') }}"></script>
+    <script src="{{ url_for('static', filename='graph.js') }}"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='score-chart.css') }}" type="text/css">
+    <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="header-img">
+            <img src="{{ url_for('static', filename='img/agt.png') }}" alt="WiggleHQ">
+        </div>
+    </header>
+    <div class="Navigation">
+        <a id="active" href="{{ url_for('base') }}">Dashboard</a>
+        <a href="{{ url_for('analysis') }}">Analysis</a>
+        <a href="{{ url_for('api') }}">API</a> 
+    </div>
+    <div id="main" class="main-content">
+        <script>
+            $(document).ready(function() {
+                let isDarkMode = false;
+        
+                $('#dark-mode-switch').on('click', function() {
+                    isDarkMode = !isDarkMode;
+                    const themeCssLink = $('#theme-css');
+                    const newTheme = isDarkMode ? 'dark-main.css' : 'main.css';
+        
+                    themeCssLink.attr('href', newTheme);
+                });
+            });
+        </script>           
+        <div class="dashboard-main">
+            <h2>Dashboard</h2>
+            <div id="health-score-api-data">Loading data...</div>
+            <div class="toggle-switch">
+                <label for="normalize-data">Normalize Data</label>
+                <input type="checkbox" id="normalize-data" />
+                <select id="device-selector">
+                    <!-- Options will be populated dynamically -->
+                </select>
+                <canvas id="main-dash"></canvas>
+                
+            </div>
+
+        </div>
+        
+        <br>
+    </div>  
+    <div class="table-container">
+        <table id="data-table" class="responsive-table">
+            <thead>
+                <tr>
+                    <th>Timestamp</th>
+                    <th>MAC Address</th>
+                    <th>Temperature</th>
+                    <th>Moisture</th>
+                    <th>Light</th>
+                    <th>Conductivity</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td>{{ record['Timestamp'] }}</td>
+                        <td>{{ record['MAC Address'] }}</td>
+                        <td>{{ record['Temperature'] }}</td>
+                        <td>{{ record['Moisture'] }}</td>
+                        <td>{{ record['Light'] }}</td>
+                        <td>{{ record['Conductivity'] }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% block body %}{% endblock %}
+</body>
+</html>

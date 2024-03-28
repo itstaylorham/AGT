@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agrotech - API</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+        <script src="{{ url_for('static', filename='script.js') }}" async></script>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+    </head>
+    <body>
+        <header>
+          <!-- Logo -->
+          <div class="header-img">
+            <img src="{{ url_for('static', filename='img/agt.png') }}" alt="WiggleHQ">
+        </div>
+        </header>
+        <div class="Navigation">
+            <a href="{{ url_for('base') }}">Dashboard</a>
+            <a href="{{ url_for('analysis') }}">Analysis</a>
+            <a id="active" href="{{ url_for('api') }}">API</a>         
+          </div> 
+        <div id="main" class="main-content">
+            <div class="link-btn">
+              <a href="http://192.168.68.113:3000/api/sensor_data">
+              <button>Sensor Data</button></a></div>
+              <div class="link-btn">
+                <a href="http://192.168.68.113:3000/api/graph_data">
+                <button>Graph Data</button></a></div>
+                <div class="link-btn">
+                  <a href="http://192.168.68.113:3000/api/metric_data">
+                  <button>Metric Data</button></a></div>
+                  <div class="link-btn">
+                    <a href="http://192.168.68.113:3000/metric_data">
+                    <button>WR Endpoint2</button></a></div>
+            <div class="graph"></div>
+                    <br>
+                  </ul>
+
+            </div>
+
+        </div>
+        {% block body %}{% endblock %}
+    </body>
+</html>

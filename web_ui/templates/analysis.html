@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agrotech - Analysis</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="{{ url_for('static', filename='analysis.js') }}"></script>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+        <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+        <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='data-tab.css') }}" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header-img">
+                <img src="{{ url_for('static', filename='img/agt.png') }}" alt="WiggleHQ">
+            </div>
+        </header>
+        <div class="Navigation">
+            <a href="{{ url_for('base') }}">Dashboard</a>
+            <a id="active" href="{{ url_for('analysis') }}">Analysis</a>
+            <a href="{{ url_for('api') }}">API</a>
+        </div>
+        <div id="main" class="main-content">
+            <div class="visualization">
+                <canvas id="analysis-dash" width="400" height="500"></canvas>
+
+        <div class="data-view">
+
+        </div>
+    
+        <!--
+            <div class="controls">
+                <div class="video-controls">
+                    <button id="backArrow" onclick="backFunction()">&#x2190;</button> 
+                    <button onclick="playVideo()">&#9658;</button>
+                    <button onclick="pauseVideo()">||</button>
+                    <button onclick="stopVideo()">&#9632;</button>   
+                    <button id="toggleTree" onclick="toggleFunction()">&#x2192;</button> 
+                </div>
+            </div> -->
+        </div>
+        </div>
+        <div class="settings">
+            <select id="timeRangeDropdown" onchange="updateChartDataByTimeRange()">
+                <option value="all">All Time</option>
+                <option value="90">Past 3 Months</option>
+                <option value="180">Past 6 Months</option>
+                <option value="365">Year</option>
+            </select>
+            <select id="analyticsTypeDropdown" onchange="performAction(this.value)">
+                <option value="average">Averages</option>
+                <option value="correlation">Correlations</option>
+                <option value="projection">Projections</option>
+                <option value="scores">Scores</option>
+            </select>
+            <button onclick="activateSelection()">Go</button>
+        </div>
+               
+        <script src="{{ url_for('static', filename='analysis.js') }}" async></script>
+    </body>
+</html>

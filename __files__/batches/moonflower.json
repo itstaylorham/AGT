@@ -1,0 +1,40 @@
+[  {    "Timestamp": [1675401126597],
+    "MAC": ["c4:7c:8d:6d:28:fa"],
+    "Temperature": [22.5],
+    "Moisture": [19.5],
+    "Light": [6000],
+    "Conductivity": [2.0]
+  },
+  {
+    "Timestamp": [1675401267091],
+    "MAC": ["c4:7c:8d:6d:28:fa"],
+    "Temperature": [23.1],
+    "Moisture": [18.8],
+    "Light": [5800],
+    "Conductivity": [1.9]
+  },
+  {
+    "Timestamp": [1675401361203],
+    "MAC": ["c4:7c:8d:6d:28:fa"],
+    "Temperature": [22.8],
+    "Moisture": [20.2],
+    "Light": [5500],
+    "Conductivity": [2.1]
+  },
+  {
+    "Timestamp": [1675401423651],
+    "MAC": ["c4:7c:8d:6d:28:fa"],
+    "Temperature": [23.1],
+    "Moisture": [19.0],
+    "Light": [5600],
+    "Conductivity": [2.2]
+  },
+  {
+    "Timestamp": [1675401536289],
+    "MAC": ["c4:7c:8d:6d:28:fa"],
+    "Temperature": [23.8],
+    "Moisture": [20.5],
+    "Light": [5200],
+    "Conductivity": [2.3]
+  }
+]
