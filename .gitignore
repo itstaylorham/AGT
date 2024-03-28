@@ -13,3 +13,4 @@ __files__/scan_files/
 .X_train
 .y_test
 .y_train
+.X_train
