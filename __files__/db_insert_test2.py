@@ -94,12 +94,21 @@ get_filtered_data("/home/jeremy/Documents/AGT/__files__/read_files")
 
 
 try:
+
+    # Get the keys from the DB-CONNECT section.
+    db_config = config['DB-CONNECT']
+    user = db_config.get('user')
+    password = db_config.get('password')
+    host = db_config.get('host')
+    database = db_config.get('database')
+    auth_plugin = db_config.get('auth_plugin')
+
     cnx = mysql.connector.connect(
-        user="jeremy", 
-        password="Starfish!2345", 
-        host="localhost", 
-        database="AGT_DB",
-        auth_plugin='caching_sha2_password'
+        user=user, 
+        password=password, 
+        host=host, 
+        database=database,
+        auth_plugin=auth_plugin
     )
 
     if cnx.is_connected():
