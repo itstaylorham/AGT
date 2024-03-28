@@ -8,6 +8,7 @@ __files__/predict/
 __files__/read_files/
 __files__/reports/
 __files__/scan_files/
+__files__/db_insert_test.py
 .test_predictions.npy
 .trained_model.pth
 .X_train

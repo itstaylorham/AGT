@@ -1,12 +1,12 @@
 import os
 import json
 import mysql.connector
-import datetime
+from datetime import datetime
+import configparser
 
-def convert_unix_to_timestamp(unix_time):
-    dt = datetime.datetime.fromtimestamp(unix_time / 1e9)
-    timestamp = dt.strftime('%Y-%m-%d %H:%M:%S')
-    return timestamp
+def convert_timestamp_to_datetime(timestamp_string):
+    dt = datetime.strptime(timestamp_string, '%Y-%m-%d %H:%M:%S')
+    return dt
 
 def insert_check(directory):
     total_files = 0
@@ -39,6 +39,8 @@ def insert_check(directory):
         print(f"No subdirectories found in {directory}")
         return
 
+    ignored_files = 0  # count of ignored files        
+
     for subdirectory in subdirectories:
         subdirectory_path = os.path.join(directory, subdirectory)
         files = os.listdir(subdirectory_path)
@@ -47,10 +49,14 @@ def insert_check(directory):
         for file in files:
             if file.endswith(".json"):
                 file_path = os.path.join(subdirectory_path, file)
-                with open(file_path, "r") as f:
-                    data = json.load(f)
-                subdirectory_data.append(data)
-                total_files += 1
+                try:  # try to load the JSON data
+                    with open(file_path, "r") as f:
+                        data = json.load(f)
+                    subdirectory_data.append(data)
+                    total_files += 1  # increment the total files counter 
+                except json.JSONDecodeError:  # if an error occurs while loading the JSON data
+                    ignored_files += 1  # increment the ignored files counter
+                    print(f'Ignored file: {file_path}')  # print the file path of the ignored file
 
         all_data.extend(subdirectory_data)
 
@@ -69,7 +75,7 @@ def insert_check(directory):
             return
 
         for item in filtered_data:
-            item['Timestamp'] = convert_unix_to_timestamp(item['Timestamp'])
+            item['Timestamp'] = convert_timestamp_to_datetime(item['Timestamp'])
 
         try:
             cursor = cnx.cursor()
@@ -85,5 +91,5 @@ def insert_check(directory):
         finally:
             cnx.close()
 
-directory = "/home/jeremy/Documents/AGT/__files__/read_files"
+directory = "__files__/read_files/"
 insert_check(directory)

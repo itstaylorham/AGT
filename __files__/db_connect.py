@@ -1,5 +1,6 @@
 import os
 import json
+from json import JSONDecodeError
 import mysql.connector
 import datetime
 import configparser
@@ -43,7 +44,6 @@ except mysql.connector.Error as err:
 def read_json_files(directory):
     total_files = 0
     all_data = []  # List to store consolidated data from all JSON files
-
     
     try:
         # Get a list of all the subdirectories in the directory
@@ -70,9 +70,13 @@ def read_json_files(directory):
                 # Construct the full path to the file
                 file_path = os.path.join(subdirectory_path, file)
 
-                # Open the file and load the JSON data
+                # Open the file and try to load the JSON data
                 with open(file_path, "r") as f:
-                    data = json.load(f)
+                    try:
+                        data = json.load(f)
+                    except JSONDecodeError:
+                        print(f'Failed to parse {file_path}, moving to next file...')
+                        continue
 
                 # Append the data to the list for the current subdirectory
                 subdirectory_data.append(data)
@@ -104,8 +108,8 @@ def convert_unix_to_timestamp(unix_time):
      return timestamp
 
 # Call the function
-read_json_files("/home/jeremy/Documents/AGT/__files__/read_files")
+read_json_files("__files__/read_files")
 
-from __files__.db_insert import insert_check
-insert_check("/home/jeremy/Documents/AGT/__files__/read_files")
+from db_insert import insert_check
+insert_check("__files__/read_files")
        

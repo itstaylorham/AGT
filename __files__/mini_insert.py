@@ -18,7 +18,7 @@ def main():
         
         # Step 3: Check data type and proceed accordingly
         if data_type.lower() == "read":
-            directory = "/home/jeremy/Documents/AGT/__files__/read_files"
+            directory = "/__files__/read_files"
             insert_read_data(directory)
         elif data_type.lower() == "predict" or data_type.lower() == "metric":
             print("Not implemented for now.")
