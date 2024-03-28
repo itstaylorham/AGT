@@ -1,6 +1,7 @@
 import os
 import json
 import glob
+import configparser
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 import pytz
@@ -16,6 +17,11 @@ app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
 
+config = configparser.ConfigParser()
+config.read('setup.cfg')
+
+HOST = config.get('FLASK', 'host')  # Reading host IP
+PORT = config.getint('FLASK', 'port')  # Reading the port
 
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -103,7 +109,7 @@ from datetime import datetime
 
 @app.route('/api/metric_data', methods=['GET'])
 def get_metric_data():
-    main_directory = '/home/jeremy/Documents/AGT/__files__/metrics'
+    main_directory = '__files__/metrics'
 
     # Get the most recent date-titled folder
     date_folders = [d for d in os.listdir(main_directory) if os.path.isdir(os.path.join(main_directory, d))]
@@ -162,5 +168,5 @@ def get_metric_data():
 
 
 if __name__ == "__main__":
-    app.run(host='192.168.68.113', port=3000)
+    app.run(host=HOST, port=PORT)
 

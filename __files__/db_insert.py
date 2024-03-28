@@ -11,6 +11,10 @@ def convert_unix_to_timestamp(unix_time):
 def insert_check(directory):
     total_files = 0
 
+    # Read the setup.cfg file
+    config = configparser.ConfigParser()
+    config.read('setup.cfg')
+
     # Get the keys from the DB-CONNECT section.
     db_config = config['DB-CONNECT']
     user = db_config.get('user')

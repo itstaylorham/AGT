@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        const response = await fetch('http://192.168.68.113:3000/api/graph_data');
+        const response = await fetch('api/graph_data');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

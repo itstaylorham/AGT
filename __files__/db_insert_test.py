@@ -92,6 +92,10 @@ def get_filtered_data(directory):
 get_filtered_data("/home/jeremy/Documents/AGT/__files__/read_files")
 
 
+# Read the setup.cfg file
+config = configparser.ConfigParser()
+config.read('setup.cfg')
+
 def insert_read_data(data):
     try:
 
