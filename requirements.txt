@@ -10,7 +10,6 @@ PyQt5
 PySide2
 statsmodels
 torch
-sklearn
 scikit-learn
 flask
 flask_sqlalchemy
