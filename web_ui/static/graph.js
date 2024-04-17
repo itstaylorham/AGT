@@ -29,44 +29,26 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 });
 
-function transformData(rawData) {
-    let deviceDataMap = {};
-
-    rawData.forEach(entry => {
-        entry.MAC.forEach((mac, index) => {
-            if (!deviceDataMap[mac]) {
-                deviceDataMap[mac] = [];
-            }
-
-            deviceDataMap[mac].push({
-                Timestamp: entry.Timestamp[index],
-                Temperature: entry.Temperature[index],
-                Light: entry.Light[index],
-                Moisture: entry.Moisture[index],
-                Conductivity: entry.Conductivity[index]
-            });
-        });
-    });
-
-    return deviceDataMap;
+// Function to normalize a value within a specified range
+function normalize(value, min, max) {
+    return (value - min) / (max - min);
 }
 
 function transformData(rawData) {
     let deviceDataMap = {};
 
     rawData.forEach(entry => {
-        entry.MAC.forEach((mac, index) => {
-            if (!deviceDataMap[mac]) {
-                deviceDataMap[mac] = [];
-            }
+        const mac = entry.mac_address;
+        if (!deviceDataMap[mac]) {
+            deviceDataMap[mac] = [];
+        }
 
-            deviceDataMap[mac].push({
-                Timestamp: entry.Timestamp[index],
-                Temperature: entry.Temperature[index],
-                Light: entry.Light[index],
-                Moisture: entry.Moisture[index],
-                Conductivity: entry.Conductivity[index]
-            });
+        deviceDataMap[mac].push({
+            Timestamp: new Date(entry.timestamp),
+            Temperature: entry.temperature,
+            Light: entry.light,
+            Moisture: entry.moisture,
+            Conductivity: entry.conductivity
         });
     });
 
@@ -84,12 +66,43 @@ function populateDeviceDropdown(deviceDataMap) {
 }
 
 function createLineGraph(ctx, deviceData) {
+    const chartData = getChartData(deviceData);
+
     return new Chart(ctx, {
         type: 'line',
-        data: getChartData(deviceData),
-        options: {}
+        data: chartData,
+        options: {
+            scales: {
+                x: {
+                    reverse: true // Set to true if you want the data to be displayed from right to left
+                }
+            }
+        }
     });
 }
+
+
+function getXAxisLabels(timestamps, interval) {
+    const labels = [];
+    let startDate = new Date(timestamps[0]);
+    let endDate = new Date(timestamps[timestamps.length - 1]);
+
+    while (startDate <= endDate) {
+        labels.push(startDate.toISOString().slice(0, 10)); // Get only the date part
+        if (interval === 'week') {
+            startDate.setDate(startDate.getDate() + 7); // Move to the next week
+        } else if (interval === 'biweek') {
+            startDate.setDate(startDate.getDate() + 14); // Move to the next biweek
+        } else if (interval === 'month') {
+            startDate.setMonth(startDate.getMonth() + 1); // Move to the next month
+        } else if (interval === 'quarter') {
+            startDate.setMonth(startDate.getMonth() + 3); // Move to the next quarter
+        }
+    }
+
+    return labels;
+}
+
 
 function getChartData(deviceData) {
     const timestamps = deviceData.map(item => item.Timestamp);
@@ -98,8 +111,10 @@ function getChartData(deviceData) {
     const moisture = deviceData.map(item => item.Moisture);
     const conductivity = deviceData.map(item => item.Conductivity);
 
+    const xAxisLabels = timestamps.map(ts => ts.toISOString().slice(0, 10));
+
     return {
-        labels: timestamps,
+        labels: xAxisLabels,
         datasets: [
             {
                 label: 'Temperature',

@@ -40,9 +40,9 @@ def base():
     return render_template('base.html')
 
 
-@app.route('/reports')
-def reports():
-    return render_template('reports.html')
+@app.route('/journal')
+def journal():
+    return render_template('journal.html')
 
 
 @app.route('/analysis')
@@ -53,6 +53,10 @@ def analysis():
 @app.route('/api')
 def api():
     return render_template('api.html')
+
+@app.route('/settings')
+def settings():
+    return render_template('settings.html')
 
 @app.route('/api/sensor_data', methods=['GET'])
 def get_sensor_data():
@@ -95,17 +99,42 @@ def get_sensor_data():
 
 @app.route('/api/graph_data', methods=['GET'])
 def get_graph_data():
-    with open('sesh.json', 'r') as f:
-        graph_data = json.load(f)
+    main_directory = '/home/jeremy/Documents/AGT/__files__/read_files'
 
-    # Only keep the last 144 entries
-    graph_data = graph_data[-144:]
-    
-    return jsonify(graph_data)
+    # Get list of all json files in directory and subdirectories and sort by modification time
+    files = [f for f in glob.glob(main_directory + "/**/*.json", recursive=True)]
+    files.sort(key=os.path.getmtime, reverse=True)
 
-from flask import jsonify
-import json
-from datetime import datetime
+    sensor_data_list = []  # Create empty list to later store sensor data dicts
+
+    # Read JSON files
+    for file in files:
+        with open(file, 'r') as f:
+            if f.read().strip():  # Check if file is not empty
+                f.seek(0)  # Move read cursor to the start of the file
+                try:
+                    raw_sensor_data = json.load(f)
+                except json.JSONDecodeError:
+                    print(f"File {file} is not a valid JSON document.")
+                    continue  # Skip to the next file
+            else:
+                continue  # Skip this iteration if the file is empty
+
+            # Parse every line in JSON
+            for data in raw_sensor_data:
+                timestamp = datetime.strptime(data.get('Timestamp'), '%Y-%m-%d %H:%M:%S')
+                timestamp_ms = int(timestamp.timestamp() * 1000)  # Convert datetime to timestamp in milliseconds
+                new_entry = {
+                    'timestamp': timestamp_ms,  # Use timestamp in milliseconds
+                    'mac_address': data.get('MAC'),
+                    'temperature': data.get('Temperature'),
+                    'light': data.get('Light'),
+                    'moisture': data.get('Moisture'),
+                    'conductivity': data.get('Conductivity')
+                }
+                sensor_data_list.append(new_entry)  # Add the new entry to the list
+
+    return jsonify(sensor_data_list)  # Return the list as JSON
 
 @app.route('/api/metric_data', methods=['GET'])
 def get_metric_data():

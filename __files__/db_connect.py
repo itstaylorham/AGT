@@ -30,16 +30,36 @@ try:
     if cnx.is_connected():
         print("")
         print("/ / SUCCESSFUL CONNECTION / /")
+        
+        # Check if specific tables exist in AGT_DB
+        cursor = cnx.cursor()
+        tables_to_check = ['SENSOR_READINGS', 'JOURNAL', 'METRICS', 'PREDICTIONS']
+        existing_tables = []
+
+        for table_name in tables_to_check:
+            cursor.execute(f"SHOW TABLES LIKE '{table_name}'")
+            result = cursor.fetchone()
+            if result:
+                existing_tables.append(table_name)
+            else:
+                print(f"{table_name} table does not exist in AGT_DB.")
+
+        if existing_tables:
+            print(f"The following tables exist in AGT_DB: {', '.join(existing_tables)}")
+        else:
+            print("None of the specified tables exist in AGT_DB.")
+            # You can handle this situation as needed
+        
         print("")
     else:
         print("")
         print("??? NOT CONNECTED: UNKNOWN ERROR ???")
         print("")
 except mysql.connector.Error as err:
-        print("")
-        print("!!!! FAILED TO CONNECT !!!!")
-        print("")
-        print(f"Error: {err}")
+    print("")
+    print("!!!! FAILED TO CONNECT !!!!")
+    print("")
+    print(f"Error: {err}")
 
 def read_json_files(directory):
     total_files = 0
@@ -99,17 +119,13 @@ def read_json_files(directory):
     
     
 def convert_unix_to_timestamp(unix_time):
-   # Convert the Unix time to a datetime object
-     dt = datetime.datetime.fromtimestamp(unix_time / 1e9)  # Divide by 1e9 to convert nanoseconds to seconds
+    # Convert the Unix time to a datetime object
+    dt = datetime.datetime.fromtimestamp(unix_time / 1e9)  # Divide by 1e9 to convert nanoseconds to seconds
 
     # Convert the datetime object to a string in the format 'YYYY-MM-DD HH:MM:SS'
-     timestamp = dt.strftime('%Y-%m-%d %H:%M:%S')
+    timestamp = dt.strftime('%Y-%m-%d %H:%M:%S')
 
-     return timestamp
+    return timestamp
 
 # Call the function
 read_json_files("__files__/read_files")
-
-from db_insert import insert_check
-insert_check("__files__/read_files")
-       

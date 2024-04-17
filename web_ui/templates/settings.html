@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agrotech - Journal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="header-img">
+            <img src="{{ url_for('static', filename='img/agt.png') }}" alt="WiggleHQ">
+        </div>
+    </header>
+    <div class="Navigation">
+        <a href="{{ url_for('base') }}">Dashboard</a>
+        <a href="{{ url_for('analysis') }}">Analysis</a>
+        <a href="{{ url_for('journal') }}">Journal</a>
+        <a href="{{ url_for('api') }}">API</a>  
+        <a id="active" href="{{ url_for('settings') }}">Settings</a>  
+    </div>
+    <div id="main" class="main-content">
+        <div class="dashboard-main">
+            <!-- Your journal content goes here -->
+        </div>
+    </div>
+</body>
+</html>

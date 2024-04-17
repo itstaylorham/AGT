@@ -26,7 +26,9 @@
     <div class="Navigation">
         <a id="active" href="{{ url_for('base') }}">Dashboard</a>
         <a href="{{ url_for('analysis') }}">Analysis</a>
-        <a href="{{ url_for('api') }}">API</a> 
+        <a href="{{ url_for('journal') }}">Journal</a>
+        <a href="{{ url_for('api') }}">API</a>  
+        <a href="{{ url_for('settings') }}">Settings</a>  
     </div>
     <div id="main" class="main-content">
         <script>
@@ -40,21 +42,44 @@
         
                     themeCssLink.attr('href', newTheme);
                 });
+
+                let normalizeData = false;
+                $('#normalize-data').on('change', function() {
+                    normalizeData = $(this).prop('checked');
+                });
+
+                $('#toggle-normalize').on('click', function() {
+                    normalizeData = !normalizeData;
+                    $('#normalize-data').prop('checked', normalizeData);
+                });
             });
         </script>           
         <div class="dashboard-main">
-            <h2>Dashboard</h2>
-            <div id="health-score-api-data">Loading data...</div>
-            <div class="toggle-switch">
-                <label for="normalize-data">Normalize Data</label>
-                <input type="checkbox" id="normalize-data" />
-                <select id="device-selector">
-                    <!-- Options will be populated dynamically -->
-                </select>
-                <canvas id="main-dash"></canvas>
+            <div class="tool-item"> 
+                <div class="normalize-data">
+                    <label for="normalize-data">Normalize Data</label>
+                    <input type="checkbox" id="normalize-data" />
+                    <select id="device-selector">
+                        <!-- Options will be populated dynamically -->
+                    </select>             
+                </div>
                 
             </div>
+            <!-- Averages Graph -->
+            <canvas id="main-dash"></canvas>
+            <hr>
+            <div class="tools">
+                <div class="tools-item">
+                    <div id="health-score-api-data">
+                        Loading data...
+                    </div>  
+                </div>
+            <div class="tool-item">
+                <button id="download-graph">Take Snapshot</button>
+            </div>
 
+             
+            </div>
         </div>
         
         <br>
