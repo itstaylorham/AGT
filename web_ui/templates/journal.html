@@ -3,6 +3,7 @@
 <head>
     <title>Agrotech - Journal</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='journal.css') }}" type="text/css">
 </head>
 <body>
     <header>
@@ -20,7 +21,17 @@
     </div>
     <div id="main" class="main-content">
         <div class="dashboard-main">
-            <!-- Your journal content goes here -->
+            <div class="post-section">
+            <form id="journalEntryForm" method="POST" enctype="multipart/form-data">
+                <h2>New Journal Entry</h2>
+                <textarea name="entryText" placeholder="Share your thoughts, observations, updates..."></textarea>
+                <input type="file" name="imageFile" accept="image/*" />
+                <input type="file" name="videoFile" accept="video/*" />
+                <button type="submit">Post</button>
+            </form>
+        </div>
+            <hr> <div id="journalEntries"> 
+                </div> 
         </div>
     </div>
 </body>

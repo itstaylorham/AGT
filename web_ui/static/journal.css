@@ -1,0 +1,29 @@
+#journalEntryForm  {
+    text-align: center;
+    display: block;
+}
+
+#journalEntryForm  textarea{
+    text-align: center;
+    display: block;
+    padding: 15px;
+
+}
+
+#journalEntryForm button {
+    background-color: azure;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+#journalEntryForm button:hover{
+    background-color: blueviolet;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+}
+
+.post-section {
+    align-items: center;
+}
