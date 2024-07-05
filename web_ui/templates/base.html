@@ -5,9 +5,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{{ url_for('static', filename='table_data.js') }}"></script>
-    <script src="{{ url_for('static', filename='data.js') }}"></script>
-    <script src="{{ url_for('static', filename='graph.js') }}"></script>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
     <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='score-chart.css') }}" type="text/css">
     <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
@@ -25,7 +22,7 @@
     </header>
     <div class="Navigation">
         <a id="active" href="{{ url_for('base') }}">Dashboard</a>
-        <a href="{{ url_for('analysis') }}">Analysis</a>
+        <a href="{{ url_for('analysis') }}">Anlytics</a>
         <a href="{{ url_for('journal') }}">Journal</a>
         <a href="{{ url_for('api') }}">API</a>  
         <a href="{{ url_for('settings') }}">Settings</a>  
@@ -111,5 +108,8 @@
         </table>
     </div>
     {% block body %}{% endblock %}
+    <script src="{{ url_for('static', filename='table_data.js') }}"></script>
+    <script src="{{ url_for('static', filename='data.js') }}"></script>
+    <script src="{{ url_for('static', filename='graph.js') }}"></script>
 </body>
 </html>
