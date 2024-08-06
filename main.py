@@ -8,7 +8,7 @@ import pandas as pd
 
 # Define a list of valid commands
 VALID_COMMANDS = [
-    "scan", "read", "find", "sesh", "train", "testing model", "push", "live",
+    "scan", "read", "find", "update", "sesh", "train", "testing model", "push", "live",
     "new sesh", "line", "trend", "fcast", "fcast 3d", "build","summary", "corr", 
     "pred", "cleaner", "nn", "export", "export csv", "export xl", "dbconn"
 ]
@@ -48,6 +48,9 @@ while True:
                 print("Starting read session...")
                 subprocess.run(["python3", "read.py"])
                 time.sleep(600)
+
+        elif usrinpt == "update":
+            subprocess.run(["python3", "__files__/mini_insert.py"])
 
         # Neural Network Commands
         elif usrinpt == "train":
@@ -148,9 +151,13 @@ while True:
         elif usrinpt == "build":
             subprocess.run(["python3","/home/jeremy/Documents/AGT/__tools__/report/build_report.py"])
         
-        # Database connection commands
+        # Database connection check
         elif usrinpt == "dbconn":
             subprocess.run(["python3", "__files__/db_connect.py"])
+
+# Sensor reading data insertion commands
+        elif usrinpt == "dbconn":
+            subprocess.run(["python3", "__files__/db_update.py"])
 
         # All else fails
     else:
