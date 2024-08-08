@@ -109,7 +109,7 @@ while True:
         # Analysis commands
         elif usrinpt == "corr":
             print("Correlation Analysis:")
-            subprocess.run(["python3", "__tools__/plot/corr.py"])
+            subprocess.run(["python3", "__tools__/plot/corr.py"]) # Altered to process test and control data
         elif usrinpt == "pred":
             subprocess.run(["python3", "__tools__/neural_net/arima.py"])
         elif usrinpt == "cleaner":
