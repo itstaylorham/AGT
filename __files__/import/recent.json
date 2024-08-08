@@ -1,0 +1,38 @@
+{
+    "baseline": {
+        "temperature": 12,
+        "moisture": 10,
+        "light": 0,
+        "conductivity": 2
+    },
+    "amplitude": {
+        "temperature": 10,
+        "moisture": 26,
+        "light": 100,
+        "conductivity": 4
+    },
+    "period": {
+        "temperature": 6,
+        "moisture": 22,
+        "light": 200,
+        "conductivity": 6
+    },
+    "range": {
+        "temperature": {
+            "lowest": 6,
+            "highest": 14
+        },
+        "moisture": {
+            "lowest": 8,
+            "highest": 22
+        },
+        "light": {
+            "lowest": 0,
+            "highest": 200
+        },
+        "conductivity": {
+            "lowest": 2,
+            "highest": 6
+        }
+    }
+}

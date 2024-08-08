@@ -1,0 +1,1010 @@
+[
+    {
+        "Timestamp": 1722972748,
+        "Temperature": 12.68,
+        "Moisture": 13.04,
+        "Light": 175.36,
+        "Conductivity": 3.49
+    },
+    {
+        "Timestamp": 1722972148,
+        "Temperature": 12.09,
+        "Moisture": 17.48,
+        "Light": 23.99,
+        "Conductivity": 3.35
+    },
+    {
+        "Timestamp": 1722971548,
+        "Temperature": 10.08,
+        "Moisture": 17.31,
+        "Light": 196.08,
+        "Conductivity": 5.34
+    },
+    {
+        "Timestamp": 1722970948,
+        "Temperature": 10.54,
+        "Moisture": 20.07,
+        "Light": 129.97,
+        "Conductivity": 4.13
+    },
+    {
+        "Timestamp": 1722970348,
+        "Temperature": 13.24,
+        "Moisture": 19.04,
+        "Light": 40.51,
+        "Conductivity": 4.93
+    },
+    {
+        "Timestamp": 1722969748,
+        "Temperature": 9.5,
+        "Moisture": 18.47,
+        "Light": 191.55,
+        "Conductivity": 4.45
+    },
+    {
+        "Timestamp": 1722969148,
+        "Temperature": 10.97,
+        "Moisture": 17.02,
+        "Light": 207.5,
+        "Conductivity": 3.67
+    },
+    {
+        "Timestamp": 1722968548,
+        "Temperature": 9.44,
+        "Moisture": 13.88,
+        "Light": 90.56,
+        "Conductivity": 2.52
+    },
+    {
+        "Timestamp": 1722967948,
+        "Temperature": 9.65,
+        "Moisture": 17.82,
+        "Light": 152.17,
+        "Conductivity": 4.18
+    },
+    {
+        "Timestamp": 1722967348,
+        "Temperature": 7.7,
+        "Moisture": 13.89,
+        "Light": 183.72,
+        "Conductivity": 5.86
+    },
+    {
+        "Timestamp": 1722966748,
+        "Temperature": 6.02,
+        "Moisture": 15.92,
+        "Light": 65.57,
+        "Conductivity": 4.4
+    },
+    {
+        "Timestamp": 1722966148,
+        "Temperature": 12.03,
+        "Moisture": 10.54,
+        "Light": 133.95,
+        "Conductivity": 4.76
+    },
+    {
+        "Timestamp": 1722965548,
+        "Temperature": 7.6,
+        "Moisture": 11.47,
+        "Light": 30.24,
+        "Conductivity": 4.48
+    },
+    {
+        "Timestamp": 1722964948,
+        "Temperature": 13.05,
+        "Moisture": 18.37,
+        "Light": 122.77,
+        "Conductivity": 4.29
+    },
+    {
+        "Timestamp": 1722964348,
+        "Temperature": 10.2,
+        "Moisture": 14.4,
+        "Light": 69.3,
+        "Conductivity": 3.44
+    },
+    {
+        "Timestamp": 1722963748,
+        "Temperature": 11.6,
+        "Moisture": 20.23,
+        "Light": 199.97,
+        "Conductivity": 2.67
+    },
+    {
+        "Timestamp": 1722963148,
+        "Temperature": 8.45,
+        "Moisture": 14.02,
+        "Light": 140.45,
+        "Conductivity": 3.92
+    },
+    {
+        "Timestamp": 1722962548,
+        "Temperature": 9.45,
+        "Moisture": 20.78,
+        "Light": 217.42,
+        "Conductivity": 4.14
+    },
+    {
+        "Timestamp": 1722961948,
+        "Temperature": 7.98,
+        "Moisture": 17.65,
+        "Light": 35.31,
+        "Conductivity": 3.91
+    },
+    {
+        "Timestamp": 1722961348,
+        "Temperature": 6.3,
+        "Moisture": 18.06,
+        "Light": 43.61,
+        "Conductivity": 4.44
+    },
+    {
+        "Timestamp": 1722960748,
+        "Temperature": 8.84,
+        "Moisture": 17.46,
+        "Light": 119.01,
+        "Conductivity": 3.61
+    },
+    {
+        "Timestamp": 1722960148,
+        "Temperature": 5.66,
+        "Moisture": 19.85,
+        "Light": 204.22,
+        "Conductivity": 6.19
+    },
+    {
+        "Timestamp": 1722959548,
+        "Temperature": 8.56,
+        "Moisture": 20.14,
+        "Light": 137.03,
+        "Conductivity": 2.62
+    },
+    {
+        "Timestamp": 1722958948,
+        "Temperature": 11.55,
+        "Moisture": 15.44,
+        "Light": 156.82,
+        "Conductivity": 4.7
+    },
+    {
+        "Timestamp": 1722958348,
+        "Temperature": 13.75,
+        "Moisture": 15.04,
+        "Light": 172.7,
+        "Conductivity": 5.25
+    },
+    {
+        "Timestamp": 1722957748,
+        "Temperature": 9.68,
+        "Moisture": 15.49,
+        "Light": 78.46,
+        "Conductivity": 3.08
+    },
+    {
+        "Timestamp": 1722957148,
+        "Temperature": 13.2,
+        "Moisture": 15.45,
+        "Light": 187.09,
+        "Conductivity": 4.63
+    },
+    {
+        "Timestamp": 1722956548,
+        "Temperature": 11.78,
+        "Moisture": 8.66,
+        "Light": 207.08,
+        "Conductivity": 3.39
+    },
+    {
+        "Timestamp": 1722955948,
+        "Temperature": 7.87,
+        "Moisture": 9.08,
+        "Light": 99.48,
+        "Conductivity": 3.36
+    },
+    {
+        "Timestamp": 1722955348,
+        "Temperature": 9.2,
+        "Moisture": 12.04,
+        "Light": 172.66,
+        "Conductivity": 3.32
+    },
+    {
+        "Timestamp": 1722954748,
+        "Temperature": 9.35,
+        "Moisture": 10.92,
+        "Light": 170.11,
+        "Conductivity": 5.2
+    },
+    {
+        "Timestamp": 1722954148,
+        "Temperature": 7.64,
+        "Moisture": 18.38,
+        "Light": 172.32,
+        "Conductivity": 2.33
+    },
+    {
+        "Timestamp": 1722953548,
+        "Temperature": 11.27,
+        "Moisture": 12.95,
+        "Light": 182.35,
+        "Conductivity": 4.89
+    },
+    {
+        "Timestamp": 1722952948,
+        "Temperature": 9.77,
+        "Moisture": 22.03,
+        "Light": 133.06,
+        "Conductivity": 4.96
+    },
+    {
+        "Timestamp": 1722952348,
+        "Temperature": 8.13,
+        "Moisture": 20.02,
+        "Light": 116.3,
+        "Conductivity": 3.68
+    },
+    {
+        "Timestamp": 1722951748,
+        "Temperature": 10.36,
+        "Moisture": 16.39,
+        "Light": 165.18,
+        "Conductivity": 3.96
+    },
+    {
+        "Timestamp": 1722951148,
+        "Temperature": 8.4,
+        "Moisture": 12.61,
+        "Light": 205.15,
+        "Conductivity": 4.93
+    },
+    {
+        "Timestamp": 1722950548,
+        "Temperature": 12.69,
+        "Moisture": 21.12,
+        "Light": 166.07,
+        "Conductivity": 2.85
+    },
+    {
+        "Timestamp": 1722949948,
+        "Temperature": 9.14,
+        "Moisture": 11.48,
+        "Light": 147.3,
+        "Conductivity": 5.24
+    },
+    {
+        "Timestamp": 1722949348,
+        "Temperature": 13.17,
+        "Moisture": 10.4,
+        "Light": 53.8,
+        "Conductivity": 2.06
+    },
+    {
+        "Timestamp": 1722948748,
+        "Temperature": 9.81,
+        "Moisture": 10.41,
+        "Light": 58.33,
+        "Conductivity": 3.67
+    },
+    {
+        "Timestamp": 1722948148,
+        "Temperature": 9.01,
+        "Moisture": 13.37,
+        "Light": 207.92,
+        "Conductivity": 3.55
+    },
+    {
+        "Timestamp": 1722947548,
+        "Temperature": 9.66,
+        "Moisture": 11.34,
+        "Light": 104.17,
+        "Conductivity": 5.33
+    },
+    {
+        "Timestamp": 1722946948,
+        "Temperature": 5.71,
+        "Moisture": 12.52,
+        "Light": 205.54,
+        "Conductivity": 3.76
+    },
+    {
+        "Timestamp": 1722946348,
+        "Temperature": 7.26,
+        "Moisture": 12.94,
+        "Light": 127.3,
+        "Conductivity": 5.43
+    },
+    {
+        "Timestamp": 1722945748,
+        "Temperature": 12.33,
+        "Moisture": 20.11,
+        "Light": 41.85,
+        "Conductivity": 3.6
+    },
+    {
+        "Timestamp": 1722945148,
+        "Temperature": 11.83,
+        "Moisture": 12.84,
+        "Light": 101.72,
+        "Conductivity": 3.35
+    },
+    {
+        "Timestamp": 1722944548,
+        "Temperature": 10.54,
+        "Moisture": 16.49,
+        "Light": 84.26,
+        "Conductivity": 3.06
+    },
+    {
+        "Timestamp": 1722943948,
+        "Temperature": 10.17,
+        "Moisture": 15.26,
+        "Light": 190.65,
+        "Conductivity": 2.01
+    },
+    {
+        "Timestamp": 1722943348,
+        "Temperature": 11.1,
+        "Moisture": 15.62,
+        "Light": 169.74,
+        "Conductivity": 5.38
+    },
+    {
+        "Timestamp": 1722942748,
+        "Temperature": 10.71,
+        "Moisture": 17.79,
+        "Light": 220.27,
+        "Conductivity": 4.35
+    },
+    {
+        "Timestamp": 1722942148,
+        "Temperature": 13.04,
+        "Moisture": 16.25,
+        "Light": 155.82,
+        "Conductivity": 2.35
+    },
+    {
+        "Timestamp": 1722941548,
+        "Temperature": 7.67,
+        "Moisture": 11.48,
+        "Light": 38.4,
+        "Conductivity": 5.08
+    },
+    {
+        "Timestamp": 1722940948,
+        "Temperature": 11.12,
+        "Moisture": 18.01,
+        "Light": 38.01,
+        "Conductivity": 4.09
+    },
+    {
+        "Timestamp": 1722940348,
+        "Temperature": 10.94,
+        "Moisture": 10.25,
+        "Light": 94.1,
+        "Conductivity": 4.6
+    },
+    {
+        "Timestamp": 1722939748,
+        "Temperature": 6.32,
+        "Moisture": 14.09,
+        "Light": 182.01,
+        "Conductivity": 2.16
+    },
+    {
+        "Timestamp": 1722939148,
+        "Temperature": 7.06,
+        "Moisture": 17.1,
+        "Light": 197.83,
+        "Conductivity": 4.48
+    },
+    {
+        "Timestamp": 1722938548,
+        "Temperature": 6.78,
+        "Moisture": 12.42,
+        "Light": 118.86,
+        "Conductivity": 2.76
+    },
+    {
+        "Timestamp": 1722937948,
+        "Temperature": 12.08,
+        "Moisture": 12.41,
+        "Light": 107.09,
+        "Conductivity": 2.32
+    },
+    {
+        "Timestamp": 1722937348,
+        "Temperature": 8.47,
+        "Moisture": 11.25,
+        "Light": 153.36,
+        "Conductivity": 2.99
+    },
+    {
+        "Timestamp": 1722936748,
+        "Temperature": 10.57,
+        "Moisture": 20.38,
+        "Light": 94.49,
+        "Conductivity": 5.03
+    },
+    {
+        "Timestamp": 1722936148,
+        "Temperature": 12.59,
+        "Moisture": 20.94,
+        "Light": 177.95,
+        "Conductivity": 4.26
+    },
+    {
+        "Timestamp": 1722935548,
+        "Temperature": 11.74,
+        "Moisture": 21.82,
+        "Light": 46.27,
+        "Conductivity": 3.9
+    },
+    {
+        "Timestamp": 1722934948,
+        "Temperature": 11.92,
+        "Moisture": 19.58,
+        "Light": 45.47,
+        "Conductivity": 3.03
+    },
+    {
+        "Timestamp": 1722934348,
+        "Temperature": 8.89,
+        "Moisture": 21.44,
+        "Light": 148.33,
+        "Conductivity": 3.51
+    },
+    {
+        "Timestamp": 1722933748,
+        "Temperature": 7.55,
+        "Moisture": 18.69,
+        "Light": 185.4,
+        "Conductivity": 4.39
+    },
+    {
+        "Timestamp": 1722933148,
+        "Temperature": 9.9,
+        "Moisture": 15.03,
+        "Light": 111.23,
+        "Conductivity": 2.19
+    },
+    {
+        "Timestamp": 1722932548,
+        "Temperature": 7.21,
+        "Moisture": 16.79,
+        "Light": 160.43,
+        "Conductivity": 4.04
+    },
+    {
+        "Timestamp": 1722931948,
+        "Temperature": 6.83,
+        "Moisture": 10.65,
+        "Light": 191.34,
+        "Conductivity": 5.31
+    },
+    {
+        "Timestamp": 1722931348,
+        "Temperature": 8.64,
+        "Moisture": 16.23,
+        "Light": 157.12,
+        "Conductivity": 4.94
+    },
+    {
+        "Timestamp": 1722930748,
+        "Temperature": 8.48,
+        "Moisture": 14.63,
+        "Light": 175.63,
+        "Conductivity": 2.78
+    },
+    {
+        "Timestamp": 1722930148,
+        "Temperature": 10.72,
+        "Moisture": 17.26,
+        "Light": 178.45,
+        "Conductivity": 4.74
+    },
+    {
+        "Timestamp": 1722929548,
+        "Temperature": 13.22,
+        "Moisture": 11.22,
+        "Light": 49.46,
+        "Conductivity": 4.43
+    },
+    {
+        "Timestamp": 1722928948,
+        "Temperature": 13.73,
+        "Moisture": 15.68,
+        "Light": 168.64,
+        "Conductivity": 5.86
+    },
+    {
+        "Timestamp": 1722928348,
+        "Temperature": 12.23,
+        "Moisture": 15.06,
+        "Light": 44.55,
+        "Conductivity": 2.44
+    },
+    {
+        "Timestamp": 1722927748,
+        "Temperature": 11.86,
+        "Moisture": 13.27,
+        "Light": 156.85,
+        "Conductivity": 1.47
+    },
+    {
+        "Timestamp": 1722927148,
+        "Temperature": 7.91,
+        "Moisture": 20.9,
+        "Light": 39.14,
+        "Conductivity": 4.07
+    },
+    {
+        "Timestamp": 1722926548,
+        "Temperature": 5.73,
+        "Moisture": 18.47,
+        "Light": 147.42,
+        "Conductivity": 4.09
+    },
+    {
+        "Timestamp": 1722925948,
+        "Temperature": 7.31,
+        "Moisture": 22.74,
+        "Light": 63.75,
+        "Conductivity": 3.69
+    },
+    {
+        "Timestamp": 1722925348,
+        "Temperature": 7.33,
+        "Moisture": 15.68,
+        "Light": 49.29,
+        "Conductivity": 4.56
+    },
+    {
+        "Timestamp": 1722924748,
+        "Temperature": 12.8,
+        "Moisture": 15.97,
+        "Light": 116.57,
+        "Conductivity": 3.92
+    },
+    {
+        "Timestamp": 1722924148,
+        "Temperature": 11.57,
+        "Moisture": 14.11,
+        "Light": 27.47,
+        "Conductivity": 3.03
+    },
+    {
+        "Timestamp": 1722923548,
+        "Temperature": 13.14,
+        "Moisture": 14.16,
+        "Light": 148.85,
+        "Conductivity": 5.14
+    },
+    {
+        "Timestamp": 1722922948,
+        "Temperature": 11.41,
+        "Moisture": 17.46,
+        "Light": 57.92,
+        "Conductivity": 3.58
+    },
+    {
+        "Timestamp": 1722922348,
+        "Temperature": 12.67,
+        "Moisture": 18.39,
+        "Light": 154.21,
+        "Conductivity": 4.71
+    },
+    {
+        "Timestamp": 1722921748,
+        "Temperature": 10.32,
+        "Moisture": 13.65,
+        "Light": 182.21,
+        "Conductivity": 5.71
+    },
+    {
+        "Timestamp": 1722921148,
+        "Temperature": 8.11,
+        "Moisture": 9.51,
+        "Light": 114.23,
+        "Conductivity": 4.33
+    },
+    {
+        "Timestamp": 1722920548,
+        "Temperature": 8.52,
+        "Moisture": 10.5,
+        "Light": 88.73,
+        "Conductivity": 4.45
+    },
+    {
+        "Timestamp": 1722919948,
+        "Temperature": 8.13,
+        "Moisture": 18.04,
+        "Light": 89.95,
+        "Conductivity": 2.84
+    },
+    {
+        "Timestamp": 1722919348,
+        "Temperature": 7.0,
+        "Moisture": 10.69,
+        "Light": 42.62,
+        "Conductivity": 3.51
+    },
+    {
+        "Timestamp": 1722918748,
+        "Temperature": 7.58,
+        "Moisture": 17.34,
+        "Light": 162.98,
+        "Conductivity": 4.52
+    },
+    {
+        "Timestamp": 1722918148,
+        "Temperature": 6.7,
+        "Moisture": 16.43,
+        "Light": 107.9,
+        "Conductivity": 2.3
+    },
+    {
+        "Timestamp": 1722917548,
+        "Temperature": 12.94,
+        "Moisture": 16.54,
+        "Light": 147.7,
+        "Conductivity": 4.92
+    },
+    {
+        "Timestamp": 1722916948,
+        "Temperature": 13.45,
+        "Moisture": 17.87,
+        "Light": 153.23,
+        "Conductivity": 5.53
+    },
+    {
+        "Timestamp": 1722916348,
+        "Temperature": 14.06,
+        "Moisture": 19.86,
+        "Light": 1.4,
+        "Conductivity": 5.4
+    },
+    {
+        "Timestamp": 1722915748,
+        "Temperature": 13.72,
+        "Moisture": 16.88,
+        "Light": 41.54,
+        "Conductivity": 3.84
+    },
+    {
+        "Timestamp": 1722915148,
+        "Temperature": 13.58,
+        "Moisture": 13.29,
+        "Light": 17.36,
+        "Conductivity": 5.01
+    },
+    {
+        "Timestamp": 1722914548,
+        "Temperature": 11.82,
+        "Moisture": 18.92,
+        "Light": 35.69,
+        "Conductivity": 2.98
+    },
+    {
+        "Timestamp": 1722913948,
+        "Temperature": 7.21,
+        "Moisture": 12.86,
+        "Light": 40.42,
+        "Conductivity": 5.46
+    },
+    {
+        "Timestamp": 1722913348,
+        "Temperature": 9.79,
+        "Moisture": 11.78,
+        "Light": 15.18,
+        "Conductivity": 3.01
+    },
+    {
+        "Timestamp": 1722912748,
+        "Temperature": 6.86,
+        "Moisture": 18.22,
+        "Light": 153.93,
+        "Conductivity": 4.26
+    },
+    {
+        "Timestamp": 1722912148,
+        "Temperature": 10.98,
+        "Moisture": 10.75,
+        "Light": 16.93,
+        "Conductivity": 3.73
+    },
+    {
+        "Timestamp": 1722911548,
+        "Temperature": 11.32,
+        "Moisture": 13.31,
+        "Light": 56.4,
+        "Conductivity": 4.42
+    },
+    {
+        "Timestamp": 1722910948,
+        "Temperature": 7.75,
+        "Moisture": 13.89,
+        "Light": 40.89,
+        "Conductivity": 2.36
+    },
+    {
+        "Timestamp": 1722910348,
+        "Temperature": 13.16,
+        "Moisture": 15.19,
+        "Light": 119.22,
+        "Conductivity": 3.11
+    },
+    {
+        "Timestamp": 1722909748,
+        "Temperature": 12.43,
+        "Moisture": 15.65,
+        "Light": 27.57,
+        "Conductivity": 5.39
+    },
+    {
+        "Timestamp": 1722909148,
+        "Temperature": 12.14,
+        "Moisture": 15.67,
+        "Light": 62.46,
+        "Conductivity": 3.36
+    },
+    {
+        "Timestamp": 1722908548,
+        "Temperature": 10.95,
+        "Moisture": 15.08,
+        "Light": 79.58,
+        "Conductivity": 2.03
+    },
+    {
+        "Timestamp": 1722907948,
+        "Temperature": 10.27,
+        "Moisture": 13.44,
+        "Light": 116.3,
+        "Conductivity": 2.27
+    },
+    {
+        "Timestamp": 1722907348,
+        "Temperature": 12.05,
+        "Moisture": 13.8,
+        "Light": 79.16,
+        "Conductivity": 3.87
+    },
+    {
+        "Timestamp": 1722906748,
+        "Temperature": 10.1,
+        "Moisture": 17.51,
+        "Light": 133.88,
+        "Conductivity": 4.53
+    },
+    {
+        "Timestamp": 1722906148,
+        "Temperature": 11.91,
+        "Moisture": 14.27,
+        "Light": 43.86,
+        "Conductivity": 3.5
+    },
+    {
+        "Timestamp": 1722905548,
+        "Temperature": 8.88,
+        "Moisture": 15.3,
+        "Light": 100.44,
+        "Conductivity": 4.06
+    },
+    {
+        "Timestamp": 1722904948,
+        "Temperature": 5.77,
+        "Moisture": 14.16,
+        "Light": 135.9,
+        "Conductivity": 5.3
+    },
+    {
+        "Timestamp": 1722904348,
+        "Temperature": 12.02,
+        "Moisture": 15.67,
+        "Light": 64.49,
+        "Conductivity": 5.06
+    },
+    {
+        "Timestamp": 1722903748,
+        "Temperature": 9.42,
+        "Moisture": 9.61,
+        "Light": 22.89,
+        "Conductivity": 3.78
+    },
+    {
+        "Timestamp": 1722903148,
+        "Temperature": 11.55,
+        "Moisture": 16.42,
+        "Light": 127.37,
+        "Conductivity": 4.41
+    },
+    {
+        "Timestamp": 1722902548,
+        "Temperature": 11.63,
+        "Moisture": 17.41,
+        "Light": 7.61,
+        "Conductivity": 3.42
+    },
+    {
+        "Timestamp": 1722901948,
+        "Temperature": 11.34,
+        "Moisture": 12.79,
+        "Light": 153.78,
+        "Conductivity": 2.76
+    },
+    {
+        "Timestamp": 1722901348,
+        "Temperature": 10.91,
+        "Moisture": 16.13,
+        "Light": -8.69,
+        "Conductivity": 3.17
+    },
+    {
+        "Timestamp": 1722900748,
+        "Temperature": 12.83,
+        "Moisture": 16.4,
+        "Light": 36.55,
+        "Conductivity": 3.78
+    },
+    {
+        "Timestamp": 1722900148,
+        "Temperature": 8.59,
+        "Moisture": 14.38,
+        "Light": 37.49,
+        "Conductivity": 3.31
+    },
+    {
+        "Timestamp": 1722899548,
+        "Temperature": 9.68,
+        "Moisture": 13.24,
+        "Light": 88.3,
+        "Conductivity": 3.31
+    },
+    {
+        "Timestamp": 1722898948,
+        "Temperature": 8.61,
+        "Moisture": 21.56,
+        "Light": 54.46,
+        "Conductivity": 2.83
+    },
+    {
+        "Timestamp": 1722898348,
+        "Temperature": 6.66,
+        "Moisture": 15.22,
+        "Light": 102.15,
+        "Conductivity": 3.69
+    },
+    {
+        "Timestamp": 1722897748,
+        "Temperature": 9.72,
+        "Moisture": 15.08,
+        "Light": 179.47,
+        "Conductivity": 3.43
+    },
+    {
+        "Timestamp": 1722897148,
+        "Temperature": 9.59,
+        "Moisture": 14.31,
+        "Light": 36.12,
+        "Conductivity": 4.49
+    },
+    {
+        "Timestamp": 1722896548,
+        "Temperature": 10.88,
+        "Moisture": 13.64,
+        "Light": 14.39,
+        "Conductivity": 3.98
+    },
+    {
+        "Timestamp": 1722895948,
+        "Temperature": 9.85,
+        "Moisture": 14.41,
+        "Light": 117.1,
+        "Conductivity": 2.19
+    },
+    {
+        "Timestamp": 1722895348,
+        "Temperature": 12.0,
+        "Moisture": 11.95,
+        "Light": 151.8,
+        "Conductivity": 5.02
+    },
+    {
+        "Timestamp": 1722894748,
+        "Temperature": 10.9,
+        "Moisture": 10.81,
+        "Light": 128.13,
+        "Conductivity": 3.55
+    },
+    {
+        "Timestamp": 1722894148,
+        "Temperature": 12.11,
+        "Moisture": 17.74,
+        "Light": 131.73,
+        "Conductivity": 4.49
+    },
+    {
+        "Timestamp": 1722893548,
+        "Temperature": 7.68,
+        "Moisture": 13.78,
+        "Light": 89.31,
+        "Conductivity": 3.22
+    },
+    {
+        "Timestamp": 1722892948,
+        "Temperature": 8.21,
+        "Moisture": 11.81,
+        "Light": 98.93,
+        "Conductivity": 2.68
+    },
+    {
+        "Timestamp": 1722892348,
+        "Temperature": 7.39,
+        "Moisture": 10.84,
+        "Light": 159.3,
+        "Conductivity": 3.32
+    },
+    {
+        "Timestamp": 1722891748,
+        "Temperature": 8.26,
+        "Moisture": 16.47,
+        "Light": 129.64,
+        "Conductivity": 1.9
+    },
+    {
+        "Timestamp": 1722891148,
+        "Temperature": 8.37,
+        "Moisture": 15.51,
+        "Light": 135.84,
+        "Conductivity": 5.4
+    },
+    {
+        "Timestamp": 1722890548,
+        "Temperature": 12.11,
+        "Moisture": 18.04,
+        "Light": 71.75,
+        "Conductivity": 2.73
+    },
+    {
+        "Timestamp": 1722889948,
+        "Temperature": 12.72,
+        "Moisture": 15.66,
+        "Light": 122.07,
+        "Conductivity": 3.88
+    },
+    {
+        "Timestamp": 1722889348,
+        "Temperature": 13.99,
+        "Moisture": 14.8,
+        "Light": 106.01,
+        "Conductivity": 1.54
+    },
+    {
+        "Timestamp": 1722888748,
+        "Temperature": 9.14,
+        "Moisture": 22.45,
+        "Light": 75.86,
+        "Conductivity": 3.0
+    },
+    {
+        "Timestamp": 1722888148,
+        "Temperature": 10.11,
+        "Moisture": 13.75,
+        "Light": 182.15,
+        "Conductivity": 3.17
+    },
+    {
+        "Timestamp": 1722887548,
+        "Temperature": 10.12,
+        "Moisture": 15.04,
+        "Light": 145.47,
+        "Conductivity": 2.67
+    },
+    {
+        "Timestamp": 1722886948,
+        "Temperature": 8.32,
+        "Moisture": 12.73,
+        "Light": 155.68,
+        "Conductivity": 3.5
+    }
+]

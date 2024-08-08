@@ -9,7 +9,7 @@ import pandas as pd
 # Define a list of valid commands
 VALID_COMMANDS = [
     "scan", "read", "find", "update", "sesh", "train", "testing model", "push", "live",
-    "new sesh", "line", "trend", "fcast", "fcast 3d", "build","summary", "corr", 
+    "new sesh", "avg", "full anal", "fcast", "fcast 3d", "build","summary", "corr", 
     "pred", "cleaner", "nn", "export", "export csv", "export xl", "dbconn"
 ]
 
@@ -34,35 +34,47 @@ while True:
     
     usrinpt = input(">>> ")
     
+    # Perform a scan for compatible BLE devices
     if usrinpt in VALID_COMMANDS:  
         if usrinpt == "scan":
             from scan import stats
             print(stats)
+
+        # Runs read.py
         elif usrinpt == "read":
             subprocess.run(["python3", "read.py"])
         elif usrinpt == "find":
             from find import device_id
             print(device_id)
+
+        # Begins a proper data collection session. Pings every 10 minutes.
         elif usrinpt == "sesh":
             while True:
                 print("Starting read session...")
                 subprocess.run(["python3", "read.py"])
                 time.sleep(600)
 
+        # Update current sesh.json with most recent sensor data
         elif usrinpt == "update":
             subprocess.run(["python3", "__files__/mini_insert.py"])
 
         # Neural Network Commands
+
+        # Train prediction model with data range set in model.py
         elif usrinpt == "train":
             subprocess.run(["python3", "__tools__/neural_net/modular/model.py","--from_main"])
 
+        # not sure what testing does, Its too early to think
         elif usrinpt == "testing model":
             subprocess.run(["python3", "__tools__/neural_net/modular/model-test.py","--from_main"])
 
+        # Push a record to sesh.py and immediately run the prediction model
         elif usrinpt == "push":
                 print("Starting read session...")
                 subprocess.run(["python3", "read.py"])
                 subprocess.run(["python3", " __tools__/neural_net/modular/model.py","--from_main"])
+
+        # Start Live Session
         elif usrinpt == "live":
                 print("Starting web interface processes...")
                 subprocess.run(["python3", "web_ui/app.py"])
@@ -80,15 +92,13 @@ while True:
                     subprocess.run(["python3", "read.py"])
                     time.sleep(600)
             else:
-                print("Cancelling new session...")
-                
-# Sesh.json source for below commands
+                print("New session cancelled.")
         
-        # Visualization Commands
-        elif usrinpt == "line":
-            subprocess.run(["python3", "__tools__/plot/line.py"]) # Altered for multi-device use
-        elif usrinpt == "trend":
-            subprocess.run(["python3", "__tools__/plot/trends.py"])
+        # Compare averages, showing trends, between sensor readings (accross all devices) and
+        elif usrinpt == "avg":
+            subprocess.run(["python3", "__tools__/plot/avg.py"]) # Altered to process test and control data
+        elif usrinpt == "trend":                                
+            subprocess.run(["python3", "__tools__/plot/trends.py"]) # Altered to process test and control data
         elif usrinpt == "fcast":
             subprocess.run(["python3", "__tools__/plot/forecast.py"])
         elif usrinpt == "fcast 3d":

@@ -86,7 +86,7 @@ for i in range(intervals):
 json_string = json.dumps(data, indent=4)
 
 # Write the JSON string to a file
-with open("new-batch.json", "w") as file:
+with open("./__files__/batches/new-batch.json", "w") as file:
     file.write(json_string)
 print('')
 print("'new-batch.json' created successfully!")

@@ -1,51 +1,80 @@
-import matplotlib.pyplot as plt
-from datetime import datetime
+import os
 import json
-import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
 
-# Load JSON data from file
-file_path = '/home/jeremy/Documents/AGT/sesh.json'
-with open(file_path, 'r') as file:
-    data = json.load(file)
+def plot_sensor_data(test_data, control_data, title):
+    # Convert to DataFrames for easy manipulation
+    test_df = pd.DataFrame(test_data)
+    control_df = pd.DataFrame(control_data)
 
-# Extract sensor data and MAC addresses
-mac_addresses = data[0]['MAC']
-sensor_data = {sensor: [] for sensor in data[0] if sensor not in ['Timestamp', 'MAC']}
+    # Ensure 'Timestamp' is in datetime format
+    test_df['Timestamp'] = pd.to_datetime(test_df['Timestamp'])
+    control_df['Timestamp'] = pd.to_datetime(control_df['Timestamp'])
 
-def generate_subplots(sensor_data, mac_addresses):
-    num_sensors = len(sensor_data)
-    num_rows = num_cols = int(num_sensors ** 0.5)  # For a square-like layout
-    fig, axs = plt.subplots(num_rows, num_cols, figsize=(12, 12))  # Adjust figure size
-    axs = axs.flatten()  # Flatten the axes array for easier indexing
+    # Merge the DataFrames on 'Timestamp' to align the data
+    merged_df = pd.merge_asof(test_df.sort_values('Timestamp'), control_df.sort_values('Timestamp'), 
+                               on='Timestamp', suffixes=('_test', '_control'))
 
-    for i, (sensor_name, readings) in enumerate(sensor_data.items()):
-        for entry in data:
-            timestamps = [datetime.strptime(ts, "%Y-%m-%d %H:%M:%S") for ts in entry['Timestamp']]  # Extract timestamps for the current entry
-            for j, device_readings in enumerate(entry[sensor_name]):  # Iterate over readings for the current sensor
-                if j < len(mac_addresses):
-                    # Ensure device readings are in list format
-                    if isinstance(device_readings, list):
-                        if len(timestamps) != len(device_readings):
-                            # Interpolate or pad the data to ensure they have the same length
-                            device_readings = np.interp(np.linspace(0, len(timestamps) - 1, len(device_readings)), np.arange(len(device_readings)), device_readings)
-                        axs[i].plot(timestamps, device_readings, label=f"Device {j+1} ({mac_addresses[j]})")
-        
-        # Set major ticks to occur at the beginning of each day
-        axs[i].xaxis.set_major_locator(plt.MaxNLocator(nbins=10))  # Adjust number of bins as needed
-        axs[i].tick_params(axis='x', rotation=45)  # Rotate x-axis labels for better visibility
-        
-        # Set x-axis label, y-axis label, legend, and title for each subplot
-        axs[i].set_xlabel('Time')  
-        axs[i].set_ylabel(sensor_name)
-        axs[i].legend(loc='upper right', fontsize='small') 
-        axs[i].set_title(f"Trending data for {sensor_name}")
+    # Extract columns for plotting
+    timestamps = merged_df['Timestamp']
+    test_temperatures = merged_df['Temperature_test']
+    control_temperatures = merged_df['Temperature_control']
+    test_moistures = merged_df['Moisture_test']
+    control_moistures = merged_df['Moisture_control']
+    test_lights = merged_df['Light_test']
+    control_lights = merged_df['Light_control']
+    test_conductivities = merged_df['Conductivity_test']
+    control_conductivities = merged_df['Conductivity_control']
 
-    # Hide any unused subplots
-    for ax in axs[num_sensors:]:
-        ax.axis('off')
+    # Create a 2x2 grid of subplots
+    fig, axs = plt.subplots(2, 2, figsize=(15, 6), sharex=True)
+    fig.suptitle(title, fontsize=16)
+
+    # Plot Temperature data
+    axs[0, 0].plot(timestamps, test_temperatures, label='Test Temperature', color='maroon', linestyle='-.', marker='o', markersize=5, linewidth=2)
+    axs[0, 0].plot(timestamps, control_temperatures, label='Control Temperature', color='red', linestyle='--', marker='x', markersize=5, linewidth=2)
+    axs[0, 0].set_ylabel('Temperature')
+    axs[0, 0].legend()
+    axs[0, 0].grid(True)
+
+    # Plot Moisture data
+    axs[0, 1].plot(timestamps, test_moistures, label='Test Moisture', color='blue', linestyle='-.', marker='s', markersize=5, linewidth=2)
+    axs[0, 1].plot(timestamps, control_moistures, label='Control Moisture', color='skyblue', linestyle='--', marker='P', markersize=5, linewidth=2)
+    axs[0, 1].set_ylabel('Moisture')
+    axs[0, 1].legend()
+    axs[0, 1].grid(True)
+
+    # Plot Light data
+    axs[1, 0].plot(timestamps, test_lights, label='Test Light', color='green', linestyle='-.', marker='^', markersize=5, linewidth=2)
+    axs[1, 0].plot(timestamps, control_lights, label='Control Light', color='lightgreen', linestyle='--', marker='v', markersize=5, linewidth=2)
+    axs[1, 0].set_ylabel('Light')
+    axs[1, 0].legend()
+    axs[1, 0].grid(True)
+
+    # Plot Conductivity data
+    axs[1, 1].plot(timestamps, test_conductivities, label='Test Conductivity', color='orange', linestyle=':', marker='d', markersize=5, linewidth=2)
+    axs[1, 1].plot(timestamps, control_conductivities, label='Control Conductivity', color='gold', linestyle='--', marker='*', markersize=5, linewidth=2)
+    axs[1, 1].set_ylabel('Conductivity')
+    axs[1, 1].legend()
+    axs[1, 1].grid(True)
+
+    # Set x-label for bottom row
+    axs[1, 0].set_xlabel('Timestamp')
+    axs[1, 1].set_xlabel('Timestamp')
 
     plt.tight_layout()
     plt.show()
 
-# Generate subplots for each sensor
-generate_subplots(sensor_data, mac_addresses)
+# Load test data
+test_json_file_path = './__files__/read_files/2024-04-30/AGT-2024-04-30.json'
+with open(test_json_file_path, 'r') as file:
+    test_data = json.load(file)
+
+# Load control data
+control_json_file_path = './__files__/batches/t_parsley.json'
+with open(control_json_file_path, 'r') as file:
+    control_data = json.load(file)
+
+# Plot both test and control data
+plot_sensor_data(test_data, control_data, 'Comparison of Test and Control Data')

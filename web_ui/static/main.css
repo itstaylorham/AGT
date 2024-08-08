@@ -339,7 +339,7 @@ tr:nth-child(even) {
 #main-dash {
  justify-content: center;
  background-color:rgb(43, 43, 43);
- max-width: 70%;
+ max-width: 100%;
 }
 
 .active-slide {
