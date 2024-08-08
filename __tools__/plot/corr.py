@@ -2,21 +2,41 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# load the df from a JSON file into a pandas dfFrame
-df = pd.read_json("sesh.json")
+# Load data from two JSON files
+test = pd.read_json("./__files__/batches/t_parsley.json")
+control = pd.read_json("./__files__/read_files/2024-07-17/AGT-2024-07-17.json")
 
-# convert the df types of the columns to float
-df['Moisture'] = df['Moisture'].str[0]
-df['Light'] = df['Light'].str[0]
-df['Temperature'] = df['Temperature'].str[0]
-df['Conductivity'] = df['Conductivity'].str[0]
+# Combine the data from both DataFrames
+df = pd.concat([test, control], ignore_index=True)
 
-# calculate the Pearson correlation coefficient between light and temperature
+# Check the data types to understand what transformations are needed
+print(df.dtypes)
+
+# Convert the columns if they are lists or other non-float types
+if isinstance(df['Moisture'].iloc[0], list):
+    df['Moisture'] = df['Moisture'].apply(lambda x: x[0] if isinstance(x, list) else x)
+
+if isinstance(df['Light'].iloc[0], list):
+    df['Light'] = df['Light'].apply(lambda x: x[0] if isinstance(x, list) else x)
+
+if isinstance(df['Temperature'].iloc[0], list):
+    df['Temperature'] = df['Temperature'].apply(lambda x: x[0] if isinstance(x, list) else x)
+
+if isinstance(df['Conductivity'].iloc[0], list):
+    df['Conductivity'] = df['Conductivity'].apply(lambda x: x[0] if isinstance(x, list) else x)
+
+# Convert to float (if not already)
+df['Moisture'] = df['Moisture'].astype(float)
+df['Light'] = df['Light'].astype(float)
+df['Temperature'] = df['Temperature'].astype(float)
+df['Conductivity'] = df['Conductivity'].astype(float)
+
+# Calculate the Pearson correlation coefficient between light and temperature
 correlation = df.corr(numeric_only=True)
 
+# Create a heatmap to visualize the correlation
 sns.heatmap(correlation, annot=True, cmap='YlGnBu')
-
-print(correlation)
 plt.show()
 
+print(correlation)
 
