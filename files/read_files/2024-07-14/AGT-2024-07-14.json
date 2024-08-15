@@ -1,0 +1,34 @@
+[
+    {
+        "Timestamp": "2024-07-14 21:22:45",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 20.7,
+        "Moisture": 0,
+        "Light": 74,
+        "Conductivity": 0
+    },
+    {
+        "Timestamp": "2024-07-14 21:22:48",
+        "MAC": "c4:7c:8d:6d:24:9e",
+        "Temperature": 26.6,
+        "Moisture": 0,
+        "Light": 224,
+        "Conductivity": 0
+    },
+    {
+        "Timestamp": "2024-07-14 22:00:50",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 20.5,
+        "Moisture": 0,
+        "Light": 0,
+        "Conductivity": 0
+    },
+    {
+        "Timestamp": "2024-07-14 22:00:54",
+        "MAC": "c4:7c:8d:6d:24:9e",
+        "Temperature": 23.5,
+        "Moisture": 0,
+        "Light": 214,
+        "Conductivity": 0
+    }
+]

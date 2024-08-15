@@ -85,7 +85,7 @@ for device_mac in device_macs:
 
 # Save the data for all devices to a common JSON file
 timestamp = datetime.now().strftime("%Y-%m-%d")
-daily_folder = os.path.join("__files__/read_files", timestamp)
+daily_folder = os.path.join("files/read_files", timestamp)
 
 # Create a directory for the current day if it doesn't already exist
 if not os.path.exists(daily_folder):

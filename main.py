@@ -8,7 +8,7 @@ import pandas as pd
 
 # Define a list of valid commands
 VALID_COMMANDS = [
-    "scan", "read", "find", "update", "sesh", "train", "testing model", "push", "live",
+    "scan", "read", "find", "trend", "update", "sesh", "train", "testing model", "push", "live",
     "new sesh", "avg", "full anal", "fcast", "fcast 3d", "build","summary", "corr", 
     "pred", "cleaner", "nn", "export", "export csv", "export xl", "dbconn"
 ]
@@ -56,23 +56,23 @@ while True:
 
         # Update current sesh.json with most recent sensor data
         elif usrinpt == "update":
-            subprocess.run(["python3", "__files__/mini_insert.py"])
+            subprocess.run(["python3", "files/mini_insert.py"])
 
         # Neural Network Commands
 
         # Train prediction model with data range set in model.py
         elif usrinpt == "train":
-            subprocess.run(["python3", "__tools__/neural_net/modular/model.py","--from_main"])
+            subprocess.run(["python3", "tools/neural_net/modular/model.py","--from_main"])
 
         # not sure what testing does, Its too early to think
         elif usrinpt == "testing model":
-            subprocess.run(["python3", "__tools__/neural_net/modular/model-test.py","--from_main"])
+            subprocess.run(["python3", "tools/neural_net/modular/model-test.py","--from_main"])
 
         # Push a record to sesh.py and immediately run the prediction model
         elif usrinpt == "push":
                 print("Starting read session...")
                 subprocess.run(["python3", "read.py"])
-                subprocess.run(["python3", " __tools__/neural_net/modular/model.py","--from_main"])
+                subprocess.run(["python3", " tools/neural_net/modular/model.py","--from_main"])
 
         # Start Live Session
         elif usrinpt == "live":
@@ -96,26 +96,26 @@ while True:
         
         # Compare averages, showing trends, between sensor readings (accross all devices) and
         elif usrinpt == "avg":
-            subprocess.run(["python3", "__tools__/plot/avg.py"]) # Altered to process test and control data
+            subprocess.run(["python3", "tools/plot/avg.py"]) # Altered to process test and control data
         elif usrinpt == "trend":                                
-            subprocess.run(["python3", "__tools__/plot/trends.py"]) # Altered to process test and control data
+            subprocess.run(["python3", "tools/plot/trends.py"]) # Altered to process test and control data
         elif usrinpt == "fcast":
-            subprocess.run(["python3", "__tools__/plot/forecast.py"])
+            subprocess.run(["python3", "tools/plot/forecast.py"])
         elif usrinpt == "fcast 3d":
-            subprocess.run(["python3", "__tools__/plot/data3d.py"])
+            subprocess.run(["python3", "tools/plot/data3d.py"])
         elif usrinpt == "summary":
-            subprocess.run(["python3", "__tools__/summary.py"])           
+            subprocess.run(["python3", "tools/summary.py"])           
 
         # Analysis commands
         elif usrinpt == "corr":
             print("Correlation Analysis:")
-            subprocess.run(["python3", "__tools__/plot/corr.py"]) # Altered to process test and control data
+            subprocess.run(["python3", "tools/plot/corr.py"]) # Altered to process test and control data
         elif usrinpt == "pred":
-            subprocess.run(["python3", "__tools__/neural_net/arima.py"])
+            subprocess.run(["python3", "tools/neural_net/arima.py"])
         elif usrinpt == "cleaner":
-            subprocess.run(["python3", "__tools__/cleaner.py"])
+            subprocess.run(["python3", "tools/cleaner.py"])
         elif usrinpt == "nn":
-            subprocess.run(["python3", "__tools__/neural_net/nn.py", "--from_main"])
+            subprocess.run(["python3", "tools/neural_net/nn.py", "--from_main"])
         
         # Export commands
 
@@ -124,9 +124,9 @@ while True:
             data = pd.read_json("sesh.json")
             cleaned_data = clean_data(data)
             timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
-            if not os.path.exists("__files__/export"):
-                os.makedirs("__files__/export")
-            data.to_json(f'__files__/export/{timestamp}.json')
+            if not os.path.exists("files/export"):
+                os.makedirs("files/export")
+            data.to_json(f'files/export/{timestamp}.json')
             print('')
             print('Current session saved as JSON in exports folder.')
             print('')
@@ -137,9 +137,9 @@ while True:
             data = pd.read_json("sesh.json")
             cleaned_data = clean_data(data)
             timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
-            if not os.path.exists("__files__/export"):
-                os.makedirs("__files__/export")
-            data.to_csv(f'__files__/export/{timestamp}.csv')
+            if not os.path.exists("files/export"):
+                os.makedirs("files/export")
+            data.to_csv(f'files/export/{timestamp}.csv')
             print('')
             print('Current session saved as CSV in exports folder.')
             print('')
@@ -149,9 +149,9 @@ while True:
             data = pd.read_json("sesh.json")
             cleaned_data = clean_data(data)
             timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
-            if not os.path.exists("__files__/export"):
-                os.makedirs("__files__/export")
-            data.to_excel(f'__files__/export/{timestamp}.xlsx')
+            if not os.path.exists("files/export"):
+                os.makedirs("files/export")
+            data.to_excel(f'files/export/{timestamp}.xlsx')
             print('')
             print('Current session saved as CSV in exports folder.')
             print('')
@@ -159,15 +159,15 @@ while True:
 # AGT_DB.SENSOR_READINGS DATA SOURCE FOR BELOW COMMANDS
             
         elif usrinpt == "build":
-            subprocess.run(["python3","/home/jeremy/Documents/AGT/__tools__/report/build_report.py"])
+            subprocess.run(["python3","/home/jeremy/Documents/AGT/tools/report/build_report.py"])
         
         # Database connection check
         elif usrinpt == "dbconn":
-            subprocess.run(["python3", "__files__/db_connect.py"])
+            subprocess.run(["python3", "files/db_connect.py"])
 
 # Sensor reading data insertion commands
         elif usrinpt == "dbconn":
-            subprocess.run(["python3", "__files__/db_update.py"])
+            subprocess.run(["python3", "files/db_update.py"])
 
         # All else fails
     else:

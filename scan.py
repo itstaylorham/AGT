@@ -71,5 +71,5 @@ print(df)
 timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 if not os.path.exists("scan_files"):
     os.makedirs("scan_files")
-df.to_json(f'__files__/scan_files/scan_data_{timestamp}.json')
+df.to_json(f'files/scan_files/scan_data_{timestamp}.json')
 done = True
