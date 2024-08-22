@@ -2,6 +2,7 @@ import os
 import json
 import matplotlib.pyplot as plt
 import pandas as pd
+from datetime import datetime
 
 def plot_sensor_data(test_data, control_data, title):
     # Convert to DataFrames for easy manipulation
@@ -67,7 +68,19 @@ def plot_sensor_data(test_data, control_data, title):
     plt.show()
 
 # Load test data
-test_json_file_path = './files/read_files/2024-04-30/AGT-2024-04-30.json'
+# Directory where the JSON files are stored
+read_files_dir = './files/read_files/'
+
+# Find the most recent folder
+latest_folder = max(
+    [f for f in os.listdir(read_files_dir) if os.path.isdir(os.path.join(read_files_dir, f))],
+    key=lambda date_str: datetime.strptime(date_str, '%Y-%m-%d')
+)
+
+# Construct the path to the most recent JSON file within that folder
+test_json_file_path = os.path.join(read_files_dir, latest_folder, f'AGT-{latest_folder}.json')
+
+# Load the most recent test data
 with open(test_json_file_path, 'r') as file:
     test_data = json.load(file)
 

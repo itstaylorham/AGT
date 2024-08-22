@@ -1,6 +1,7 @@
 import os
 import json
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 def plot_sensor_data(data, title):
     # Extract timestamps and sensor data
@@ -45,8 +46,19 @@ def plot_sensor_data(data, title):
     plt.tight_layout()
     plt.show()
 
+# Read from date folders and json files
+read_files_dir = './files/read_files/'
+
+# Find the most recent folder
+latest_data = max(
+    [f for f in os.listdir(read_files_dir) if os.path.isdir(os.path.join(read_files_dir, f))],
+    key=lambda date_str: datetime.strptime(date_str, '%Y-%m-%d')
+)
+
+# Construct the path to the most recent JSON file
+test_json_file_path = os.path.join(read_files_dir, latest_data, f'AGT-{latest_data}.json')
+
 # Load and plot test data
-test_json_file_path = './files/read_files/2024-04-30/AGT-2024-04-30.json'
 with open(test_json_file_path, 'r') as file:
     test_data = json.load(file)
 plot_sensor_data(test_data, 'Test Data Average')

@@ -1,10 +1,26 @@
+import os
+from datetime import datetime
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# Load data from two JSON files
+# Load data from the static test JSON file
 test = pd.read_json("./files/batches/t_parsley.json")
-control = pd.read_json("./files/read_files/2024-07-17/AGT-2024-07-17.json")
+
+# Dynamic loading of the most recent control JSON file
+read_files_dir = './files/read_files/'
+
+# Find the most recent folder
+latest_data = max(
+    [f for f in os.listdir(read_files_dir) if os.path.isdir(os.path.join(read_files_dir, f))],
+    key=lambda date_str: datetime.strptime(date_str, '%Y-%m-%d')
+)
+
+# Construct the path to the most recent JSON file
+control_json_file_path = os.path.join(read_files_dir, latest_data, f'AGT-{latest_data}.json')
+
+# Load the most recent control JSON file
+control = pd.read_json(control_json_file_path)
 
 # Combine the data from both DataFrames
 df = pd.concat([test, control], ignore_index=True)
