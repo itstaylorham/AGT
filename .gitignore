@@ -1,7 +1,14 @@
+# Ignore environment and cache
 env/
-webui_beta/
-version/
 __pycache__/
+
+# Ignore web UI files
+webui_beta/
+
+# Ignore version control files (if applicable)
+version/
+
+# Ignore files and subdirectories under the 'files' directory
 files/export/
 files/metrics/
 files/predict/
@@ -9,15 +16,14 @@ files/read_files/
 files/reports/
 files/scan_files/
 files/db_insert_test.py
+
+# Ignore model and prediction-related files
 .test_predictions.npy
 .trained_model.pth
 .X_train
-.y_test
 .y_train
-.X_train
-<<<<<<< Updated upstream
-sesh.json/
+.y_test
+
+# Ignore session-related files
 sesh.json
-=======
-setup.cfg/
->>>>>>> Stashed changes
+sesh.json/
