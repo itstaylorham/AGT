@@ -15,5 +15,9 @@ files/db_insert_test.py
 .y_test
 .y_train
 .X_train
+<<<<<<< Updated upstream
 sesh.json/
 sesh.json
+=======
+setup.cfg/
+>>>>>>> Stashed changes
