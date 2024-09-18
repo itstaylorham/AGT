@@ -15,3 +15,5 @@ files/db_insert_test.py
 .y_test
 .y_train
 .X_train
+sesh.json/
+sesh.json
