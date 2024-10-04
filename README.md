@@ -1,6 +1,9 @@
 Agrotech Live is a data collection and analysis tools for agriculture applications.
+
 IMPORTANT FOR BLUETOOTH ACCESS
 - Give bluepy-helper sudo access before running anything.
+IMPORTANT FOR NETWORK ACCESS
+- Fill in the setup.cfg file with your own server information.
 
 ## Giving bluepy-helper permissions on Linux
 
