@@ -24,7 +24,7 @@ cursor = db.cursor()
 
 # Function to check if a record already exists
 def record_exists(timestamp, mac):
-    sql = "SELECT COUNT(*) FROM AGT_2024_SENSOR_READINGS WHERE Timestamp = %s AND MAC = %s"
+    sql = "SELECT COUNT(*) FROM AGT_2024_SENSOR_READINGS WHERE TIMECODE = %s AND MAC = %s"
     cursor.execute(sql, (timestamp, mac))
     count = cursor.fetchone()[0]
     return count > 0
@@ -42,7 +42,7 @@ def process_json_file(file_path):
         if not record_exists(timestamp, mac):
             sql = """
             INSERT INTO AGT_2024_SENSOR_READINGS 
-            (Timestamp, MAC, Temperature, Moisture, Light, Conductivity) 
+            (TIMECODE, MAC, Temperature, Moisture, Light, Conductivity) 
             VALUES (%s, %s, %s, %s, %s, %s)
             """
             values = (
