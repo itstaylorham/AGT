@@ -9,7 +9,7 @@ import pandas as pd
 # Define a list of valid commands
 VALID_COMMANDS = [
     "scan", "read", "find", "trend", "update", "sesh", "train", "testing model", "push", "live",
-    "new sesh", "avg", "full anal", "fcast", "fcast 3d", "build","summary", "corr", 
+    "new sesh", "avg", "cluster", "full anal", "fcast", "fcast 3d", "build","summary", "corr", 
     "pred", "cleaner", "nn", "export", "export csv", "export xl", "dbconn"
 ]
 
@@ -63,6 +63,11 @@ while True:
         # Train prediction model with data range set in model.py
         elif usrinpt == "train":
             subprocess.run(["python3", "tools/neural_net/modular/model.py","--from_main"])
+
+        # Train prediction model with data range set in model.py
+        elif usrinpt == "cluster":
+            subprocess.run(["python3", "tools/auto-cluster.py","--from_main"])
+
 
         # not sure what testing does, Its too early to think
         elif usrinpt == "testing model":
