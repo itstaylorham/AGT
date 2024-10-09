@@ -9,7 +9,7 @@ from openpyxl.chart import LineChart, Reference
 # Replace with your database connection details
 db_url = "mysql+mysqlconnector://jeremy:Starfish!2345@localhost/AGT_DB"
 
-sql_query = "SELECT * FROM AGT_DB.AGT_2023_SENSOR_READINGS WHERE TIMECODE LIKE '2023%'"
+sql_query = "SELECT * FROM AGT_DB.AGT_2024_SENSOR_READINGS UNION SELECT * FROM AGT_DB.AGT_2023_SENSOR_READINGS"
 
 # Read data from AGT_DB.SENSOR_READINGS to pandas dataframe
 df = pd.read_sql(sql_query, create_engine(db_url))
