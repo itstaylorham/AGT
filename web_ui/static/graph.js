@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function() {
     try {
-        const response = await fetch('api/graph_data');
+        const response = await fetch('api/sensor_data');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

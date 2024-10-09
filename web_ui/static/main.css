@@ -1,7 +1,6 @@
 /* main.css */
 
-/* General styles */
-/* General styles */
+/* General Styles */
 body {
     font-family: 'Neuropol X Free', sans-serif;
     margin: 0;
@@ -11,197 +10,30 @@ body {
     background-color: #ececec;
 }
 
-.link-btn {
-    padding: 15px;
-}
-
-.link-btn button {
-    width: 100%;
-    padding: 5px;
-    background-color: #dfdfdf;
-}
-
-.link-btn button:hover {
-    cursor: pointer;
-    width: 100%;
-    padding: 5px;
-}
-
-/* Header styles */
+/* Header Styles */
 .header-img {
     text-align: center;
-    padding: 2px;
-    background-color: #597dca;
-}
-
-
-.tool-item {
-    padding-top: 15px; /* Existing padding - keep as is */
-    
-}
-
-.tool-item button{
-
-    background-color: rgb(43, 43, 43);  /* White background */
-    color: rgb(235, 235, 235);             /* Black text */
-    border: 1px solid black;  /* Optional black border */
-    cursor: pointer;          /* Indicate it's clickable */
-
-    border-radius: 10px, 10px, 0px, 0px;
     padding: 10px;
-
-    /* Optional hover effect */
-    transition: background-color 0.05s; /* Smooth transition */
-    
-    &:hover {
-        background-color: #6f6f6f; /* Slightly lighter gray on hover */
-    } 
-}
-
-.normalize-data {
-    background-color: rgb(43, 43, 43);  /* White background */
-    color: rgb(235, 235, 235);             /* Black text */
-    border: 1px solid black;  /* Optional black border */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    cursor: pointer;          /* Indicate it's clickable */
-    padding: 10px;
-
-    /* Optional hover effect */
-    transition: background-color 0.05s; /* Smooth transition */
-
+    background-color: #000000;
 }
 
 .header-img img {
     width: 150px;
 }
 
-#health-score-api-data {
-    background-color: rgb(43, 43, 43);  /* White background */
-    color: rgb(235, 235, 235);             /* Black text */
-    border: 1px solid black;  /* Optional black border */
-    cursor: pointer;          /* Indicate it's clickable */
-    padding: 10px;
-
-    /* Optional hover effect */
-    transition: background-color 0.05s; /* Smooth transition */
-
-}
-
-/* Main content styles */
-.main-content {
-    padding: 0.5rem;
-}
-
-.dashboard-main {
-    text-align: center;
-}
-
-h2 {
-    margin-top: 1.5rem;
-}
-
-/* Table styles */
-.table-container {
-    overflow-x: auto;
-    max-width: 100%;
-    margin-bottom: 1rem;
-}
-
-/* Responsive table */
-.responsive-table {
-    width: 100%;
-    table-layout: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.new-row {
-    background-color: yellow;
-}
-
-th,
-td {
-    padding: 0.50rem;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-
-
-.link-btn {
-    padding: 15px;
-}
-
-
-.link-btn button{
-    width: 100%;
-    padding: 5px;
-    background-color: #dfdfdf;
-}
-
-.link-btn button:hover{
-    cursor: pointer;
-    width: 100%;
-    padding: 5px;
-}
-
-/* Header styles */
-.header-img {
-    text-align: center;
-    padding: 2px;
-    background-color: #1b1b1b;
-}
-
-.header-img img {
-    width: 150px;
-}
-
-
-
-/* Main content styles */
-/* main.css */
-/* Header styles */
-.header-img {
-    text-align: center;
-    padding: 2px;
-    background-color: #1b1b1b;
-}
-
-.header-img img {
-    width: 150px;
-}
-
-/* Navigation styles */
+/* Navigation Styles */
 .Navigation {
-    background-color: #333;
-    display: flex;  /* Make the navigation a flex container */
-    justify-content: space-between; /* Distribute the space evenly between the items */
-    overflow: auto;
-    white-space: nowrap;
-    text-align: center;
-}
-
-.Navigation a:active {
-    text-decoration: underline;
-    background-color: #1b1b1b;
+    background-color: #121212;
+    display: flex;  
+    justify-content: space-around; 
 }
 
 .Navigation a {
-    display: inline-block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    flex: 1;  /* Make each link take up an equal amount of space */
-    text-align: center; /* Center the text within each link */
+    flex: 1;  
+    text-align: center; 
 }
 
 .Navigation a:hover {
@@ -209,111 +41,51 @@ th {
     color: black;
 }
 
-
-/* Main content styles */
+/* Main Content Styles */
 .main-content {
-    padding: 0.5rem; /* Reduced padding */
-}
-
-.dashboard-main {
-    text-align: center;
-}
-
-h2 {
-    margin-top: 1.5rem;
-}
-
-/* Table styles */
-.table-container {
-    overflow-x: auto;
-    max-width: 100%;
-    margin-bottom: 1rem;
-}
-
-/* Responsive table */
-.responsive-table {
-    width: 100%;
-    table-layout: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.new-row {
-    background-color: yellow;
-}
-
-th, td {
-    padding: 0.50rem;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-th {
-    background-color: #f2f2f2;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.graph-carousel {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.slide {
-  display: none;
-  min-height: 100%;
-  width: 100%;
-}
-
-.active-slide {
-  display: block;
-}
-
-/* Analysis Page File Tree */
-#fileTree {
-    overflow: auto;
-    border: 1px solid #ccc;
     padding: 1rem;
 }
 
-#ToggleTree {
-    margin-bottom: 1rem;
-}
-
 .dashboard-main {
     text-align: center;
 }
 
-h2 {
-    margin-top: 1.5rem;
+/* Tool Item Styles */
+.tool-item {
+    padding-top: 15px; 
 }
 
-/* Table styles */
+.normalize-data {
+    background-color: rgb(43, 43, 43);
+    color: rgb(235, 235, 235);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+button {
+    background-color: rgb(43, 43, 43);
+    color: rgb(235, 235, 235);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6f6f6f;
+}
+
+/* Table Styles */
 .table-container {
     overflow-x: auto;
     max-width: 100%;
     margin-bottom: 1rem;
 }
 
-/* Responsive table */
 .responsive-table {
     width: 100%;
-    table-layout: auto;
-}
-
-table {
-    width: 100%;
     border-collapse: collapse;
-}
-
-.new-row {
-    background-color: yellow;
 }
 
 th, td {
@@ -327,27 +99,12 @@ th {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9;
 }
 
-.slide {
-  display: none;
-  min-height: 100%;
-  width: 100%;
-}
-
+/* Graph Styles */
 #main-dash {
- justify-content: center;
- background-color:rgb(43, 43, 43);
- max-width: 100%;
-}
-
-.active-slide {
-  display: block;
-}
-
-/* Analysis Page File Tree */
-#fileTree {
-    overflow: auto;
-    border: none;
+    justify-content: center;
+    background-color: rgb(14, 14, 14);
+    max-width: 100%;
 }

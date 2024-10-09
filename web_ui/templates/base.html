@@ -1,58 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Agrotech - Home</title>
+
+    <!-- CSS and JS Links -->
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
-    <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='score-chart.css') }}" type="text/css">
-    <link id="theme-css" rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <header>
-        <!-- Logo -->
         <div class="header-img">
-            <img src="{{ url_for('static', filename='img/agt.png') }}" alt="WiggleHQ">
+            <img src="{{ url_for('static', filename='img/agt.png') }}" alt="Agrotech Logo">
         </div>
+        <nav class="Navigation">
+            <a id="active" href="{{ url_for('base') }}">Dashboard</a>
+            <a href="{{ url_for('analysis') }}">Analytics</a>
+            <a href="{{ url_for('journal') }}">Journal</a>
+            <a href="{{ url_for('api') }}">API</a>  
+            <a href="{{ url_for('settings') }}">Settings</a>  
+        </nav>
     </header>
-    <div class="Navigation">
-        <a id="active" href="{{ url_for('base') }}">Dashboard</a>
-        <a href="{{ url_for('analysis') }}">Anlytics</a>
-        <a href="{{ url_for('journal') }}">Journal</a>
-        <a href="{{ url_for('api') }}">API</a>  
-        <a href="{{ url_for('settings') }}">Settings</a>  
-    </div>
-    <div id="main" class="main-content">
-        <script>
-            $(document).ready(function() {
-                let isDarkMode = false;
-        
-                $('#dark-mode-switch').on('click', function() {
-                    isDarkMode = !isDarkMode;
-                    const themeCssLink = $('#theme-css');
-                    const newTheme = isDarkMode ? 'dark-main.css' : 'main.css';
-        
-                    themeCssLink.attr('href', newTheme);
-                });
-
-                let normalizeData = false;
-                $('#normalize-data').on('change', function() {
-                    normalizeData = $(this).prop('checked');
-                });
-
-                $('#toggle-normalize').on('click', function() {
-                    normalizeData = !normalizeData;
-                    $('#normalize-data').prop('checked', normalizeData);
-                });
-            });
-        </script>           
+    
+    <main id="main" class="main-content">
         <div class="dashboard-main">
-            <div class="tool-item"> 
+            <div class="tool-item">
                 <div class="normalize-data">
                     <label for="normalize-data">Normalize Data</label>
                     <input type="checkbox" id="normalize-data" />
@@ -60,56 +37,71 @@
                         <!-- Options will be populated dynamically -->
                     </select>             
                 </div>
-                
             </div>
+
             <!-- Averages Graph -->
             <canvas id="main-dash"></canvas>
             <hr>
-            <div class="tools">
-                <div class="tools-item">
-                    <div id="health-score-api-data">
-                        Loading data...
-                    </div>  
-                </div>
-            <div class="tool-item">
-                <button id="download-graph">Take Snapshot</button>
-            </div>
 
-             
+            <div class="tools">
+                <div id="health-score-api-data">Loading data...</div>
+                <div class="tool-item">
+                    <button id="download-graph">Take Snapshot</button>
+                </div>
             </div>
         </div>
         
-        <br>
-    </div>  
-    <div class="table-container">
-        <table id="data-table" class="responsive-table">
-            <thead>
-                <tr>
-                    <th>Timestamp</th>
-                    <th>MAC Address</th>
-                    <th>Temperature</th>
-                    <th>Moisture</th>
-                    <th>Light</th>
-                    <th>Conductivity</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for record in records %}
+        <div class="table-container">
+            <table id="data-table" class="responsive-table">
+                <thead>
                     <tr>
-                        <td>{{ record['Timestamp'] }}</td>
-                        <td>{{ record['MAC Address'] }}</td>
-                        <td>{{ record['Temperature'] }}</td>
-                        <td>{{ record['Moisture'] }}</td>
-                        <td>{{ record['Light'] }}</td>
-                        <td>{{ record['Conductivity'] }}</td>
+                        <th>Timestamp</th>
+                        <th>MAC Address</th>
+                        <th>Temperature</th>
+                        <th>Moisture</th>
+                        <th>Light</th>
+                        <th>Conductivity</th>
                     </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% block body %}{% endblock %}
+                </thead>
+                <tbody>
+                    {% for record in records %}
+                        <tr>
+                            <td>{{ record['Timestamp'] }}</td>
+                            <td>{{ record['MAC Address'] }}</td>
+                            <td>{{ record['Temperature'] }}</td>
+                            <td>{{ record['Moisture'] }}</td>
+                            <td>{{ record['Light'] }}</td>
+                            <td>{{ record['Conductivity'] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </main>
+
     <script src="{{ url_for('static', filename='table_data.js') }}"></script>
     <script src="{{ url_for('static', filename='data.js') }}"></script>
     <script src="{{ url_for('static', filename='graph.js') }}"></script>
+    
+    <script>
+        $(document).ready(function() {
+            let isDarkMode = false;
+            $('#dark-mode-switch').on('click', function() {
+                isDarkMode = !isDarkMode;
+                const newTheme = isDarkMode ? 'dark-main.css' : 'main.css';
+                $('#theme-css').attr('href', newTheme);
+            });
+
+            let normalizeData = false;
+            $('#normalize-data').on('change', function() {
+                normalizeData = $(this).prop('checked');
+            });
+
+            $('#toggle-normalize').on('click', function() {
+                normalizeData = !normalizeData;
+                $('#normalize-data').prop('checked', normalizeData);
+            });
+        });
+    </script>
 </body>
 </html>
