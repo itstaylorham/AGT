@@ -13,14 +13,26 @@
           <div class="header-img">
             <img src="{{ url_for('static', filename='img/agt.png') }}" alt="WiggleHQ">
         </div>
-        </header>
-        <div class="Navigation">
-          <a href="{{ url_for('base') }}">Dashboard</a>
-          <a href="{{ url_for('analysis') }}">Analysis</a>
-          <a href="{{ url_for('journal') }}">Journal</a>
-          <a id="active" href="{{ url_for('api') }}">API</a>  
-          <a href="{{ url_for('settings') }}">Settings</a>     
-          </div> 
+        <header>
+          <div class="header-img">
+              <img src="{{ url_for('static', filename='img/agt.png') }}" alt="Agrotech Logo">
+          </div>
+          <!-- Hamburger Icon -->
+          <div class="hamburger-menu" id="hamburger-menu">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          
+          <!-- Slide-out Navigation Menu -->
+          <nav class="slide-menu" id="slide-menu">
+              <a href="{{ url_for('base') }}">Dashboard</a>
+              <a href="{{ url_for('analysis') }}">Analytics</a>
+              <a href="{{ url_for('journal') }}">Journal</a>
+              <a href="{{ url_for('api') }}">API</a>  
+              <a href="{{ url_for('settings') }}">Settings</a>  
+          </nav>
+      </header>
         <div id="main" class="main-content">
             <div class="link-btn">
               <a href="http://localhost:3000/api/sensor_data">
@@ -41,6 +53,14 @@
             </div>
 
         </div>
+        <script>
+          const hamburgerMenu = document.getElementById('hamburger-menu');
+          const slideMenu = document.getElementById('slide-menu');
+          
+          hamburgerMenu.addEventListener('click', function() {
+              slideMenu.classList.toggle('active');
+          });
+      </script>
         {% block body %}{% endblock %}
     </body>
 </html>

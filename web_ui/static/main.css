@@ -1,5 +1,3 @@
-/* main.css */
-
 /* General Styles */
 body {
     font-family: 'Neuropol X Free', sans-serif;
@@ -18,32 +16,72 @@ body {
 }
 
 .header-img img {
-    width: 150px;
+    width: 100px;
+    padding-top:15px;
+    padding-bottom: 15px;
 }
 
-/* Navigation Styles */
-.Navigation {
+/* Hamburger Icon Styles */
+.hamburger-menu {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    margin: 5px;
+    background-color: white;
+}
+
+/* Slide-out Navigation Menu */
+.slide-menu {
+    position: fixed;
+    left: -250px; /* Initially hidden outside the viewport */
+    top: 1;
+    width: 250px;
+    height: 100%;
     background-color: #121212;
-    display: flex;  
-    justify-content: space-around; 
+    transition: 0.4s;
+    z-index: 1000;
+    padding-top: 60px; /* Space for the header */
+    display: flex;
+    flex-direction: column;
 }
 
-.Navigation a {
+.slide-menu a {
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    flex: 1;  
-    text-align: center; 
+    display: block;
+    text-align: left;
 }
 
-.Navigation a:hover {
+.slide-menu a:hover {
     background-color: #ddd;
     color: black;
 }
 
-/* Main Content Styles */
+/* Slide menu when active (visible) */
+.slide-menu.active {
+    left: 0;
+}
+
+/* Main content adjustment when the menu is active */
 .main-content {
     padding: 1rem;
+    transition: margin-left 0.4s;
+}
+
+/* Optional: Shift main content right when menu is open */
+.slide-menu.active + .main-content {
+    margin-left: 250px;
 }
 
 .dashboard-main {
@@ -52,14 +90,59 @@ body {
 
 /* Tool Item Styles */
 .tool-item {
-    padding-top: 15px; 
+    padding-top: 15px;
 }
 
+/* Styles for the normalize data control */
 .normalize-data {
     background-color: rgb(43, 43, 43);
     color: rgb(235, 235, 235);
     border-radius: 10px;
-    padding: 10px;
+    padding: 15px 20px;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 100%;
+    font-size: 1.1em;
+}
+
+/* Custom checkbox styling */
+.normalize-data input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    accent-color: rgb(75, 192, 192);
+}
+
+/* Label styling */
+.normalize-data label {
+    cursor: pointer;
+    font-weight: 500;
+    user-select: none;
+}
+
+/* Device selector styling to match */
+#device-selector {
+    background-color: rgb(43, 43, 43);
+    color: rgb(235, 235, 235);
+    border: 1px solid rgb(75, 192, 192);
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#device-selector:focus {
+    outline: none;
+    border-color: rgb(54, 162, 235);
+}
+
+/* Hover effect */
+.normalize-data:hover {
+    background-color: rgb(53, 53, 53);
 }
 
 button {
@@ -67,6 +150,7 @@ button {
     color: rgb(235, 235, 235);
     border: none;
     border-radius: 10px;
+    margin: 20px;
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -107,4 +191,8 @@ tr:nth-child(even) {
     justify-content: center;
     background-color: rgb(14, 14, 14);
     max-width: 100%;
+}
+
+input #normalize-data {
+    width: 200%;
 }
