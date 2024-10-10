@@ -18,8 +18,16 @@
         <div class="header-img">
             <img src="{{ url_for('static', filename='img/agt.png') }}" alt="Agrotech Logo">
         </div>
-        <nav class="Navigation">
-            <a id="active" href="{{ url_for('base') }}">Dashboard</a>
+        <!-- Hamburger Icon -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <!-- Slide-out Navigation Menu -->
+        <nav class="slide-menu" id="slide-menu">
+            <a href="{{ url_for('base') }}">Dashboard</a>
             <a href="{{ url_for('analysis') }}">Analytics</a>
             <a href="{{ url_for('journal') }}">Journal</a>
             <a href="{{ url_for('api') }}">API</a>  
@@ -35,10 +43,10 @@
                     <input type="checkbox" id="normalize-data" />
                     <select id="device-selector">
                         <!-- Options will be populated dynamically -->
-                    </select>             
+                    </select>
                 </div>
             </div>
-
+            
             <!-- Averages Graph -->
             <canvas id="main-dash"></canvas>
             <hr>
@@ -102,6 +110,13 @@
                 $('#normalize-data').prop('checked', normalizeData);
             });
         });
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const slideMenu = document.getElementById('slide-menu');
+        
+        hamburgerMenu.addEventListener('click', function() {
+            slideMenu.classList.toggle('active');
+        });
     </script>
+    <script type="module" src="{{ url_for('static', filename='normalize.js') }}"></script>
 </body>
 </html>
