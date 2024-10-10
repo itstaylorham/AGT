@@ -3,7 +3,7 @@ import json
 import glob
 import configparser
 from datetime import datetime
-from flask import Flask, jsonify, render_template
+from Flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
 # Initialize Flask app and database
