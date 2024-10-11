@@ -11,7 +11,10 @@ import itertools
 import bluepy
 
 # List of MAC addresses for FlowerCare devices
-device_macs = ["c4:7c:8d:6d:4e:df","c4:7c:8d:6d:24:9e"]
+device_macs = ["c4:7c:8d:6d:26:c9",
+"c4:7c:8d:6d:24:ed",
+"c4:7c:8d:6d:24:9e",
+"c4:7c:8d:6d:4e:df"]
 
 # Initialize the scanner with BT interface and a 
 # custom callback for newly discovered devices.

@@ -9,23 +9,6 @@ import time
 import threading
 from tqdm import tqdm
 
-# Function to prompt the user for date or date range
-def get_date_range():
-    start_date_str = input("Enter start date (YYYY-MM-DD) or press Enter for no start date: ")
-    end_date_str = input("Enter end date (YYYY-MM-DD) or press Enter for no end date: ")
-
-    if start_date_str:
-        start_date = datetime.strptime(start_date_str, '%Y-%m-%d')
-    else:
-        start_date = None
-
-    if end_date_str:
-        end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
-    else:
-        end_date = None
-
-    return start_date, end_date
-
 # Function to load all .json files from the main folder and subfolders
 def load_all_files():
     base_dir = "files/read_files/"
@@ -47,14 +30,6 @@ def load_all_files():
     
     # Append all data into a single DataFrame
     data = pd.concat(data_list, ignore_index=True)
-    return data
-
-# Function to filter data by date range if provided
-def filter_data_by_date(data, start_date, end_date):
-    if start_date:
-        data = data[data['Timestamp'] >= start_date]
-    if end_date:
-        data = data[data['Timestamp'] <= end_date]
     return data
 
 # Timer function to count down and close plots
@@ -116,16 +91,10 @@ def create_and_display_plots(data, features):
     return all_figures
 
 def main():
-    # Get the date range from the user
-    start_date, end_date = get_date_range()
-
     # Load all files from the base folder and subfolders
     data = load_all_files()
 
     if data is not None:
-        # Filter data based on the provided date range
-        data = filter_data_by_date(data, start_date, end_date)
-
         # Select relevant columns for correlation and clustering
         features = data[['Temperature', 'Moisture', 'Light', 'Conductivity']]
 
