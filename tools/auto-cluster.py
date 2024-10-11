@@ -58,11 +58,10 @@ def filter_data_by_date(data, start_date, end_date):
     return data
 
 # Timer function to count down and close plots
-def countdown_timer(seconds):
-    for i in tqdm(range(seconds, 0, -1), desc="Time Remaining", leave=False):
-        time.sleep(1)
-    # Force close all windows
-    plt.close('all')
+def countdown_timer(seconds, event):
+    for i in tqdm(range(seconds, 0, -1), desc="Time Remaining", leave=True):
+        time.sleep(1)  # Sleep for 1 second
+    event.set()  # Set the event to signal that time is up
 
 def create_and_display_plots(data, features):
     # Initialize KMeans model first since it's needed for all plots
@@ -80,7 +79,7 @@ def create_and_display_plots(data, features):
                             palette='viridis')
     pair_plot.fig.canvas.manager.set_window_title('Feature Correlations Overview')
     all_figures.append(pair_plot.fig)
-    plt.show(block=False)
+    plt.show(block=False)  # Display each figure as it's created
 
     # 2. Create correlation matrix
     print("Creating correlation matrix...")
@@ -112,7 +111,7 @@ def create_and_display_plots(data, features):
         plt.title(f"K-Means Clustering: {feature_x} vs {feature_y}")
         plt.xlabel(feature_x)
         plt.ylabel(feature_y)
-        plt.show(block=False)
+        plt.show(block=False)  # Show the plot immediately
 
     return all_figures
 
@@ -135,19 +134,24 @@ def main():
         figures = create_and_display_plots(data, features)
 
         print("\nStarting 30-second display timer...")
+        # Create a threading event
+        event = threading.Event()
         # Start the timer in a separate thread
-        timer_thread = threading.Thread(target=countdown_timer, args=(30,))
+        timer_thread = threading.Thread(target=countdown_timer, args=(30, event))
         timer_thread.start()
         
-        # Keep the main thread alive until the timer finishes
-        plt.pause(30)  # This keeps the plots visible for 30 seconds
+        # Keep GUI active and wait for the event to be set (after the timer finishes)
+        while not event.is_set():
+            plt.pause(0.5)  # Keep GUI responsive and allow interaction
         
-        # Wait for the timer thread to complete
-        timer_thread.join()
-        
-        # Ensure all windows are closed
+        # Ensure all windows are closed after timer ends
+        print("\nClosing all plots...")
         for fig in figures:
             plt.close(fig)
+
+        # Wait for the timer thread to complete
+        timer_thread.join()
+
     else:
         print("No data was found for analysis.")
 
