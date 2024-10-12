@@ -54,7 +54,7 @@ class Session:
     def __init__(self):
         self.read_counter = 0
         self.ping_counter = 0  # Counter for number of pings before clustering
-        self.session_time = 30  # Time between read sessions in seconds
+        self.session_time = 300  # Time between read sessions in seconds
         self.auto_cluster_time = 150  # Time for the auto-cluster after pings
 
     def countdown(self, seconds, message):
@@ -105,7 +105,7 @@ class Session:
 
             self.ping_counter += 1  # Increment the ping counter after each read
 
-            if self.read_counter >= 2:
+            if self.read_counter >= 5:
                 print("2 read sessions completed, running auto-cluster...")
                 subprocess.run(["python", "tools/auto-cluster.py", "--from_main"])
 
