@@ -47,40 +47,45 @@ def api():
 @app.route('/settings')
 def settings():
     return render_template('settings.html')
-
+    
 @app.route('/api/sensor_data', methods=['GET'])
 def get_sensor_data():
-    main_directory = '/home/jeremy/Documents/AGT/files/read_files'
-    files = [f for f in glob.glob(main_directory + "/**/*.json", recursive=True)]
-    files.sort(key=os.path.getmtime, reverse=True)
+    # Define the full path to the sesh.json file
+    file_path = os.path.join('/home/jeremy/Documents/AGT', 'sesh.json')
 
     sensor_data_list = []
-    for file in files:
-        try:
-            with open(file, 'r') as f:
-                content = f.read().strip()
-                if not content:
-                    continue
+    
+    try:
+        with open(file_path, 'r') as f:
+            content = f.read().strip()
+            if not content:
+                return jsonify([])  # Return an empty list if the file is empty
 
-                raw_sensor_data = json.loads(content)
-                for data in raw_sensor_data:
-                    timestamp = datetime.strptime(data.get('Timestamp'), '%Y-%m-%d %H:%M:%S')
-                    new_entry = {
-                        'timestamp': timestamp,
-                        'mac_address': data.get('MAC'),
-                        'temperature': data.get('Temperature'),
-                        'light': data.get('Light'),
-                        'moisture': data.get('Moisture'),
-                        'conductivity': data.get('Conductivity')
-                    }
-                    sensor_data_list.append(new_entry)
+            raw_sensor_data = json.loads(content)
+            
+            # Iterate over the sensor data entries
+            for data in raw_sensor_data:
+                timestamp = datetime.strptime(data.get('Timestamp'), '%Y-%m-%d %H:%M:%S')
+                new_entry = {
+                    'timestamp': timestamp,
+                    'mac_address': data.get('MAC'),
+                    'temperature': data.get('Temperature'),
+                    'light': data.get('Light'),
+                    'moisture': data.get('Moisture'),
+                    'conductivity': data.get('Conductivity')
+                }
+                sensor_data_list.append(new_entry)
 
-        except FileNotFoundError:
-            print(f"File not found: {file}")
-        except json.JSONDecodeError:
-            print(f"Invalid JSON in file: {file}")
+    except FileNotFoundError:
+        print(f"File not found: {file_path}")
+        return jsonify([])  # Return an empty list if the file doesn't exist
+    except json.JSONDecodeError:
+        print(f"Invalid JSON in file: {file_path}")
+        return jsonify([])  # Return an empty list if the JSON is invalid
 
+    # Return the sensor data as a JSON response
     return jsonify(sensor_data_list)
+
 
 # Additional API routes...
 

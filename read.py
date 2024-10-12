@@ -114,7 +114,7 @@ with open(daily_json_file, 'w') as f:
 
 done = True
 
-# Adding sensor data to the "sesh.json" file in the same format as daily data
+# Adding sensor data to the "sesh.json" file in the correct format
 file_name = 'sesh.json'
 if os.path.exists(file_name):
     with open(file_name, 'r') as f:
@@ -126,8 +126,12 @@ else:
 df["Timestamp"] = pd.to_datetime(df["Timestamp"]).dt.strftime("%Y-%m-%d %H:%M:%S")
 df["MAC"] = df["MAC"].astype(str)
 
-# Append the entire dataframe as a single dictionary to the "sesh.json" file
-data.append(df.to_dict(orient='list'))
+# Convert the DataFrame to a list of dictionaries (one per row)
+data_records = df.to_dict(orient='records')
 
+# Append new records
+data.extend(data_records)
+
+# Save the updated data back to the file
 with open(file_name, 'w') as f:
-    json.dump(data, f)
+    json.dump(data, f, indent=4)
