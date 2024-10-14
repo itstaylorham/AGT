@@ -1,5 +1,6 @@
 import requests
 import time
+from datetime import datetime
 
 def get_coordinates(zipcode):
     url = f"https://api.zippopotam.us/us/{zipcode}"
@@ -32,7 +33,8 @@ def get_grid_points(latitude, longitude, retries=3):
                 'office_id': properties['gridId'],
                 'grid_x': properties['gridX'],
                 'grid_y': properties['gridY'],
-                'forecast_url': properties['forecast']
+                'forecast_url': properties['forecast'],
+                'observation_stations_url': properties['observationStations']
             }
         time.sleep(1)
     raise Exception("Failed to get grid points after multiple attempts")
@@ -51,10 +53,32 @@ def get_gridpoint_forecast(forecast_url, retries=3):
         time.sleep(1)
     raise Exception("Failed to get forecast after multiple attempts")
 
+def get_current_conditions(observation_stations_url, retries=3):
+    headers = {
+        'User-Agent': '(weather-app, contact@example.com)',
+        'Accept': 'application/json'
+    }
+    for _ in range(retries):
+        # Get the first observation station
+        stations_response = requests.get(observation_stations_url, headers=headers)
+        if stations_response.status_code == 200:
+            stations_data = stations_response.json()
+            if 'features' in stations_data and len(stations_data['features']) > 0:
+                station_url = stations_data['features'][0]['id'] + '/observations/latest'
+                
+                # Get the current conditions from the station
+                conditions_response = requests.get(station_url, headers=headers)
+                if conditions_response.status_code == 200:
+                    conditions_data = conditions_response.json()
+                    return conditions_data
+        time.sleep(1)
+    raise Exception("Failed to get current conditions after multiple attempts")
+
 def get_weather_forecast(zipcode):
     coords = get_coordinates(zipcode)
     grid = get_grid_points(coords['latitude'], coords['longitude'])
     forecast = get_gridpoint_forecast(grid['forecast_url'])
+    current_conditions = get_current_conditions(grid['observation_stations_url'])
     return {
         'zipcode': zipcode,
         'location': {
@@ -62,21 +86,36 @@ def get_weather_forecast(zipcode):
             'state': coords['state']
         },
         'grid': grid,
-        'forecast': forecast
+        'forecast': forecast,
+        'current_conditions': current_conditions
     }
 
 def print_forecast(forecast_data):
-    print(f"Weather Forecast for {forecast_data['location']['place_name']}, "
+    print(f"Weather for {forecast_data['location']['place_name']}, "
           f"{forecast_data['location']['state']} ({forecast_data['zipcode']})")
     print(f"NWS Grid: {forecast_data['grid']['office_id']} "
           f"{forecast_data['grid']['grid_x']},{forecast_data['grid']['grid_y']}\n")
 
-    for period in forecast_data['forecast'][:3]:  # Print first 3 periods
+
+    print("Forecast:")
+    for period in reversed(forecast_data['forecast'][:2]):  # Print first 3 periods
         print(f"{period['name']}:")
         print(f"Temperature: {period['temperature']}°{period['temperatureUnit']}")
         print(f"Conditions: {period['shortForecast']}")
         print(f"Wind: {period['windSpeed']} {period['windDirection']}")
         print(f"Details: {period['detailedForecast']}\n")
+
+        # Print current conditions
+    current = forecast_data['current_conditions']
+    if 'properties' in current:
+        props = current['properties']
+        timestamp = datetime.fromisoformat(props['timestamp']).strftime('%Y-%m-%d %H:%M:%S')
+        print("Current Conditions:")
+        print(f"As of: {timestamp}")
+        print(f"Temperature: {props['temperature']['value']:.1f}°C / {(props['temperature']['value'] * 9/5 + 32):.1f}°F")
+        print(f"Humidity: {props['relativeHumidity']['value']:.1f}%")
+        print(f"Wind: {props['windSpeed']['value']} {props['windDirection']['value']}")
+        print(f"Conditions: {props['textDescription']}\n")
 
 if __name__ == "__main__":
     try:
