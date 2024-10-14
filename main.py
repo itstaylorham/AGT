@@ -10,7 +10,7 @@ class CommandManager:
     """Handles command validation and execution."""
     VALID_COMMANDS = [
         "scan", "read", "find", "trend", "update", "sesh", "train", "testing model", "push", 
-        "live", "new sesh", "avg", "cluster", "full anal", "fcast", "fcast 3d", 
+        "live", "new sesh", "avg", "cluster", "weather", "full anal", "fcast", "fcast 3d", 
         "build", "summary", "corr", "pred", "cleaner", "nn", "export", "export csv", 
         "export xl", "dbconn"
     ]
@@ -54,7 +54,8 @@ class Session:
     def __init__(self):
         self.read_counter = 0
         self.ping_counter = 0  # Counter for number of pings before clustering
-        self.session_time = 30  # Time between read sessions in seconds
+        self.session_time = 10  # Time between read sessions in seconds
+        self.weather_counter = 0  # New counter for weather.py execution
 
     def countdown(self, seconds, message):
         """Displays a countdown timer in HH:MM:SS format."""
@@ -76,6 +77,7 @@ class Session:
             start_time = time.time()  # Record the start time of the read session
             subprocess.run(["python", "read.py"])  # Execute read.py
             self.read_counter += 1
+            self.weather_counter += 1  # Increment weather counter
 
             # Calculate time taken for the read session
             time_taken = time.time() - start_time
@@ -100,6 +102,12 @@ class Session:
                 # Just wait for the next read session
                 print(f"Waiting for the next read session for {self.session_time} seconds...")
                 self.countdown(self.session_time, "Waiting for the next read session to start...")
+
+            # Check if it's time to run weather.py
+            if self.weather_counter >= 3:
+                print("3 read sessions completed, running weather.py...")  # Updated comment
+                subprocess.run(["python", "tools/weather.py"])
+                self.weather_counter = 0  # Reset the weather counter
 
 class App:
     """Main application class to handle user input and command execution."""
@@ -137,6 +145,8 @@ class App:
             subprocess.run(["python", "tools/neural_net/modular/model.py", "--from_main"])
         elif command == "cluster":
             subprocess.run(["python", "tools/auto-cluster.py", "--from_main"])
+        elif command == "weather":
+            subprocess.run(["python", "tools/weather.py", "--from_main"])
         elif command == "push":
             subprocess.run(["python", "read.py"])
             subprocess.run(["python", "tools/neural_net/modular/model.py", "--from_main"])

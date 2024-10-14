@@ -1,5 +1,6 @@
 import requests
 import time
+import configparser
 from datetime import datetime
 
 def get_coordinates(zipcode):
@@ -96,16 +97,15 @@ def print_forecast(forecast_data):
     print(f"NWS Grid: {forecast_data['grid']['office_id']} "
           f"{forecast_data['grid']['grid_x']},{forecast_data['grid']['grid_y']}\n")
 
-
     print("Forecast:")
-    for period in reversed(forecast_data['forecast'][:2]):  # Print first 3 periods
+    for period in reversed(forecast_data['forecast'][:2]):  # Print first 2 periods
         print(f"{period['name']}:")
         print(f"Temperature: {period['temperature']}°{period['temperatureUnit']}")
         print(f"Conditions: {period['shortForecast']}")
         print(f"Wind: {period['windSpeed']} {period['windDirection']}")
         print(f"Details: {period['detailedForecast']}\n")
 
-        # Print current conditions
+    # Print current conditions
     current = forecast_data['current_conditions']
     if 'properties' in current:
         props = current['properties']
@@ -117,9 +117,16 @@ def print_forecast(forecast_data):
         print(f"Wind: {props['windSpeed']['value']} {props['windDirection']['value']}")
         print(f"Conditions: {props['textDescription']}\n")
 
+def read_config():
+    config = configparser.ConfigParser()
+    config.read('setup.cfg')  # Replace with the path to your config file
+    return config
+
 if __name__ == "__main__":
     try:
-        zipcode = input("Enter a ZIP code: ")
+        config = read_config()
+        zipcode = config['WEATHER'].get('zipcode', '10101')  # Default to '07462' if not found
+        print(zipcode)
         forecast_data = get_weather_forecast(zipcode)
         print_forecast(forecast_data)
     except Exception as e:
