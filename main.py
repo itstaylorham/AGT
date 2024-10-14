@@ -54,8 +54,7 @@ class Session:
     def __init__(self):
         self.read_counter = 0
         self.ping_counter = 0  # Counter for number of pings before clustering
-        self.session_time = 300  # Time between read sessions in seconds
-        self.auto_cluster_time = 150  # Time for the auto-cluster after pings
+        self.session_time = 30  # Time between read sessions in seconds
 
     def countdown(self, seconds, message):
         """Displays a countdown timer in HH:MM:SS format."""
@@ -69,20 +68,6 @@ class Session:
             time.sleep(1)
             seconds -= 1
         print('\nCompleted!')
-
-    def display_timers(self, next_ping_seconds, cluster_seconds):
-        """Displays the countdown times for the next ping and cluster."""
-        while next_ping_seconds > 0 or cluster_seconds > 0:
-            
-            if cluster_seconds > 0:
-                print(f"\rNEXT CLUSTER: {cluster_seconds // 60:02d}:{cluster_seconds % 60:02d}    ", end='', flush=True)
-                time.sleep(1)
-                cluster_seconds -= 1
-            
-            if next_ping_seconds > 0:
-                print(f"\rNEXT PING: {next_ping_seconds // 60:02d}:{next_ping_seconds % 60:02d}    ", end='', flush=True)
-                time.sleep(1)
-                next_ping_seconds -= 1
 
     def start_read_session(self):
         """Starts a read session and manages the read counter."""
@@ -98,28 +83,24 @@ class Session:
 
             # Calculate time until the next ping
             time_until_next_ping = self.session_time - time_taken  # Time until the next ping
-            if time_until_next_ping > 0:
-                next_ping_seconds = int(time_until_next_ping)  # Remaining time for ping
-            else:
-                next_ping_seconds = 0  # No waiting time if the session took longer than the defined time
-
+            next_ping_seconds = max(0, int(time_until_next_ping))  # Remaining time for ping
             self.ping_counter += 1  # Increment the ping counter after each read
 
-            if self.read_counter >= 5:
+            if self.read_counter >= 2:
                 print("2 read sessions completed, running auto-cluster...")
                 subprocess.run(["python", "tools/auto-cluster.py", "--from_main"])
 
-                # Create countdown for auto-cluster based on the number of pings
-                cluster_seconds = self.auto_cluster_time - (self.ping_counter * self.session_time)
+                # Reset counters after clustering
                 self.ping_counter = 0  # Reset the ping counter after clustering
                 self.read_counter = 0  # Reset read session counter
 
-                # Start displaying timers
-                self.display_timers(next_ping_seconds, cluster_seconds)
+                # No waiting time after auto-cluster
+                print("Auto-clustering completed. Immediately starting the next read session...")
             else:
                 # Just wait for the next read session
                 print(f"Waiting for the next read session for {self.session_time} seconds...")
                 self.countdown(self.session_time, "Waiting for the next read session to start...")
+
 class App:
     """Main application class to handle user input and command execution."""
     
