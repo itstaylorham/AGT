@@ -54,7 +54,7 @@ class Session:
     def __init__(self):
         self.read_counter = 0
         self.ping_counter = 0  # Counter for number of pings before clustering
-        self.session_time = 10  # Time between read sessions in seconds
+        self.session_time = 300  # Time between read sessions in seconds
         self.weather_counter = 0  # New counter for weather.py execution
 
     def countdown(self, seconds, message):
