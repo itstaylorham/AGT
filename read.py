@@ -4,24 +4,40 @@ import os
 import pandas as pd
 from flowercare import FlowerCare, FlowerCareScanner
 import time
-from datetime import datetime, timedelta
+from datetime import datetime
 import sys
 import threading
 import itertools
 import bluepy
+import configparser
+import ast
 
-# List of MAC addresses for FlowerCare devices
-device_macs = ["c4:7c:8d:6d:24:ed", "c4:7c:8d:6d:4e:df"]
+def load_config():
+    """Load configuration from setup.cfg file"""
+    config = configparser.ConfigParser()
+    config.read('setup.cfg')
+    
+    # Parse the MAC addresses string into a list
+    try:
+        device_macs = ast.literal_eval(config['DEVICE']['macs'])
+        if not isinstance(device_macs, list):
+            raise ValueError("MAC addresses must be in list format")
+    except (KeyError, SyntaxError, ValueError) as e:
+        print(f"Error reading MAC addresses from config: {e}")
+        sys.exit(1)
+        
+    return device_macs
 
-# Initialize the scanner with BT interface and a 
-# custom callback for newly discovered devices.
-print("");
-print(">>> Finding devices")
-print("");
+# Load MAC addresses from config
+device_macs = load_config()
+
+print(f"Loaded {len(device_macs)} MAC addresses from config")
+
+# Initialize the scanner with BT interface
+print("\n>>> Finding devices\n")
 scanner = FlowerCareScanner(
-    interface='hci0',  # hci0 is default, explicitly stating for demo purpose
+    interface='hci0',
     callback=lambda device: print(device.addr)
-    # any lambda with the device as the sole argument will do
 )
 
 sensor_data_list = []
@@ -41,10 +57,7 @@ for device_mac in device_macs:
     # Find the specified device by MAC address
     device = next((d for d in devices if d.addr == device_mac), None)
     if device is not None:
-        # Query the information for the specified device.
-        print("")
-        print(f">>> Sensor readings for device {device_mac}")
-        print("")
+        print(f"\n>>> Sensor readings for device {device_mac}\n")
         done = False
 
         def animate():
@@ -63,75 +76,75 @@ for device_mac in device_macs:
         t = threading.Thread(target=animate)
         t.start()
 
-        # Query the information for the specified device.
-        flower_care_device = FlowerCare(
-            mac=device_mac, 
-            interface='hci0'
-        )
-        data = {'Timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 
+        # Query the information for the specified device
+        try:
+            flower_care_device = FlowerCare(
+                mac=device_mac, 
+                interface='hci0'
+            )
+            data = {
+                'Timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"), 
                 'MAC': flower_care_device.mac, 
                 'Temperature': flower_care_device.real_time_data.temperature, 
                 'Moisture': flower_care_device.real_time_data.moisture,
                 'Light': flower_care_device.real_time_data.light, 
-                'Conductivity': flower_care_device.real_time_data.conductivity}
-        sensor_data_list.append(data)
+                'Conductivity': flower_care_device.real_time_data.conductivity
+            }
+            sensor_data_list.append(data)
+        except Exception as e:
+            print(f"Error reading device {device_mac}: {e}")
+            continue
 
-        # Pretty print device information
+        # Display current readings
         pd.set_option("display.max_rows", None)
         pd.set_option("display.max_columns", None)
-
         df = pd.DataFrame(sensor_data_list)
         print(df)
+    else:
+        print(f"Device {device_mac} not found during scan")
 
-# Save the data for all devices to a common JSON file
+# Save data to daily folder
 timestamp = datetime.now().strftime("%Y-%m-%d")
 daily_folder = os.path.join("files/read_files", timestamp)
 
-# Create a directory for the current day if it doesn't already exist
+# Create directory if it doesn't exist
 if not os.path.exists(daily_folder):
     os.makedirs(daily_folder)
 
-# Define the daily JSON file path
+# Define daily JSON file path
 daily_json_file = os.path.join(daily_folder, f'AGT-{timestamp}.json')
 
-# Load existing data if the file exists, otherwise create an empty list
+# Load or create daily data
 if os.path.exists(daily_json_file):
     with open(daily_json_file, 'r') as f:
         daily_data = json.load(f)
 else:
     daily_data = []
 
-# Convert the Timestamp column to a string before saving to JSON
-df["Timestamp"] = pd.to_datetime(df["Timestamp"]).dt.strftime("%Y-%m-%d %H:%M:%S")
-df["MAC"] = df["MAC"].astype(str)
+# Prepare DataFrame for JSON
+if sensor_data_list:
+    df = pd.DataFrame(sensor_data_list)
+    df["Timestamp"] = pd.to_datetime(df["Timestamp"]).dt.strftime("%Y-%m-%d %H:%M:%S")
+    df["MAC"] = df["MAC"].astype(str)
 
-# Append new records to the existing data
-daily_data.extend(df.to_dict(orient='records'))
+    # Append new records
+    daily_data.extend(df.to_dict(orient='records'))
 
-# Save the updated data to the daily JSON file
-with open(daily_json_file, 'w') as f:
-    json.dump(daily_data, f)
+    # Save updated data
+    with open(daily_json_file, 'w') as f:
+        json.dump(daily_data, f)
+
+    # Update sesh.json
+    sesh_file = 'sesh.json'
+    if os.path.exists(sesh_file):
+        with open(sesh_file, 'r') as f:
+            sesh_data = json.load(f)
+    else:
+        sesh_data = []
+
+    sesh_data.extend(df.to_dict(orient='records'))
+    
+    with open(sesh_file, 'w') as f:
+        json.dump(sesh_data, f, indent=4)
 
 done = True
-
-# Adding sensor data to the "sesh.json" file in the correct format
-file_name = 'sesh.json'
-if os.path.exists(file_name):
-    with open(file_name, 'r') as f:
-        data = json.load(f)
-else:
-    data = []
-
-# Convert the Timestamp column to a string before saving to JSON
-df["Timestamp"] = pd.to_datetime(df["Timestamp"]).dt.strftime("%Y-%m-%d %H:%M:%S")
-df["MAC"] = df["MAC"].astype(str)
-
-# Convert the DataFrame to a list of dictionaries (one per row)
-data_records = df.to_dict(orient='records')
-
-# Append new records
-data.extend(data_records)
-
-# Save the updated data back to the file
-with open(file_name, 'w') as f:
-    json.dump(data, f, indent=4)
