@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 import time
 import subprocess
+import configparser
+import json  # Use this for safer loading of JSON data
 from datetime import datetime
 import os
 import pandas as pd
@@ -50,12 +52,53 @@ class DataManager:
 
 class Session:
     """Manages read sessions and counter for auto-clustering."""
-
+    
     def __init__(self):
         self.read_counter = 0
-        self.ping_counter = 0  # Counter for number of pings before clustering
-        self.session_time = 300  # Time between read sessions in seconds
-        self.weather_counter = 0  # New counter for weather.py execution
+        self.ping_counter = 0
+        self.session_time = 300
+        self.weather_counter = 0
+        self.devices = self.load_devices()  # Load devices from setup.cfg
+
+    def load_devices(self):
+        """Load devices from the setup.cfg file."""
+        config = configparser.ConfigParser()
+        config.read('setup.cfg')
+        macs_str = config.get('DEVICE', 'macs')
+        macs_list = json.loads(macs_str)  # Use json.loads for safer parsing
+        return macs_list
+
+    def display_devices(self):
+        """Displays the current devices for scanning."""
+        print("Current devices available for scanning:")
+        for idx, device in enumerate(self.devices, start=1):
+            print(f"{idx}: {device}")
+
+    def configure_session(self):
+        """Configure the session based on user input."""
+        print("< Display the current devices > These are the devices that will be scanned.")
+        self.display_devices()
+        if input("Continue? (Y/N) >>> ").strip().upper() != "Y":
+            print("Session setup canceled.")
+            return False
+
+        # Get the time interval between pings
+        try:
+            self.session_time = int(input("\nPlease enter time between pings (in seconds)\n>>> ").strip())
+        except ValueError:
+            print("Invalid input. Using default session time of 300 seconds.")
+            self.session_time = 300
+
+        # Configuration settings
+        self.auto_cluster = input("\nRun auto-cluster? (Y/N)\n>>> ").strip().upper() == "Y"
+        self.monitor_weather = input("\nMonitor weather? (Y/N)\n>>> ").strip().upper() == "Y"
+
+        if input("\nGo live? (Y/N) \n>>> ").strip().upper() == "Y":
+            print("Starting live monitoring session...")
+            subprocess.run(["python", "web_ui/app.py"])
+
+        print("Session configured with applied settings.")
+        return True
 
     def countdown(self, seconds, message):
         """Displays a countdown timer in HH:MM:SS format."""
@@ -71,41 +114,38 @@ class Session:
         print('\nCompleted!')
 
     def start_read_session(self):
-        """Starts a read session and manages the read counter."""
+        """Starts a read session and manages the read counter based on user-defined settings."""
+        if not self.configure_session():
+            return  # Exit if session setup is canceled
+
         while True:
             print("Starting read session...")
-            start_time = time.time()  # Record the start time of the read session
-            subprocess.run(["python", "read.py"])  # Execute read.py
+            start_time = time.time()
+            subprocess.run(["python", "read.py"])
             self.read_counter += 1
-            self.weather_counter += 1  # Increment weather counter
+            self.weather_counter += 1
 
             # Calculate time taken for the read session
             time_taken = time.time() - start_time
-            print(f"Read session completed in {time_taken:.2f} seconds.")
+            print(f"\nRead session completed in {time_taken:.2f} seconds.\n")
 
-            # Calculate time until the next ping
-            time_until_next_ping = self.session_time - time_taken  # Time until the next ping
-            next_ping_seconds = max(0, int(time_until_next_ping))  # Remaining time for ping
-            self.ping_counter += 1  # Increment the ping counter after each read
+            time_until_next_ping = self.session_time - time_taken
+            next_ping_seconds = max(0, int(time_until_next_ping))
+            self.ping_counter += 1
 
-            if self.read_counter >= 2:
-                print("2 read sessions completed, running auto-cluster...")
+            # Check for auto-clustering
+            if self.auto_cluster and self.read_counter >= 2:
+                print("\nRunning auto-cluster...\n")
                 subprocess.run(["python", "tools/auto-cluster.py", "--from_main"])
-
-                # Reset counters after clustering
-                self.ping_counter = 0  # Reset the ping counter after clustering
-                self.read_counter = 0  # Reset read session counter
-
-                # No waiting time after auto-cluster
+                self.ping_counter = 0
+                self.read_counter = 0
                 print("Auto-clustering completed. Immediately starting the next read session...")
             else:
-                # Just wait for the next read session
-                print(f"Waiting for the next read session for {self.session_time} seconds...")
                 self.countdown(self.session_time, "Waiting for the next read session to start...")
 
             # Check if it's time to run weather.py
-            if self.weather_counter >= 3:
-                print("3 read sessions completed, running weather.py...")  # Updated comment
+            if self.monitor_weather and self.weather_counter >= 3:
+                print("3 read sessions completed, running weather.py...")
                 subprocess.run(["python", "tools/weather.py"])
                 self.weather_counter = 0  # Reset the weather counter
 
@@ -186,7 +226,6 @@ class App:
             self.data_manager.export_data(cleaned_data, 'csv', timestamp)
         elif command == "export xl":
             self.data_manager.export_data(cleaned_data, 'excel', timestamp)
-
 
 if __name__ == "__main__":
     app = App()
