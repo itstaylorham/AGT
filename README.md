@@ -25,9 +25,19 @@ This command will return the path of the file followed by the capabilities set o
 6. Finally, to test if bluepy-helper has the necessary permissions, you can try running your script (that uses bluepy-helper) with `sudo` and see if it runs without any errors. If it runs without errors, it means that bluepy-helper has the necessary permissions to access the system's Bluetooth adapter.
 
 ## ENCOUNTERING PyQt5/6 ERRORS?
-run this: "sudo apt install make g++ pkg-config libgl1-mesa-dev libxcb*-dev libfontconfig1-dev libxkbcommon-x11-dev python libgtk-3-dev
-"
+> sudo apt install make g++ pkg-config
+> libgl1-mesa-dev libxcb*-dev
+> libfontconfig1-dev libxkbcommon-x11-dev python libgtk-3-dev
 
+
+## CAN'T INSTALL BLUEPY?
+> sudo apt-get update
+> sudo apt-get install libglib2.0-dev
+
+## NO BLUETOOTH?
+> sudo apt-get install bluetooth bluez bluez-tools
+> sudo systemctl enable bluetooth
+> sudo systemctl start bluetooth
 
 Command List:
 >> scan: Runs the stats method from the scan.py module, likely to scan and display device or data statistics.
