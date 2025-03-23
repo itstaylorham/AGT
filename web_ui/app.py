@@ -51,7 +51,7 @@ def settings():
 @app.route('/api/sensor_data', methods=['GET'])
 def get_sensor_data():
     # Define the full path to the sesh.json file
-    file_path = os.path.join('/home/jeremy/Documents/AGT', 'sesh.json')
+    file_path = os.path.join('/home/nunya/Documents/GitHub/AGT', 'sesh.json')
 
     sensor_data_list = []
     

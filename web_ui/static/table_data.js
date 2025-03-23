@@ -25,19 +25,60 @@ function addNewRow(item) {
     conductivityCell.textContent = item.Conductivity;
 }
 
+function setupWebSocket() {
+    const socket = new WebSocket('ws://api/sensor_data'); // Replace with your WebSocket URL
+
+    socket.onmessage = (event) => {
+        const deviceData = JSON.parse(event.data);
+        let formattedTimestamp = new Date(deviceData.timestamp).toLocaleString();
+
+        let item = {
+            Timestamp: formattedTimestamp,
+            MAC: deviceData.mac_address,
+            Temperature: deviceData.temperature,
+            Moisture: deviceData.moisture,
+            Light: deviceData.light,
+            Conductivity: deviceData.conductivity
+        };
+        addNewRow(item);
+
+        // Optional: Maintain table size (e.g., keep last 144 rows)
+        const table = document.getElementById('data-table');
+        const rows = table.getElementsByTagName('tr');
+        if (rows.length > 144) {
+            table.deleteRow(rows.length - 1); // Remove oldest row
+        }
+    };
+
+    socket.onopen = () => {
+        console.log('WebSocket connection established');
+    };
+
+    socket.onerror = (error) => {
+        console.error('WebSocket error:', error);
+    };
+
+    socket.onclose = () => {
+        console.log('WebSocket connection closed, attempting to reconnect...');
+        setTimeout(setupWebSocket, 2000); // Reconnect after 2 seconds
+    };
+}
+
+// Initial setup
+document.addEventListener('DOMContentLoaded', () => {
+    setupWebSocket();
+    // Optional: Initial fetch to populate table
+    fetchSensorData();
+});
+
 async function fetchSensorData() {
     try {
         const response = await fetch('/api/sensor_data');
         const data = await response.json();
         const sortedData = sortData(data).slice(0, 144);
 
-        const table = document.getElementById('data-table');
-        table.getElementsByTagName('tbody')[0].innerHTML = '';
-
         sortedData.forEach(deviceData => {
-            // Convert to the user's local time and format it
             let formattedTimestamp = new Date(deviceData.timestamp).toLocaleString();
-
             let item = {
                 Timestamp: formattedTimestamp,
                 MAC: deviceData.mac_address,
@@ -52,8 +93,3 @@ async function fetchSensorData() {
         console.error('Error fetching sensor data:', error);
     }
 }
-
-
-
-document.addEventListener('DOMContentLoaded', fetchSensorData);
-setInterval(fetchSensorData, 5000);

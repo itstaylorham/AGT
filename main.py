@@ -26,13 +26,26 @@ class DataManager:
     
     @staticmethod
     def clean_data(data):
-        data['Timestamp'] = pd.to_datetime(data['Timestamp'].str[0]).dt.strftime('%Y-%m-%d %H:%M:%S')
-        data['MAC'] = data['MAC'].str[0]
-        data['Moisture'] = data['Moisture'].str[0]
-        data['Light'] = data['Light'].str[0]
-        data['Temperature'] = data['Temperature'].str[0]
-        data['Conductivity'] = data['Conductivity'].str[0]
+        """Clean and prepare data for export while preserving precision."""
+        # Convert timestamp to consistent format
+        data['Timestamp'] = pd.to_datetime(data['Timestamp'], errors='coerce').dt.strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Handle missing columns but preserve actual values
+        required_columns = ['MAC', 'Moisture', 'Light', 'Temperature', 'Conductivity']
+        for col in required_columns:
+            if col not in data.columns:
+                print(f"Warning: {col} column missing. Adding empty values.")
+                data[col] = ""
+                
+        # Handle null values but keep the data types appropriate
+        data['MAC'] = data['MAC'].fillna("")
+        data['Moisture'] = pd.to_numeric(data['Moisture'], errors='coerce').fillna(0)
+        data['Light'] = pd.to_numeric(data['Light'], errors='coerce').fillna(0)
+        data['Temperature'] = pd.to_numeric(data['Temperature'], errors='coerce').fillna(0)
+        data['Conductivity'] = pd.to_numeric(data['Conductivity'], errors='coerce').fillna(0)
+        
         return data
+
 
     @staticmethod
     def export_data(data, file_format, timestamp):
@@ -56,7 +69,7 @@ class Session:
     def __init__(self):
         self.read_counter = 0
         self.ping_counter = 0
-        self.session_time = 300
+        self.session_time = 600
         self.weather_counter = 0
         self.devices = self.load_devices()  # Load devices from setup.cfg
 
@@ -87,11 +100,6 @@ class Session:
             self.session_time = int(input("\nPlease enter time between pings (in seconds)\n>>> ").strip())
         except ValueError:
             print("Invalid input. Using default session time of 300 seconds.")
-            self.session_time = 300
-
-        # Configuration settings
-        self.auto_cluster = input("\nRun auto-cluster? (Y/N)\n>>> ").strip().upper() == "Y"
-        self.monitor_weather = input("\nMonitor weather? (Y/N)\n>>> ").strip().upper() == "Y"
 
         if input("\nGo live? (Y/N) \n>>> ").strip().upper() == "Y":
             print("Starting live monitoring session...")
@@ -133,21 +141,7 @@ class Session:
             next_ping_seconds = max(0, int(time_until_next_ping))
             self.ping_counter += 1
 
-            # Check for auto-clustering
-            if self.auto_cluster and self.read_counter >= 2:
-                print("\nRunning auto-cluster...\n")
-                subprocess.run(["python", "tools/auto-cluster.py", "--from_main"])
-                self.ping_counter = 0
-                self.read_counter = 0
-                print("Auto-clustering completed. Immediately starting the next read session...")
-            else:
-                self.countdown(self.session_time, "Waiting for the next read session to start...")
-
-            # Check if it's time to run weather.py
-            if self.monitor_weather and self.weather_counter >= 3:
-                print("3 read sessions completed, running weather.py...")
-                subprocess.run(["python", "tools/weather.py"])
-                self.weather_counter = 0  # Reset the weather counter
+            self.countdown(self.session_time, "Waiting for the next read session to start...")
 
 class App:
     """Main application class to handle user input and command execution."""
