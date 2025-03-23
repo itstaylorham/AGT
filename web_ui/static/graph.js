@@ -72,7 +72,15 @@ document.addEventListener('DOMContentLoaded', async function () {
             options: {
                 scales: {
                     x: { reverse: false }, // Display X-axis normally
-                    y: { display: true },  // Show Y-axis labels
+                    y: {
+                        display: true,
+                        ticks: {
+                            callback: function (value, index, values) {
+                                // Assuming value here is the index of the hour in uniqueHours
+                                return chartData.yAxisLabels[value];
+                            }
+                        }
+                    },
                 },
             },
         });
@@ -83,6 +91,11 @@ document.addEventListener('DOMContentLoaded', async function () {
         const timestamps = deviceData.map(item => item.Timestamp);
         const xAxisLabels = timestamps.map(ts => ts.toISOString().slice(0, 10));
 
+        // Extract hours for Y-axis labels
+        const hours = timestamps.map(timestamp => timestamp.getHours() + ':00');
+        const uniqueHours = [...new Set(hours)];
+        const yAxisLabels = uniqueHours.sort(); // Sort hours for correct display
+
         return {
             labels: xAxisLabels,
             datasets: [
@@ -91,6 +104,7 @@ document.addEventListener('DOMContentLoaded', async function () {
                 createDataset('Moisture', 'rgba(0, 0, 200, 0.75)', deviceData.map(item => item.Moisture)),
                 createDataset('Conductivity', 'rgba(200, 0, 0, 0.75)', deviceData.map(item => item.Conductivity)),
             ],
+            yAxisLabels: yAxisLabels, // Store Y-axis labels
         };
     }
 

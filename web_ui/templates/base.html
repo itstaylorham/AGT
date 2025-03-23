@@ -6,26 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Agrotech - Home</title>
 
-    <!-- CSS and JS Links -->
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
 </head>
 <body>
     <header>
         <div class="header-img">
             <img src="{{ url_for('static', filename='img/agt.png') }}" alt="Agrotech Logo">
         </div>
-        <!-- Hamburger Icon -->
         <div class="hamburger-menu" id="hamburger-menu">
             <span></span>
             <span></span>
             <span></span>
         </div>
         
-        <!-- Slide-out Navigation Menu -->
         <nav class="slide-menu" id="slide-menu">
             <a href="{{ url_for('base') }}">Dashboard</a>
             <a href="{{ url_for('analysis') }}">Analytics</a>
@@ -42,12 +40,10 @@
                     <label for="normalize-data">Normalize Data</label>
                     <input type="checkbox" id="normalize-data" />
                     <select id="device-selector">
-                        <!-- Options will be populated dynamically -->
-                    </select>
+                        </select>
                 </div>
             </div>
             
-            <!-- Averages Graph -->
             <canvas id="main-dash"></canvas>
             <hr>
 

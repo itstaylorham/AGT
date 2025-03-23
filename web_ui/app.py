@@ -1,8 +1,7 @@
 import os
 import json
-import glob
 import configparser
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
 
@@ -51,7 +50,7 @@ def settings():
 @app.route('/api/sensor_data', methods=['GET'])
 def get_sensor_data():
     # Define the full path to the sesh.json file
-    file_path = os.path.join('/home/nunya/Documents/GitHub/AGT', 'sesh.json')
+    file_path = os.path.join('sesh.json')
 
     sensor_data_list = []
     
@@ -63,18 +62,24 @@ def get_sensor_data():
 
             raw_sensor_data = json.loads(content)
             
-            # Iterate over the sensor data entries
+            # Calculate the time 24 hours ago
+            twenty_four_hours_ago = datetime.now() - timedelta(hours=12)
+            
+            # Iterate over the sensor data entries and filter
             for data in raw_sensor_data:
                 timestamp = datetime.strptime(data.get('Timestamp'), '%Y-%m-%d %H:%M:%S')
-                new_entry = {
-                    'timestamp': timestamp,
-                    'mac_address': data.get('MAC'),
-                    'temperature': data.get('Temperature'),
-                    'light': data.get('Light'),
-                    'moisture': data.get('Moisture'),
-                    'conductivity': data.get('Conductivity')
-                }
-                sensor_data_list.append(new_entry)
+                
+                # Only include entries from the last 24 hours
+                if timestamp >= twenty_four_hours_ago:
+                    new_entry = {
+                        'timestamp': timestamp,
+                        'mac_address': data.get('MAC'),
+                        'temperature': data.get('Temperature'),
+                        'light': data.get('Light'),
+                        'moisture': data.get('Moisture'),
+                        'conductivity': data.get('Conductivity')
+                    }
+                    sensor_data_list.append(new_entry)
 
     except FileNotFoundError:
         print(f"File not found: {file_path}")
