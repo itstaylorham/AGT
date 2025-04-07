@@ -27,5 +27,5 @@ files/db_insert_test.py
 .y_test
 
 # Ignore session-related files
-# sesh.json
-# sesh.json/
+#Terminal User Interface
+/tui/target
