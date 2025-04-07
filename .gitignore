@@ -14,7 +14,7 @@ version/
 files/export/
 files/metrics/
 files/predict/
-files/read_files/
+# files/read_files/
 files/reports/
 files/scan_files/
 files/db_insert_test.py
@@ -27,5 +27,5 @@ files/db_insert_test.py
 .y_test
 
 # Ignore session-related files
-sesh.json
-sesh.json/
+# sesh.json
+# sesh.json/
