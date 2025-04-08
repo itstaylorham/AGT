@@ -63,7 +63,7 @@ def get_sensor_data():
             raw_sensor_data = json.loads(content)
             
             # Calculate the time 24 hours ago
-            twenty_four_hours_ago = datetime.now() - timedelta(hours=12)
+            twenty_four_hours_ago = datetime.now() - timedelta(hours=999999)
             
             # Iterate over the sensor data entries and filter
             for data in raw_sensor_data:
@@ -91,8 +91,6 @@ def get_sensor_data():
     # Return the sensor data as a JSON response
     return jsonify(sensor_data_list)
 
-
-# Additional API routes...
 
 if __name__ == "__main__":
     app.run(host=HOST, port=PORT)

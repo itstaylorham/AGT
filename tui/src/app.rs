@@ -1,6 +1,7 @@
 // src/app.rs (Modified)
 use serde::Deserialize;
 use std::sync::{Arc, Mutex};
+use std::time::Instant;
 
 #[derive(Deserialize, Clone)]
 pub struct SensorData {
@@ -15,13 +16,17 @@ pub struct SensorData {
 
 #[derive(Clone)]
 pub struct AppState {
-    pub data: Arc<Mutex<Vec<SensorData>>>,
+    pub data: Vec<SensorData>,
+    pub last_update_time: Option<Instant>,
+    pub previous_data_len: usize,
 }
 
 impl AppState {
     pub fn new() -> Self {
         AppState {
-            data: Arc::new(Mutex::new(vec![])),
+            data: vec![],
+            last_update_time: None,
+            previous_data_len: 0,
         }
     }
 }
