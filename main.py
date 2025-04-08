@@ -244,17 +244,24 @@ class App:
             print("New session cancelled.")
 
     def export_session_data(self, command):
-        """Exports the current session data in the specified format."""
-        data = pd.read_json("sesh.json")
-        cleaned_data = self.data_manager.clean_data(data)
-        timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
+        """Exports the current session data in the specified format with filtering options."""
+        try:
+            data = pd.read_json("sesh.json")
+            if data.empty:
+                print("No data available to export.")
+                return
+                
+            cleaned_data = self.data_manager.clean_data(data)
+            timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
 
-        if command == "export":
-            self.data_manager.export_data(cleaned_data, 'json', timestamp)
-        elif command == "export csv":
-            self.data_manager.export_data(cleaned_data, 'csv', timestamp)
-        elif command == "export xl":
-            self.data_manager.export_data(cleaned_data, 'excel', timestamp)
+            if command == "export":
+                self.data_manager.export_data(cleaned_data, 'json', timestamp)
+            elif command == "export csv":
+                self.data_manager.export_data(cleaned_data, 'csv', timestamp)
+            elif command == "export xl":
+                self.data_manager.export_data(cleaned_data, 'excel', timestamp)
+        except Exception as e:
+            print(f"Error exporting data: {e}")
 
 if __name__ == "__main__":
     app = App()
