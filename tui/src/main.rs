@@ -43,6 +43,8 @@ async fn update_data_periodically(
     manual_refresh_flag: Arc<Mutex<bool>>,
 ) {
     let mut interval = interval(Duration::from_secs(5 * 60)); // Regular interval
+=======
+async fn update_data_periodically(app_state: std::sync::Arc<app::AppState>, json_url: String) {
     let mut interval = interval(Duration::from_secs(10)); // ten seconds
 >>>>>>> Stashed changes
     loop {
