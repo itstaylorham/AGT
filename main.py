@@ -210,33 +210,7 @@ class App:
 
     def export_session_data(self, command):
         """Exports the current session data in the specified format."""
-        # Load session data
         data = pd.read_json("sesh.json")
-        
-        # Ask for the number of days to export
-        try:
-            days = int(input("How many days of data would you like to export? "))
-        except ValueError:
-            print("Invalid input. Using all available data.")
-            days = None
-
-        # Filter data for the last 'days' if applicable
-        if days:
-            end_date = data['Timestamp'].max()
-            start_date = (datetime.strptime(end_date, '%Y-%m-%d %H:%M:%S') - pd.Timedelta(days=days)).strftime('%Y-%m-%d %H:%M:%S')
-            data = data[data['Timestamp'] >= start_date]
-
-        # Ask for sorting order (ASC or DESC)
-        sort_order = input("Enter sorting order (ASC/DESC): ").strip().upper()
-        if sort_order == "ASC":
-            data = data.sort_values(by='Timestamp', ascending=True)
-        elif sort_order == "DESC":
-            data = data.sort_values(by='Timestamp', ascending=False)
-        else:
-            print("Invalid sort order. Sorting by default (ASC).")
-            data = data.sort_values(by='Timestamp', ascending=True)
-
-        # Clean the data before exporting
         cleaned_data = self.data_manager.clean_data(data)
         timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
 
@@ -245,4 +219,8 @@ class App:
         elif command == "export csv":
             self.data_manager.export_data(cleaned_data, 'csv', timestamp)
         elif command == "export xl":
-            self.data_manager.export_data
+            self.data_manager.export_data(cleaned_data, 'excel', timestamp)
+
+if __name__ == "__main__":
+    app = App()
+    app.run()
