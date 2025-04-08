@@ -46,6 +46,9 @@ async fn update_data_periodically(
 =======
 async fn update_data_periodically(app_state: std::sync::Arc<app::AppState>, json_url: String) {
     let mut interval = interval(Duration::from_secs(10)); // ten seconds
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     loop {
         tokio::select! {
