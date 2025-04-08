@@ -46,22 +46,57 @@ class DataManager:
         
         return data
 
-
     @staticmethod
     def export_data(data, file_format, timestamp):
-        """Export cleaned data to the specified format."""
+        """Export cleaned data to the specified format with filtering by days and sorting options."""
         if not os.path.exists("files/export"):
             os.makedirs("files/export")
-
+        
+        # Convert Timestamp column to datetime for filtering
+        data['Timestamp'] = pd.to_datetime(data['Timestamp'])
+        
+        # Ask user for how many days of data to export
+        try:
+            days = int(input("How many days of data would you like to export? (Enter 0 for all data): "))
+            if days < 0:
+                print("Invalid input. Using all available data.")
+                days = 0
+        except ValueError:
+            print("Invalid input. Using all available data.")
+            days = 0
+        
+        # Filter data by days if specified
+        if days > 0:
+            current_date = datetime.now()
+            filter_date = current_date - pd.Timedelta(days=days)
+            data = data[data['Timestamp'] >= filter_date]
+            if data.empty:
+                print(f"No data found within the last {days} days.")
+                return
+        
+        # Ask user for sorting order
+        sort_order = input("Sort by timestamp in ascending (ASC) or descending (DESC) order? ").strip().upper()
+        if sort_order == "ASC":
+            data = data.sort_values('Timestamp', ascending=True)
+        elif sort_order == "DESC":
+            data = data.sort_values('Timestamp', ascending=False)
+        else:
+            print("Invalid sort order. Using ascending order by default.")
+            data = data.sort_values('Timestamp', ascending=True)
+        
+        # Convert Timestamp back to string format for export
+        data['Timestamp'] = data['Timestamp'].dt.strftime('%Y-%m-%d %H:%M:%S')
+        
+        # Export data in the specified format
         if file_format == 'json':
-            data.to_json(f'files/export/{timestamp}.json')
-            print('Current session saved as JSON in /AGT/files/export')
+            data.to_json(f'files/export/{timestamp}.json', orient='records')
+            print(f'Data for the last {days if days > 0 else "all"} days saved as JSON in /AGT/files/export')
         elif file_format == 'csv':
-            data.to_csv(f'files/export/{timestamp}.csv')
-            print('Current session saved as CSV in /AGT/files/export')
+            data.to_csv(f'files/export/{timestamp}.csv', index=False)
+            print(f'Data for the last {days if days > 0 else "all"} days saved as CSV in /AGT/files/export')
         elif file_format == 'excel':
-            data.to_excel(f'files/export/{timestamp}.xlsx')
-            print('Current session saved as Excel in /AGT/files/export')
+            data.to_excel(f'files/export/{timestamp}.xlsx', index=False)
+            print(f'Data for the last {days if days > 0 else "all"} days saved as Excel in /AGT/files/export')
 
 class Session:
     """Manages read sessions and counter for auto-clustering."""
