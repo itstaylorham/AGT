@@ -36,12 +36,15 @@ fn parse_data(json_value: &Value) -> Vec<app::SensorData> {
     data
 }
 
+<<<<<<< Updated upstream
 async fn update_data_periodically(
     app_state: Arc<Mutex<app::AppState>>,
     json_url: String,
     manual_refresh_flag: Arc<Mutex<bool>>,
 ) {
     let mut interval = interval(Duration::from_secs(5 * 60)); // Regular interval
+    let mut interval = interval(Duration::from_secs(10)); // ten seconds
+>>>>>>> Stashed changes
     loop {
         tokio::select! {
             biased; // Apply biased selection to the entire block
