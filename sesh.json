@@ -66854,5 +66854,45 @@
         "Moisture": 55,
         "Light": 108,
         "Conductivity": 1116
+    },
+    {
+        "Timestamp": "2025-04-08 19:56:16",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.4,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 19:56:19",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 55,
+        "Light": 104,
+        "Conductivity": 1851
+    },
+    {
+        "Timestamp": "2025-04-08 19:56:23",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 55,
+        "Light": 65,
+        "Conductivity": 1095
+    },
+    {
+        "Timestamp": "2025-04-08 20:08:31",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.6,
+        "Moisture": 24,
+        "Light": 186,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 20:08:41",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 30,
+        "Conductivity": 1100
     }
 ]
