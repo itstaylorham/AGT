@@ -32,8 +32,7 @@ suppressPackageStartupMessages(library(dplyr))
 
 # Read the latest exported data from main.py
 # Location is tentative
-session_data <- read.csv("data/session.csv")
-training_data <- read.csv("data/training.csv")
+session_data <- read.csv("data/training.csv")
 
 # Convert Timestamp to POSIXct for proper datetime comparison
 session_data$Timestamp <- as.POSIXct(session_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
