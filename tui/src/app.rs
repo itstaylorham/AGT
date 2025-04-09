@@ -1,5 +1,4 @@
 use serde::Deserialize;
-use std::sync::{Arc, Mutex};
 use std::time::Instant;
 
 #[derive(Deserialize, Clone)]

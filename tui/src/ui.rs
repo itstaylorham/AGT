@@ -1,5 +1,4 @@
 use ratatui::{
-    backend::Backend,
     layout::{Constraint, Direction, Layout},
     style::{Color, Modifier, Style},
     widgets::{Block, Borders, Paragraph, Row, Table},
@@ -10,16 +9,21 @@ use std::time::{Duration, Instant};
 
 use crate::app::AppState;
 
-pub fn render<B: Backend>(
+pub fn render(
     f: &mut Frame,
     app_state: &AppState,
     refresh_interval_ui: Duration,
     manual_refresh_flag: Arc<Mutex<bool>>,
+    api_url: &str, // added this
 ) {
     let chunks = Layout::default()
         .direction(Direction::Vertical)
         .margin(1)
-        .constraints([Constraint::Min(0), Constraint::Length(1)].as_ref())
+        .constraints([
+            Constraint::Min(0),        // Data table
+            Constraint::Length(1),     // Countdown timer
+            Constraint::Length(1),     // Source URL
+        ])
         .split(f.size());
 
     let mut reversed_data = app_state.data.clone();
@@ -60,20 +64,22 @@ pub fn render<B: Backend>(
 
     f.render_widget(table, chunks[0]);
 
-    // Render countdown timer and trigger manual refresh
+    // Countdown timer
     let now = Instant::now();
-    let elapsed_since_update = app_state.last_update_time.map_or(refresh_interval_ui, |t| now.duration_since(t));
+    let elapsed_since_update = app_state
+        .last_update_time
+        .map_or(refresh_interval_ui, |t| now.duration_since(t));
 
     let remaining_secs = if elapsed_since_update < refresh_interval_ui {
         (refresh_interval_ui - elapsed_since_update).as_secs()
     } else {
-        // Trigger manual refresh when the UI timer ends
         let mut refresh_flag_guard = manual_refresh_flag.lock().unwrap();
         *refresh_flag_guard = true;
-        refresh_interval_ui.as_secs() // Show "Refreshing in: 10 seconds" again immediately
+        refresh_interval_ui.as_secs()
     };
 
- //   let countdown_text = format!("Refreshing in: {} seconds", remaining_secs);
- //   let countdown = Paragraph::new(countdown_text).style(Style::default().fg(Color::Cyan));
- //   f.render_widget(countdown, chunks[1]);
+    // API source URL display
+    let source_text = format!("Source: {}", api_url);
+    let source = Paragraph::new(source_text).style(Style::default().fg(Color::DarkGray));
+    f.render_widget(source, chunks[2]);
 }

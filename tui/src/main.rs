@@ -3,7 +3,8 @@ use std::{
     sync::{Arc, Mutex},
     time::{Duration, Instant},
 };
-use tokio::time::{interval, sleep}; // Import sleep
+
+use tokio::time::{interval, sleep};
 use crossterm::{
     event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode},
     execute,
@@ -15,6 +16,7 @@ use std::error::Error;
 
 mod app;
 mod ui;
+mod api;
 
 async fn fetch_data(url: &str) -> Result<Value, Box<dyn Error>> {
     let response = reqwest::get(url).await?;
@@ -45,7 +47,7 @@ async fn update_data_periodically(
 
     loop {
         tokio::select! {
-            biased; // Apply biased selection to the entire block
+            biased;
             _ = interval.tick() => {
                 fetch_and_update(app_state.clone(), &json_url).await;
             }
@@ -54,25 +56,24 @@ async fn update_data_periodically(
                 {
                     let flag_guard = manual_refresh_flag.lock().unwrap();
                     should_refresh = *flag_guard;
-                } // flag_guard is dropped here
+                }
 
                 if should_refresh {
                     Some(())
                 } else {
-                    tokio::time::sleep(Duration::from_millis(100)).await; // Use tokio::time::sleep
+                    sleep(Duration::from_millis(100)).await;
                     None
                 }
             } => {
                 if manual_refresh.is_some() {
                     fetch_and_update(app_state.clone(), &json_url).await;
                     let mut flag_guard = manual_refresh_flag.lock().unwrap();
-                    *flag_guard = false; // Reset the flag
+                    *flag_guard = false;
                 }
             }
         }
     }
 }
-
 
 async fn fetch_and_update(app_state: Arc<Mutex<app::AppState>>, url: &str) {
     match fetch_data(url).await {
@@ -93,21 +94,17 @@ async fn fetch_and_update(app_state: Arc<Mutex<app::AppState>>, url: &str) {
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {
-    // Setup terminal
     enable_raw_mode()?;
     let mut stdout = io::stdout();
     execute!(stdout, EnterAlternateScreen, EnableMouseCapture)?;
     let backend = CrosstermBackend::new(stdout);
     let mut terminal = Terminal::new(backend)?;
 
-    // Application state
     let app_state = Arc::new(Mutex::new(app::AppState::new()));
     let json_url = "http://192.168.1.193:8000/api/sensor_data".to_string();
 
-    // Flag to trigger manual refresh from the main loop
     let manual_refresh_flag = Arc::new(Mutex::new(false));
 
-    // Spawn a background task to update data periodically and on manual trigger
     let app_state_clone = Arc::clone(&app_state);
     let url_clone = json_url.clone();
     let refresh_flag_clone = Arc::clone(&manual_refresh_flag);
@@ -115,19 +112,20 @@ async fn main() -> Result<(), Box<dyn Error>> {
         update_data_periodically(app_state_clone, url_clone, refresh_flag_clone).await;
     });
 
-    // Main application loop
     let mut should_quit = false;
-    let refresh_interval_ui = Duration::from_secs(10); // UI refresh interval
+    let refresh_interval_ui = Duration::from_secs(10);
+
     while !should_quit {
         {
             let app_state_guard = app_state.lock().unwrap();
             terminal.draw(|f| {
-                ui::render::<CrosstermBackend<std::io::Stdout>>(
+                ui::render(
                     f,
                     &app_state_guard,
                     refresh_interval_ui, // Pass the UI refresh interval
                     Arc::clone(&manual_refresh_flag), // Pass the flag
-                )
+                    &json_url, // Pass the API URL (if needed)
+                )                
             })?;
         }
 
@@ -138,10 +136,10 @@ async fn main() -> Result<(), Box<dyn Error>> {
                 }
             }
         }
-        tokio::time::sleep(Duration::from_millis(100)).await; // Small delay for responsiveness
+
+        sleep(Duration::from_millis(100)).await;
     }
 
-    // Restore terminal
     disable_raw_mode()?;
     execute!(
         terminal.backend_mut(),
