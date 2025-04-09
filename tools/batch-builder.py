@@ -82,14 +82,18 @@ data = []
 # Get the current datetime and subtract the intervals
 current_time = datetime.now()
 
-# Generate rows with timestamp, temperature, moisture, light, and conductivity
+# Generate rows with timestamp, MAC address, temperature, moisture, light, and conductivity
 for i in range(intervals):
     timestamp = current_time - timedelta(seconds=i * interval_duration)
     # Format timestamp to "YYYY-MM-DD HH:MM:SS"
     formatted_timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')
     
+    # Define a placeholder MAC address (XX:XX:XX:XX:XX:XX)
+    mac_address = "XX:XX:XX:XX:XX:XX"
+    
     row = {
         "Timestamp": formatted_timestamp,
+        "MAC": mac_address,
         "Temperature": round(temp[i], 2),
         "Moisture": round(moisture[i], 2),
         "Light": round(light[i], 2),
@@ -99,7 +103,7 @@ for i in range(intervals):
 
 # Write the list of dictionaries to a CSV file
 with open(file_name, "w", newline="") as csvfile:
-    fieldnames = ["Timestamp", "Temperature", "Moisture", "Light", "Conductivity"]
+    fieldnames = ["Timestamp", "MAC", "Temperature", "Moisture", "Light", "Conductivity"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
     writer.writeheader()
