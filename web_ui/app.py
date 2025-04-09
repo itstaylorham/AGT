@@ -63,7 +63,7 @@ def get_sensor_data():
             raw_sensor_data = json.loads(content)
             
             # Calculate the time 24 hours ago
-            twenty_four_hours_ago = datetime.now() - timedelta(hours=999999)
+            twenty_four_hours_ago = datetime.now() - timedelta(hours=12)
             
             # Iterate over the sensor data entries and filter
             for data in raw_sensor_data:
