@@ -2,12 +2,21 @@ import csv
 import json
 import numpy as np
 import time
+from datetime import datetime, timedelta
 
 print('-- batch builder --')
 
+# Ask the user for how many days of data to generate
+days = int(input("How many days of data should be generated? "))
+assert days > 0, "Number of days must be greater than 0."
+
+# Ask for the desired file name
+file_name = input("Enter the name of the output CSV file (without extension): ")
+file_name = f"./files/batches/{file_name}.csv"
+
 # Define the time range
 interval_duration = 10 * 60  # 10 minutes in seconds
-past_hours = 24
+past_hours = days * 24  # Convert days to hours
 
 # Calculate the number of intervals
 intervals = past_hours * 60 * 60 // interval_duration
@@ -70,12 +79,17 @@ cond = scale * cond_sine + (1 - scale) * cond_rand
 # Create a list to hold the data rows
 data = []
 
+# Get the current datetime and subtract the intervals
+current_time = datetime.now()
+
 # Generate rows with timestamp, temperature, moisture, light, and conductivity
-current_time = int(time.time())  # Current Unix timestamp
 for i in range(intervals):
-    timestamp = current_time - (i * interval_duration)
+    timestamp = current_time - timedelta(seconds=i * interval_duration)
+    # Format timestamp to "YYYY-MM-DD HH:MM:SS"
+    formatted_timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+    
     row = {
-        "Timestamp": timestamp,
+        "Timestamp": formatted_timestamp,
         "Temperature": round(temp[i], 2),
         "Moisture": round(moisture[i], 2),
         "Light": round(light[i], 2),
@@ -84,7 +98,7 @@ for i in range(intervals):
     data.append(row)
 
 # Write the list of dictionaries to a CSV file
-with open("./files/batches/new-batch.csv", "w", newline="") as csvfile:
+with open(file_name, "w", newline="") as csvfile:
     fieldnames = ["Timestamp", "Temperature", "Moisture", "Light", "Conductivity"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
@@ -93,4 +107,4 @@ with open("./files/batches/new-batch.csv", "w", newline="") as csvfile:
         writer.writerow(row)
 
 print('')
-print("'new-batch.csv' created successfully!")
+print(f"'{file_name}' created successfully!")
