@@ -251,6 +251,16 @@ class App:
                 print("No data available to export.")
                 return
                 
+            # Ask user which devices to filter on by MAC address
+            mac_input = input("Enter the MAC address(es) you want to filter by (separate multiple with space): ").strip()
+            if mac_input:
+                macs_to_filter = mac_input.split()
+                if all(self.is_valid_mac(mac) for mac in macs_to_filter):
+                    # Filter data by MAC addresses
+                    data = data[data['MAC'].isin(macs_to_filter)]
+                else:
+                    print("Invalid MAC address format. No filter applied.")
+            
             cleaned_data = self.data_manager.clean_data(data)
             timestamp = datetime.now().strftime("%Y-%m-%d-%H:%M:%S")
 
@@ -263,6 +273,13 @@ class App:
         except Exception as e:
             print(f"Error exporting data: {e}")
 
+    @staticmethod
+    def is_valid_mac(mac):
+        """Validates the MAC address format (basic validation)."""
+        # MAC addresses are usually in format XX:XX:XX:XX:XX:XX
+        return len(mac) == 17 and all(part.isalnum() and len(part) == 2 for part in mac.split(":"))
+        
+# Running the app
 if __name__ == "__main__":
     app = App()
     app.run()
