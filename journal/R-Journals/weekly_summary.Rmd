@@ -23,25 +23,26 @@ In an ongoing effort to achieve food sovereignty, Wiggle Labs has developed Agro
 This report covers the past seven days of session data. If there are missing records, then the closest recorded days will be included.
 
 
-# Time Series
+# Time Series Comparison
 
-This section examines the relationships between sensor variables (temperature, moisture, light, and conductivity) over the past week. Pairwise scatter plots illustrate how these variables interact, while color coding emphasizes key patterns and potential correlations.
+This section examines the relationships between sensor variables from the past week and the initial input data we're comparing the session data to. 
 
 ``` {r preprocess-data, include=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 
 # Read the latest exported data from main.py
 # Location is tentative
-agt_data <- read.csv("data/2025-04-08-19:24:16.csv")
+session_data <- read.csv("data/session.csv")
+training_data <- read.csv("data/training.csv")
 
 # Convert Timestamp to POSIXct for proper datetime comparison
-agt_data$Timestamp <- as.POSIXct(agt_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
+session_data$Timestamp <- as.POSIXct(session_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
 
 # Create shortened MAC addresses (last 5 characters)
-agt_data$ShortMAC <- substr(agt_data$MAC, nchar(agt_data$MAC) - 4, nchar(agt_data$MAC))
+session_data$ShortMAC <- substr(session_data$MAC, nchar(session_data$MAC) - 4, nchar(session_data$MAC))
 
 # Get the latest reading for each MAC address
-latest_readings <- agt_data %>%
+latest_readings <- session_data %>%
   group_by(ShortMAC) %>%
   slice(which.max(Timestamp)) %>%
   select(ShortMAC, Timestamp, Temperature, Moisture, Light, Conductivity) %>%
@@ -53,24 +54,24 @@ print(latest_readings)
 
 ``` {r plot-sensor-data, echo=FALSE}
 # Convert Timestamp to POSIXct format in R
-agt_data$Timestamp <- as.POSIXct(agt_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
+session_data$Timestamp <- as.POSIXct(session_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
 placeholder <- "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt lectus. Duis volutpat euismod felis in condimentum. Nunc pretium lectus lectus, sit amet pharetra nibh dictum ut. Vivamus laoreet, ante in commodo aliquam, tellus sem rutrum elit, eget ullamcorper justo est eu quam. Sed metus libero, luctus eu sollicitudin vitae, pretium nec lectus. Mauris semper tempus ultricies. Mauris pulvinar ullamcorper nulla, in porttitor nisi tempor eu. "  # Store the message in the placeholder variable
 
 # Assign different shades for each MAC address within a color range
-temperature_colors <- colorRampPalette(c("#5B9BD5", "#003366"))(length(unique(agt_data$ShortMAC)))  # Shades of blue
-moisture_colors <- colorRampPalette(c("#70AD47", "#2F6A21"))(length(unique(agt_data$ShortMAC)))     # Shades of green
-light_colors <- colorRampPalette(c("#FFC000", "#FF7F00"))(length(unique(agt_data$ShortMAC)))        # Shades of yellow-orange
-conductivity_colors <- colorRampPalette(c("#ED7D31", "#9C4A2F"))(length(unique(agt_data$ShortMAC))) # Shades of orange
+temperature_colors <- colorRampPalette(c("#5B9BD5", "#003366"))(length(unique(session_data$ShortMAC)))  # Shades of blue
+moisture_colors <- colorRampPalette(c("#70AD47", "#2F6A21"))(length(unique(session_data$ShortMAC)))     # Shades of green
+light_colors <- colorRampPalette(c("#FFC000", "#FF7F00"))(length(unique(session_data$ShortMAC)))        # Shades of yellow-orange
+conductivity_colors <- colorRampPalette(c("#ED7D31", "#9C4A2F"))(length(unique(session_data$ShortMAC))) # Shades of orange
 
 # Create a color map based on ShortMAC for each variable
-color_map_temperature <- setNames(temperature_colors, unique(agt_data$ShortMAC))
-color_map_moisture <- setNames(moisture_colors, unique(agt_data$ShortMAC))
-color_map_light <- setNames(light_colors, unique(agt_data$ShortMAC))
-color_map_conductivity <- setNames(conductivity_colors, unique(agt_data$ShortMAC))
+color_map_temperature <- setNames(temperature_colors, unique(session_data$ShortMAC))
+color_map_moisture <- setNames(moisture_colors, unique(session_data$ShortMAC))
+color_map_light <- setNames(light_colors, unique(session_data$ShortMAC))
+color_map_conductivity <- setNames(conductivity_colors, unique(session_data$ShortMAC))
 
 # Plot Temperature over Time with different shades for each MAC address
-plot(agt_data$Timestamp, agt_data$Temperature,
-     col = color_map_temperature[agt_data$ShortMAC],  # Color by MAC address
+plot(session_data$Timestamp, session_data$Temperature,
+     col = color_map_temperature[session_data$ShortMAC],  # Color by MAC address
      xlab = "Time",
      ylab = "Temperature",
      main = "Weekly Temperature",
@@ -78,8 +79,8 @@ plot(agt_data$Timestamp, agt_data$Temperature,
 mtext(placeholder, side = 1, line = 2, cex = 0.8)  # Use the placeholder variable for subtext
 
 # Plot Moisture over Time with different shades for each MAC address
-plot(agt_data$Timestamp, agt_data$Moisture,
-     col = color_map_moisture[agt_data$ShortMAC],  # Color by MAC address
+plot(session_data$Timestamp, session_data$Moisture,
+     col = color_map_moisture[session_data$ShortMAC],  # Color by MAC address
      xlab = "Time",
      ylab = "Moisture",
      main = "Weekly Moisture",
@@ -87,8 +88,8 @@ plot(agt_data$Timestamp, agt_data$Moisture,
 mtext(placeholder, side = 1, line = 2, cex = 0.8)  # Use the placeholder variable for subtext
 
 # Plot Light over Time with different shades for each MAC address
-plot(agt_data$Timestamp, agt_data$Light,
-     col = color_map_light[agt_data$ShortMAC],  # Color by MAC address
+plot(session_data$Timestamp, session_data$Light,
+     col = color_map_light[session_data$ShortMAC],  # Color by MAC address
      xlab = "Time",
      ylab = "Light",
      main = "Weekly Light",
@@ -96,8 +97,8 @@ plot(agt_data$Timestamp, agt_data$Light,
 mtext(placeholder, side = 1, line = 2, cex = 0.8)  # Use the placeholder variable for subtext
 
 # Plot Conductivity over Time with different shades for each MAC address
-plot(agt_data$Timestamp, agt_data$Conductivity,
-     col = color_map_conductivity[agt_data$ShortMAC],  # Color by MAC address
+plot(session_data$Timestamp, session_data$Conductivity,
+     col = color_map_conductivity[session_data$ShortMAC],  # Color by MAC address
      xlab = "Time",
      ylab = "Conductivity",
      main = "Weekly Conductivity",
@@ -110,10 +111,10 @@ Matrices
 # Correlation Matrices 
 
 ``` {r correlation-covariance}
-  Temperature <- c(agt_data$Temperature)
-  Moisture <- c(agt_data$Moisture)
-  Light <- c(agt_data$Light)
-  Conductivity <- c(agt_data$Conductivity)
+  Temperature <- c(session_data$Temperature)
+  Moisture <- c(session_data$Moisture)
+  Light <- c(session_data$Light)
+  Conductivity <- c(session_data$Conductivity)
   
   matrix_data <- data.frame(Temperature, Moisture, Light, Conductivity)  
   print("Covariance Matrix")
@@ -136,14 +137,14 @@ colors <- c(
     conductivity = "#ED7D31"  # Muted orange
 )
 
-# Assuming agt_data is your data frame
-pairs(agt_data[, c("Temperature", "Moisture", "Light", "Conductivity")],
+# Assuming session_data is your data frame
+pairs(session_data[, c("Temperature", "Moisture", "Light", "Conductivity")],
       col = colors["temperature"],  
       pch = 16,          
       main = "Scatter Plot Matrix")
 
 # Plot Temperature vs Moisture
-plot(agt_data$Temperature, agt_data$Moisture,
+plot(session_data$Temperature, session_data$Moisture,
      col = adjustcolor(colors[c("temperature", "moisture")], alpha=0.7),
      xlab = "Temperature",
      ylab = "Moisture",
@@ -151,7 +152,7 @@ plot(agt_data$Temperature, agt_data$Moisture,
      pch = 16)
 
 # Plot Temperature vs Light
-plot(agt_data$Temperature, agt_data$Light,
+plot(session_data$Temperature, session_data$Light,
      col = adjustcolor(colors[c("temperature", "light")], alpha=0.7),
      xlab = "Temperature",
      ylab = "Light",
@@ -159,7 +160,7 @@ plot(agt_data$Temperature, agt_data$Light,
      pch = 16)
 
 # Plot Temperature vs Conductivity
-plot(agt_data$Temperature, agt_data$Conductivity,
+plot(session_data$Temperature, session_data$Conductivity,
      col = adjustcolor(colors[c("temperature", "conductivity")], alpha=0.7),
      xlab = "Temperature",
      ylab = "Conductivity",
@@ -167,7 +168,7 @@ plot(agt_data$Temperature, agt_data$Conductivity,
      pch = 16)
 
 # Plot Moisture vs Light
-plot(agt_data$Moisture, agt_data$Light,
+plot(session_data$Moisture, session_data$Light,
      col = adjustcolor(colors[c("moisture", "light")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Light",
@@ -175,7 +176,7 @@ plot(agt_data$Moisture, agt_data$Light,
      pch = 16)
 
 # Plot Moisture vs Conductivity
-plot(agt_data$Moisture, agt_data$Conductivity,
+plot(session_data$Moisture, session_data$Conductivity,
      col = adjustcolor(colors[c("moisture", "conductivity")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Conductivity",
@@ -183,7 +184,7 @@ plot(agt_data$Moisture, agt_data$Conductivity,
      pch = 16)
 
 # Plot Light vs Conductivity
-plot(agt_data$Moisture, agt_data$Temperature,
+plot(session_data$Moisture, session_data$Temperature,
      col = adjustcolor(colors[c("moisture", "temperature")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Temperature",
@@ -191,7 +192,7 @@ plot(agt_data$Moisture, agt_data$Temperature,
      pch = 16)
 
 # Plot Moisture vs Light
-plot(agt_data$Light, agt_data$Moisture,
+plot(session_data$Light, session_data$Moisture,
      col = adjustcolor(colors[c("moisture", "light")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Light",
@@ -199,7 +200,7 @@ plot(agt_data$Light, agt_data$Moisture,
      pch = 16)
 
 # Plot Moisture vs Conductivity
-plot(agt_data$Light, agt_data$Conductivity,
+plot(session_data$Light, session_data$Conductivity,
      col = adjustcolor(colors[c("moisture", "conductivity")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Conductivity",
@@ -207,7 +208,7 @@ plot(agt_data$Light, agt_data$Conductivity,
      pch = 16)
 
 # Plot Light vs Conductivity
-plot(agt_data$Light, agt_data$Temperature,
+plot(session_data$Light, session_data$Temperature,
      col = adjustcolor(colors[c("moisture", "temperature")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Temperature",
@@ -215,7 +216,7 @@ plot(agt_data$Light, agt_data$Temperature,
      pch = 16)
 
 # Plot Moisture vs Light
-plot(agt_data$Conductivity, agt_data$Moisture,
+plot(session_data$Conductivity, session_data$Moisture,
      col = adjustcolor(colors[c("moisture", "light")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Light",
@@ -223,7 +224,7 @@ plot(agt_data$Conductivity, agt_data$Moisture,
      pch = 16)
 
 # Plot Moisture vs Conductivity
-plot(agt_data$Conductivity, agt_data$Light,
+plot(session_data$Conductivity, session_data$Light,
      col = adjustcolor(colors[c("moisture", "conductivity")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Conductivity",
@@ -231,7 +232,7 @@ plot(agt_data$Conductivity, agt_data$Light,
      pch = 16)
 
 # Plot Light vs Conductivity
-plot(agt_data$Conductivity, agt_data$Temperature,
+plot(session_data$Conductivity, session_data$Temperature,
      col = adjustcolor(colors[c("moisture", "temperature")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Temperature",
@@ -248,7 +249,7 @@ plot(agt_data$Conductivity, agt_data$Temperature,
 library(ggplot2)
 
 # Select the relevant variables for correlation
-matrix_data <- agt_data[, c("Temperature", "Moisture", "Light", "Conductivity")]
+matrix_data <- session_data[, c("Temperature", "Moisture", "Light", "Conductivity")]
 
 # Calculate the correlation matrix
 cor_matrix <- cor(matrix_data, use = "complete.obs")
