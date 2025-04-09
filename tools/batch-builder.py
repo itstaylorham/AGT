@@ -1,3 +1,4 @@
+import csv
 import json
 import numpy as np
 import time
@@ -82,11 +83,14 @@ for i in range(intervals):
     }
     data.append(row)
 
-# Convert the list of rows to a JSON string
-json_string = json.dumps(data, indent=4)
+# Write the list of dictionaries to a CSV file
+with open("./files/batches/new-batch.csv", "w", newline="") as csvfile:
+    fieldnames = ["Timestamp", "Temperature", "Moisture", "Light", "Conductivity"]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-# Write the JSON string to a file
-with open("./files/batches/new-batch.json", "w") as file:
-    file.write(json_string)
+    writer.writeheader()
+    for row in data:
+        writer.writerow(row)
+
 print('')
-print("'new-batch.json' created successfully!")
+print("'new-batch.csv' created successfully!")

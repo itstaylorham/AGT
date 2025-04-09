@@ -17,6 +17,12 @@ header-includes:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Abstract
+In an ongoing effort to achieve food sovereignty, Wiggle Labs has developed Agrotech Live to monitor the soil health of different plants and crops. This tool collects four data points; Temperature, Moisture, Light and Conductivity from sensors placed near a subject. The training data for this program are the ideal conditions for the subject, and the performance of the experiment is based on how close the collected sensor (testing) data is to the input care training data. Input data is identical in structure the testing data (collected during a session), except it represents only perfect conditions for the subject. A score is generated (along with other statistical results) periodically to communicate how well the experiment is performing.
+
+This report covers the past seven days of session data. If there are missing records, then the closest recorded days will be included.
+
+
 # Time Series
 
 This section examines the relationships between sensor variables (temperature, moisture, light, and conductivity) over the past week. Pairwise scatter plots illustrate how these variables interact, while color coding emphasizes key patterns and potential correlations.

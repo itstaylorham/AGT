@@ -1,1 +1,3970 @@
-[{"Timestamp": "2025-04-08 00:09:27", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.2, "Moisture": 46, "Light": 14, "Conductivity": 648}, {"Timestamp": "2025-04-08 00:09:30", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.9, "Moisture": 27, "Light": 205, "Conductivity": 84}, {"Timestamp": "2025-04-08 00:09:33", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.4, "Moisture": 58, "Light": 126, "Conductivity": 1986}, {"Timestamp": "2025-04-08 00:09:37", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.7, "Moisture": 60, "Light": 86, "Conductivity": 1271}, {"Timestamp": "2025-04-08 00:20:02", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.0, "Moisture": 46, "Light": 113, "Conductivity": 649}, {"Timestamp": "2025-04-08 00:20:05", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.8, "Moisture": 27, "Light": 205, "Conductivity": 85}, {"Timestamp": "2025-04-08 00:20:07", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.3, "Moisture": 58, "Light": 206, "Conductivity": 1997}, {"Timestamp": "2025-04-08 00:20:11", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.7, "Moisture": 60, "Light": 105, "Conductivity": 1274}, {"Timestamp": "2025-04-08 00:30:37", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.8, "Moisture": 46, "Light": 0, "Conductivity": 650}, {"Timestamp": "2025-04-08 00:30:40", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.7, "Moisture": 27, "Light": 99, "Conductivity": 84}, {"Timestamp": "2025-04-08 00:30:42", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.2, "Moisture": 58, "Light": 220, "Conductivity": 1997}, {"Timestamp": "2025-04-08 00:30:46", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.7, "Moisture": 60, "Light": 63, "Conductivity": 1274}, {"Timestamp": "2025-04-08 00:41:11", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.8, "Moisture": 46, "Light": 0, "Conductivity": 647}, {"Timestamp": "2025-04-08 00:41:14", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.8, "Moisture": 27, "Light": 237, "Conductivity": 85}, {"Timestamp": "2025-04-08 00:41:16", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.2, "Moisture": 58, "Light": 220, "Conductivity": 1997}, {"Timestamp": "2025-04-08 00:41:20", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 60, "Light": 87, "Conductivity": 1276}, {"Timestamp": "2025-04-08 00:51:45", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.9, "Moisture": 46, "Light": 78, "Conductivity": 644}, {"Timestamp": "2025-04-08 00:51:48", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.8, "Moisture": 27, "Light": 138, "Conductivity": 85}, {"Timestamp": "2025-04-08 00:51:50", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.2, "Moisture": 58, "Light": 220, "Conductivity": 2001}, {"Timestamp": "2025-04-08 00:51:54", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 59, "Light": 63, "Conductivity": 1267}, {"Timestamp": "2025-04-08 01:02:20", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.7, "Moisture": 46, "Light": 118, "Conductivity": 639}, {"Timestamp": "2025-04-08 01:02:24", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.7, "Moisture": 27, "Light": 236, "Conductivity": 84}, {"Timestamp": "2025-04-08 01:02:26", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 58, "Light": 220, "Conductivity": 1986}, {"Timestamp": "2025-04-08 01:02:29", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.4, "Moisture": 60, "Light": 86, "Conductivity": 1262}, {"Timestamp": "2025-04-08 01:12:54", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.7, "Moisture": 46, "Light": 58, "Conductivity": 639}, {"Timestamp": "2025-04-08 01:12:56", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.6, "Moisture": 27, "Light": 99, "Conductivity": 85}, {"Timestamp": "2025-04-08 01:12:58", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 58, "Light": 87, "Conductivity": 2005}, {"Timestamp": "2025-04-08 01:13:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.4, "Moisture": 59, "Light": 105, "Conductivity": 1281}, {"Timestamp": "2025-04-08 01:23:25", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.5, "Moisture": 45, "Light": 117, "Conductivity": 648}, {"Timestamp": "2025-04-08 01:23:28", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 26, "Light": 217, "Conductivity": 84}, {"Timestamp": "2025-04-08 01:23:30", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 58, "Light": 237, "Conductivity": 1993}, {"Timestamp": "2025-04-08 01:23:33", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 59, "Light": 43, "Conductivity": 1264}, {"Timestamp": "2025-04-08 01:33:57", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.6, "Moisture": 45, "Light": 58, "Conductivity": 648}, {"Timestamp": "2025-04-08 01:33:59", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 27, "Light": 155, "Conductivity": 85}, {"Timestamp": "2025-04-08 01:34:01", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 58, "Light": 87, "Conductivity": 1981}, {"Timestamp": "2025-04-08 01:34:04", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.2, "Moisture": 59, "Light": 0, "Conductivity": 1272}, {"Timestamp": "2025-04-08 01:44:29", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.8, "Moisture": 45, "Light": 117, "Conductivity": 640}, {"Timestamp": "2025-04-08 01:44:32", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 26, "Light": 236, "Conductivity": 85}, {"Timestamp": "2025-04-08 01:44:34", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 58, "Light": 234, "Conductivity": 1993}, {"Timestamp": "2025-04-08 01:44:37", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 59, "Light": 105, "Conductivity": 1272}, {"Timestamp": "2025-04-08 01:55:01", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.5, "Moisture": 45, "Light": 74, "Conductivity": 639}, {"Timestamp": "2025-04-08 01:55:04", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 26, "Light": 136, "Conductivity": 82}, {"Timestamp": "2025-04-08 01:55:06", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 58, "Light": 87, "Conductivity": 1967}, {"Timestamp": "2025-04-08 01:55:09", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 59, "Light": 47, "Conductivity": 1281}, {"Timestamp": "2025-04-08 02:05:34", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.5, "Moisture": 46, "Light": 94, "Conductivity": 639}, {"Timestamp": "2025-04-08 02:05:37", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 26, "Light": 205, "Conductivity": 82}, {"Timestamp": "2025-04-08 02:05:39", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 58, "Light": 220, "Conductivity": 1993}, {"Timestamp": "2025-04-08 02:05:42", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.2, "Moisture": 59, "Light": 107, "Conductivity": 1267}, {"Timestamp": "2025-04-08 02:16:06", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.8, "Moisture": 45, "Light": 1666, "Conductivity": 635}, {"Timestamp": "2025-04-08 02:16:09", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.1, "Moisture": 26, "Light": 8212, "Conductivity": 85}, {"Timestamp": "2025-04-08 02:16:12", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 58, "Light": 2422, "Conductivity": 1974}, {"Timestamp": "2025-04-08 02:16:16", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 59, "Light": 1064, "Conductivity": 1267}, {"Timestamp": "2025-04-08 02:26:40", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.0, "Moisture": 45, "Light": 1743, "Conductivity": 634}, {"Timestamp": "2025-04-08 02:26:44", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.7, "Moisture": 26, "Light": 8372, "Conductivity": 83}, {"Timestamp": "2025-04-08 02:26:46", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.3, "Moisture": 58, "Light": 2660, "Conductivity": 1986}, {"Timestamp": "2025-04-08 02:26:49", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.8, "Moisture": 59, "Light": 1120, "Conductivity": 1258}, {"Timestamp": "2025-04-08 02:37:13", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.2, "Moisture": 45, "Light": 1681, "Conductivity": 633}, {"Timestamp": "2025-04-08 02:37:16", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.1, "Moisture": 26, "Light": 8286, "Conductivity": 82}, {"Timestamp": "2025-04-08 02:37:19", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.4, "Moisture": 58, "Light": 2541, "Conductivity": 1975}, {"Timestamp": "2025-04-08 02:37:24", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 26.1, "Moisture": 60, "Light": 1084, "Conductivity": 1246}, {"Timestamp": "2025-04-08 02:47:48", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.3, "Moisture": 45, "Light": 1718, "Conductivity": 628}, {"Timestamp": "2025-04-08 02:47:52", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.5, "Moisture": 26, "Light": 8407, "Conductivity": 81}, {"Timestamp": "2025-04-08 02:47:55", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.6, "Moisture": 58, "Light": 2614, "Conductivity": 1975}, {"Timestamp": "2025-04-08 02:47:59", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 26.1, "Moisture": 60, "Light": 1132, "Conductivity": 1253}, {"Timestamp": "2025-04-08 02:58:23", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.2, "Moisture": 45, "Light": 1708, "Conductivity": 632}, {"Timestamp": "2025-04-08 02:58:27", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.5, "Moisture": 26, "Light": 8461, "Conductivity": 82}, {"Timestamp": "2025-04-08 02:58:29", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.6, "Moisture": 58, "Light": 2482, "Conductivity": 1959}, {"Timestamp": "2025-04-08 02:58:32", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 26.1, "Moisture": 59, "Light": 1072, "Conductivity": 1246}, {"Timestamp": "2025-04-08 03:08:58", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.2, "Moisture": 45, "Light": 1759, "Conductivity": 628}, {"Timestamp": "2025-04-08 03:09:01", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.7, "Moisture": 26, "Light": 8335, "Conductivity": 82}, {"Timestamp": "2025-04-08 03:09:04", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.5, "Moisture": 58, "Light": 2732, "Conductivity": 1959}, {"Timestamp": "2025-04-08 03:09:10", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 26.3, "Moisture": 59, "Light": 1136, "Conductivity": 1224}, {"Timestamp": "2025-04-08 03:19:35", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 26.1, "Moisture": 45, "Light": 74, "Conductivity": 629}, {"Timestamp": "2025-04-08 03:19:39", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.0, "Moisture": 26, "Light": 220, "Conductivity": 83}, {"Timestamp": "2025-04-08 03:19:42", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.4, "Moisture": 58, "Light": 158, "Conductivity": 1970}, {"Timestamp": "2025-04-08 03:19:47", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.9, "Moisture": 59, "Light": 105, "Conductivity": 1239}, {"Timestamp": "2025-04-08 03:30:11", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.5, "Moisture": 45, "Light": 56, "Conductivity": 625}, {"Timestamp": "2025-04-08 03:30:14", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.1, "Moisture": 26, "Light": 202, "Conductivity": 84}, {"Timestamp": "2025-04-08 03:30:16", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 58, "Light": 220, "Conductivity": 1978}, {"Timestamp": "2025-04-08 03:30:20", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 59, "Light": 47, "Conductivity": 1251}, {"Timestamp": "2025-04-08 03:40:46", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.5, "Moisture": 45, "Light": 0, "Conductivity": 626}, {"Timestamp": "2025-04-08 03:40:49", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.8, "Moisture": 26, "Light": 102, "Conductivity": 85}, {"Timestamp": "2025-04-08 03:40:51", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 58, "Light": 104, "Conductivity": 1981}, {"Timestamp": "2025-04-08 03:40:54", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 59, "Light": 105, "Conductivity": 1264}, {"Timestamp": "2025-04-08 03:51:19", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.3, "Moisture": 45, "Light": 135, "Conductivity": 622}, {"Timestamp": "2025-04-08 03:51:22", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.6, "Moisture": 26, "Light": 221, "Conductivity": 84}, {"Timestamp": "2025-04-08 03:51:24", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.9, "Moisture": 58, "Light": 218, "Conductivity": 1997}, {"Timestamp": "2025-04-08 03:51:28", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 58, "Light": 107, "Conductivity": 1255}, {"Timestamp": "2025-04-08 04:01:52", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.3, "Moisture": 45, "Light": 95, "Conductivity": 625}, {"Timestamp": "2025-04-08 04:01:56", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.4, "Moisture": 26, "Light": 79, "Conductivity": 85}, {"Timestamp": "2025-04-08 04:01:58", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.9, "Moisture": 58, "Light": 220, "Conductivity": 1988}, {"Timestamp": "2025-04-08 04:02:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.2, "Moisture": 58, "Light": 68, "Conductivity": 1269}, {"Timestamp": "2025-04-08 04:12:28", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.3, "Moisture": 45, "Light": 117, "Conductivity": 619}, {"Timestamp": "2025-04-08 04:12:31", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.4, "Moisture": 26, "Light": 221, "Conductivity": 85}, {"Timestamp": "2025-04-08 04:12:33", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.7, "Moisture": 58, "Light": 87, "Conductivity": 1978}, {"Timestamp": "2025-04-08 04:12:36", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.1, "Moisture": 58, "Light": 89, "Conductivity": 1269}, {"Timestamp": "2025-04-08 04:23:00", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.3, "Moisture": 45, "Light": 55, "Conductivity": 621}, {"Timestamp": "2025-04-08 04:23:03", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.4, "Moisture": 26, "Light": 118, "Conductivity": 84}, {"Timestamp": "2025-04-08 04:23:05", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.8, "Moisture": 58, "Light": 220, "Conductivity": 1974}, {"Timestamp": "2025-04-08 04:23:08", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.1, "Moisture": 58, "Light": 108, "Conductivity": 1260}, {"Timestamp": "2025-04-08 04:33:32", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 45, "Light": 117, "Conductivity": 608}, {"Timestamp": "2025-04-08 04:33:36", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 26, "Light": 221, "Conductivity": 83}, {"Timestamp": "2025-04-08 04:33:38", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.7, "Moisture": 58, "Light": 126, "Conductivity": 1992}, {"Timestamp": "2025-04-08 04:33:41", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.0, "Moisture": 58, "Light": 86, "Conductivity": 1262}, {"Timestamp": "2025-04-08 04:44:05", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 45, "Light": 74, "Conductivity": 614}, {"Timestamp": "2025-04-08 04:44:08", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 26, "Light": 82, "Conductivity": 86}, {"Timestamp": "2025-04-08 04:44:11", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 58, "Light": 220, "Conductivity": 1992}, {"Timestamp": "2025-04-08 04:44:16", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 58, "Light": 86, "Conductivity": 1254}, {"Timestamp": "2025-04-08 04:54:39", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 45, "Light": 115, "Conductivity": 612}, {"Timestamp": "2025-04-08 04:54:42", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 26, "Light": 237, "Conductivity": 85}, {"Timestamp": "2025-04-08 04:54:44", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 58, "Light": 104, "Conductivity": 1992}, {"Timestamp": "2025-04-08 04:54:47", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 58, "Light": 0, "Conductivity": 1256}, {"Timestamp": "2025-04-08 05:05:10", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.2, "Moisture": 45, "Light": 97, "Conductivity": 614}, {"Timestamp": "2025-04-08 05:05:13", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 25, "Light": 171, "Conductivity": 83}, {"Timestamp": "2025-04-08 05:05:15", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.7, "Moisture": 58, "Light": 203, "Conductivity": 1969}, {"Timestamp": "2025-04-08 05:05:18", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 58, "Light": 89, "Conductivity": 1254}, {"Timestamp": "2025-04-08 05:15:42", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.2, "Moisture": 45, "Light": 117, "Conductivity": 610}, {"Timestamp": "2025-04-08 05:15:46", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.1, "Moisture": 25, "Light": 236, "Conductivity": 86}, {"Timestamp": "2025-04-08 05:15:48", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 58, "Light": 104, "Conductivity": 1988}, {"Timestamp": "2025-04-08 05:15:51", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 58, "Light": 108, "Conductivity": 1248}, {"Timestamp": "2025-04-08 05:26:14", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.2, "Moisture": 45, "Light": 99, "Conductivity": 605}, {"Timestamp": "2025-04-08 05:26:20", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 25, "Light": 120, "Conductivity": 83}, {"Timestamp": "2025-04-08 05:26:22", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 58, "Light": 250, "Conductivity": 1985}, {"Timestamp": "2025-04-08 05:26:25", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 58, "Light": 68, "Conductivity": 1248}, {"Timestamp": "2025-04-08 05:36:49", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 44, "Light": 136, "Conductivity": 614}, {"Timestamp": "2025-04-08 05:36:52", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 25, "Light": 205, "Conductivity": 83}, {"Timestamp": "2025-04-08 05:36:54", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 58, "Light": 123, "Conductivity": 1977}, {"Timestamp": "2025-04-08 05:36:57", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 58, "Light": 89, "Conductivity": 1248}, {"Timestamp": "2025-04-08 05:47:21", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.2, "Moisture": 44, "Light": 118, "Conductivity": 610}, {"Timestamp": "2025-04-08 05:47:25", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.1, "Moisture": 25, "Light": 79, "Conductivity": 83}, {"Timestamp": "2025-04-08 05:47:27", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 58, "Light": 236, "Conductivity": 1965}, {"Timestamp": "2025-04-08 05:47:30", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.7, "Moisture": 58, "Light": 107, "Conductivity": 1241}, {"Timestamp": "2025-04-08 05:57:53", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 44, "Light": 95, "Conductivity": 610}, {"Timestamp": "2025-04-08 05:57:56", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 25, "Light": 202, "Conductivity": 83}, {"Timestamp": "2025-04-08 05:57:59", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 58, "Light": 87, "Conductivity": 1961}, {"Timestamp": "2025-04-08 05:58:04", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 58, "Light": 66, "Conductivity": 1237}, {"Timestamp": "2025-04-08 06:08:28", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 44, "Light": 94, "Conductivity": 601}, {"Timestamp": "2025-04-08 06:08:31", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 25, "Light": 203, "Conductivity": 83}, {"Timestamp": "2025-04-08 06:08:33", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 56, "Light": 220, "Conductivity": 1992}, {"Timestamp": "2025-04-08 06:08:35", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 58, "Light": 108, "Conductivity": 1231}, {"Timestamp": "2025-04-08 06:18:59", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.0, "Moisture": 44, "Light": 136, "Conductivity": 606}, {"Timestamp": "2025-04-08 06:19:03", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.0, "Moisture": 25, "Light": 100, "Conductivity": 83}, {"Timestamp": "2025-04-08 06:19:05", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 56, "Light": 104, "Conductivity": 1977}, {"Timestamp": "2025-04-08 06:19:08", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.7, "Moisture": 58, "Light": 66, "Conductivity": 1236}, {"Timestamp": "2025-04-08 06:29:41", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.1, "Moisture": 44, "Light": 58, "Conductivity": 604}, {"Timestamp": "2025-04-08 06:29:46", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.1, "Moisture": 25, "Light": 205, "Conductivity": 83}, {"Timestamp": "2025-04-08 06:29:49", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 56, "Light": 220, "Conductivity": 1953}, {"Timestamp": "2025-04-08 06:29:54", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 58, "Light": 108, "Conductivity": 1233}, {"Timestamp": "2025-04-08 06:40:17", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.0, "Moisture": 44, "Light": 81, "Conductivity": 597}, {"Timestamp": "2025-04-08 06:40:21", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.0, "Moisture": 25, "Light": 205, "Conductivity": 83}, {"Timestamp": "2025-04-08 06:40:23", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 56, "Light": 104, "Conductivity": 1965}, {"Timestamp": "2025-04-08 06:40:25", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.7, "Moisture": 58, "Light": 66, "Conductivity": 1222}, {"Timestamp": "2025-04-08 06:50:50", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.0, "Moisture": 44, "Light": 17, "Conductivity": 602}, {"Timestamp": "2025-04-08 06:50:53", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.1, "Moisture": 25, "Light": 118, "Conductivity": 82}, {"Timestamp": "2025-04-08 06:50:57", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.3, "Moisture": 56, "Light": 220, "Conductivity": 1956}, {"Timestamp": "2025-04-08 06:51:03", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.6, "Moisture": 58, "Light": 108, "Conductivity": 1246}, {"Timestamp": "2025-04-08 07:01:26", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 25.0, "Moisture": 43, "Light": 135, "Conductivity": 600}, {"Timestamp": "2025-04-08 07:01:30", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.8, "Moisture": 25, "Light": 236, "Conductivity": 83}, {"Timestamp": "2025-04-08 07:01:33", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 56, "Light": 87, "Conductivity": 1956}, {"Timestamp": "2025-04-08 07:01:37", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.6, "Moisture": 58, "Light": 68, "Conductivity": 1227}, {"Timestamp": "2025-04-08 07:12:01", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.6, "Moisture": 43, "Light": 19, "Conductivity": 606}, {"Timestamp": "2025-04-08 07:12:07", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.7, "Moisture": 25, "Light": 205, "Conductivity": 82}, {"Timestamp": "2025-04-08 07:12:09", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.3, "Moisture": 57, "Light": 202, "Conductivity": 1979}, {"Timestamp": "2025-04-08 07:12:11", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.6, "Moisture": 58, "Light": 108, "Conductivity": 1229}, {"Timestamp": "2025-04-08 07:22:35", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.6, "Moisture": 43, "Light": 118, "Conductivity": 603}, {"Timestamp": "2025-04-08 07:22:39", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.7, "Moisture": 25, "Light": 100, "Conductivity": 82}, {"Timestamp": "2025-04-08 07:22:41", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.2, "Moisture": 56, "Light": 104, "Conductivity": 1967}, {"Timestamp": "2025-04-08 07:22:43", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.4, "Moisture": 58, "Light": 63, "Conductivity": 1234}, {"Timestamp": "2025-04-08 07:33:07", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.6, "Moisture": 43, "Light": 74, "Conductivity": 603}, {"Timestamp": "2025-04-08 07:33:09", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.6, "Moisture": 25, "Light": 187, "Conductivity": 83}, {"Timestamp": "2025-04-08 07:33:12", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.0, "Moisture": 56, "Light": 250, "Conductivity": 1955}, {"Timestamp": "2025-04-08 07:33:15", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.3, "Moisture": 58, "Light": 105, "Conductivity": 1225}, {"Timestamp": "2025-04-08 07:43:40", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.6, "Moisture": 43, "Light": 115, "Conductivity": 599}, {"Timestamp": "2025-04-08 07:43:42", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.6, "Moisture": 25, "Light": 99, "Conductivity": 84}, {"Timestamp": "2025-04-08 07:43:46", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.0, "Moisture": 56, "Light": 217, "Conductivity": 1971}, {"Timestamp": "2025-04-08 07:43:50", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.4, "Moisture": 58, "Light": 84, "Conductivity": 1238}, {"Timestamp": "2025-04-08 07:54:14", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.5, "Moisture": 43, "Light": 74, "Conductivity": 600}, {"Timestamp": "2025-04-08 07:54:17", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.4, "Moisture": 25, "Light": 203, "Conductivity": 84}, {"Timestamp": "2025-04-08 07:54:20", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.9, "Moisture": 56, "Light": 87, "Conductivity": 1962}, {"Timestamp": "2025-04-08 07:54:22", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.2, "Moisture": 58, "Light": 107, "Conductivity": 1229}, {"Timestamp": "2025-04-08 08:04:46", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.5, "Moisture": 43, "Light": 138, "Conductivity": 591}, {"Timestamp": "2025-04-08 08:04:50", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.5, "Moisture": 25, "Light": 138, "Conductivity": 82}, {"Timestamp": "2025-04-08 08:04:52", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.0, "Moisture": 56, "Light": 220, "Conductivity": 1974}, {"Timestamp": "2025-04-08 08:04:55", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.2, "Moisture": 56, "Light": 65, "Conductivity": 1229}, {"Timestamp": "2025-04-08 08:15:20", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.6, "Moisture": 43, "Light": 0, "Conductivity": 594}, {"Timestamp": "2025-04-08 08:15:22", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.6, "Moisture": 25, "Light": 220, "Conductivity": 83}, {"Timestamp": "2025-04-08 08:15:25", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.0, "Moisture": 56, "Light": 220, "Conductivity": 1959}, {"Timestamp": "2025-04-08 08:15:28", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.3, "Moisture": 56, "Light": 73, "Conductivity": 1219}, {"Timestamp": "2025-04-08 08:25:53", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.5, "Moisture": 43, "Light": 115, "Conductivity": 591}, {"Timestamp": "2025-04-08 08:25:56", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.4, "Moisture": 25, "Light": 154, "Conductivity": 82}, {"Timestamp": "2025-04-08 08:25:59", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.0, "Moisture": 56, "Light": 250, "Conductivity": 1971}, {"Timestamp": "2025-04-08 08:26:02", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.1, "Moisture": 56, "Light": 65, "Conductivity": 1210}, {"Timestamp": "2025-04-08 08:36:27", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.3, "Moisture": 43, "Light": 0, "Conductivity": 593}, {"Timestamp": "2025-04-08 08:36:30", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.3, "Moisture": 25, "Light": 220, "Conductivity": 84}, {"Timestamp": "2025-04-08 08:36:32", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.8, "Moisture": 56, "Light": 220, "Conductivity": 1962}, {"Timestamp": "2025-04-08 08:36:34", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.0, "Moisture": 56, "Light": 107, "Conductivity": 1205}, {"Timestamp": "2025-04-08 08:46:59", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.3, "Moisture": 43, "Light": 115, "Conductivity": 590}, {"Timestamp": "2025-04-08 08:47:03", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.1, "Moisture": 25, "Light": 120, "Conductivity": 84}, {"Timestamp": "2025-04-08 08:47:06", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.7, "Moisture": 56, "Light": 126, "Conductivity": 1966}, {"Timestamp": "2025-04-08 08:47:08", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.9, "Moisture": 56, "Light": 107, "Conductivity": 1219}, {"Timestamp": "2025-04-08 08:57:33", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.0, "Moisture": 43, "Light": 74, "Conductivity": 588}, {"Timestamp": "2025-04-08 08:57:36", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.0, "Moisture": 25, "Light": 236, "Conductivity": 85}, {"Timestamp": "2025-04-08 08:57:39", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.6, "Moisture": 56, "Light": 234, "Conductivity": 1976}, {"Timestamp": "2025-04-08 08:57:41", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.7, "Moisture": 57, "Light": 110, "Conductivity": 1223}, {"Timestamp": "2025-04-08 09:08:05", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.0, "Moisture": 43, "Light": 43, "Conductivity": 590}, {"Timestamp": "2025-04-08 09:08:08", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.9, "Moisture": 25, "Light": 155, "Conductivity": 83}, {"Timestamp": "2025-04-08 09:08:11", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.6, "Moisture": 56, "Light": 158, "Conductivity": 1965}, {"Timestamp": "2025-04-08 09:08:14", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.6, "Moisture": 57, "Light": 66, "Conductivity": 1223}, {"Timestamp": "2025-04-08 09:18:39", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.2, "Moisture": 43, "Light": 1, "Conductivity": 591}, {"Timestamp": "2025-04-08 09:18:41", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.0, "Moisture": 25, "Light": 267, "Conductivity": 85}, {"Timestamp": "2025-04-08 09:18:45", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.6, "Moisture": 56, "Light": 217, "Conductivity": 1962}, {"Timestamp": "2025-04-08 09:18:48", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.9, "Moisture": 57, "Light": 110, "Conductivity": 1202}, {"Timestamp": "2025-04-08 09:29:13", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.1, "Moisture": 43, "Light": 42, "Conductivity": 584}, {"Timestamp": "2025-04-08 09:29:16", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.6, "Moisture": 56, "Light": 87, "Conductivity": 1962}, {"Timestamp": "2025-04-08 09:29:20", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.0, "Moisture": 57, "Light": 108, "Conductivity": 1197}, {"Timestamp": "2025-04-08 09:39:44", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.0, "Moisture": 43, "Light": 1, "Conductivity": 590}, {"Timestamp": "2025-04-08 09:39:47", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.0, "Moisture": 25, "Light": 221, "Conductivity": 82}, {"Timestamp": "2025-04-08 09:39:50", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.6, "Moisture": 56, "Light": 249, "Conductivity": 1949}, {"Timestamp": "2025-04-08 09:39:52", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.9, "Moisture": 57, "Light": 43, "Conductivity": 1204}, {"Timestamp": "2025-04-08 09:50:17", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 24.0, "Moisture": 43, "Light": 40, "Conductivity": 587}, {"Timestamp": "2025-04-08 09:50:20", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.9, "Moisture": 25, "Light": 120, "Conductivity": 85}, {"Timestamp": "2025-04-08 09:50:23", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.4, "Moisture": 56, "Light": 172, "Conductivity": 1941}, {"Timestamp": "2025-04-08 09:50:26", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.6, "Moisture": 57, "Light": 110, "Conductivity": 1208}, {"Timestamp": "2025-04-08 10:00:50", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.8, "Moisture": 42, "Light": 1, "Conductivity": 592}, {"Timestamp": "2025-04-08 10:00:53", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.6, "Moisture": 25, "Light": 220, "Conductivity": 83}, {"Timestamp": "2025-04-08 10:00:56", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.3, "Moisture": 55, "Light": 218, "Conductivity": 1972}, {"Timestamp": "2025-04-08 10:00:59", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.6, "Moisture": 57, "Light": 86, "Conductivity": 1190}, {"Timestamp": "2025-04-08 10:11:24", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.8, "Moisture": 42, "Light": 136, "Conductivity": 585}, {"Timestamp": "2025-04-08 10:11:27", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.6, "Moisture": 25, "Light": 138, "Conductivity": 83}, {"Timestamp": "2025-04-08 10:11:31", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.3, "Moisture": 55, "Light": 218, "Conductivity": 1948}, {"Timestamp": "2025-04-08 10:11:35", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.3, "Moisture": 56, "Light": 13, "Conductivity": 1206}, {"Timestamp": "2025-04-08 10:22:00", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.5, "Moisture": 42, "Light": 1, "Conductivity": 586}, {"Timestamp": "2025-04-08 10:22:03", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.6, "Moisture": 24, "Light": 220, "Conductivity": 83}, {"Timestamp": "2025-04-08 10:22:06", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.1, "Moisture": 55, "Light": 140, "Conductivity": 1955}, {"Timestamp": "2025-04-08 10:32:31", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.5, "Moisture": 42, "Light": 138, "Conductivity": 587}, {"Timestamp": "2025-04-08 10:32:34", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.0, "Moisture": 55, "Light": 249, "Conductivity": 1967}, {"Timestamp": "2025-04-08 10:32:37", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.2, "Moisture": 56, "Light": 128, "Conductivity": 1210}, {"Timestamp": "2025-04-08 10:43:00", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.5, "Moisture": 42, "Light": 74, "Conductivity": 587}, {"Timestamp": "2025-04-08 10:43:03", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.3, "Moisture": 24, "Light": 140, "Conductivity": 84}, {"Timestamp": "2025-04-08 10:43:06", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.0, "Moisture": 55, "Light": 107, "Conductivity": 1946}, {"Timestamp": "2025-04-08 10:43:11", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.1, "Moisture": 56, "Light": 87, "Conductivity": 1193}, {"Timestamp": "2025-04-08 10:53:35", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.2, "Moisture": 42, "Light": 63, "Conductivity": 583}, {"Timestamp": "2025-04-08 10:53:40", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.2, "Moisture": 24, "Light": 254, "Conductivity": 81}, {"Timestamp": "2025-04-08 10:53:43", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.9, "Moisture": 55, "Light": 249, "Conductivity": 1958}, {"Timestamp": "2025-04-08 10:53:46", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.1, "Moisture": 55, "Light": 130, "Conductivity": 1203}, {"Timestamp": "2025-04-08 11:04:10", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.3, "Moisture": 42, "Light": 42, "Conductivity": 587}, {"Timestamp": "2025-04-08 11:04:13", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.1, "Moisture": 24, "Light": 156, "Conductivity": 84}, {"Timestamp": "2025-04-08 11:04:16", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.8, "Moisture": 55, "Light": 249, "Conductivity": 1953}, {"Timestamp": "2025-04-08 11:04:18", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.0, "Moisture": 55, "Light": 66, "Conductivity": 1203}, {"Timestamp": "2025-04-08 11:14:42", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.2, "Moisture": 42, "Light": 139, "Conductivity": 588}, {"Timestamp": "2025-04-08 11:14:46", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.1, "Moisture": 24, "Light": 220, "Conductivity": 84}, {"Timestamp": "2025-04-08 11:14:49", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.8, "Moisture": 55, "Light": 107, "Conductivity": 1956}, {"Timestamp": "2025-04-08 11:14:52", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.9, "Moisture": 55, "Light": 107, "Conductivity": 1195}, {"Timestamp": "2025-04-08 11:25:17", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.1, "Moisture": 42, "Light": 115, "Conductivity": 585}, {"Timestamp": "2025-04-08 11:25:20", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.0, "Moisture": 24, "Light": 100, "Conductivity": 81}, {"Timestamp": "2025-04-08 11:25:23", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.7, "Moisture": 55, "Light": 252, "Conductivity": 1956}, {"Timestamp": "2025-04-08 11:25:27", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.8, "Moisture": 55, "Light": 68, "Conductivity": 1190}, {"Timestamp": "2025-04-08 11:27:21", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.1, "Moisture": 42, "Light": 139, "Conductivity": 585}, {"Timestamp": "2025-04-08 11:27:24", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.1, "Moisture": 24, "Light": 220, "Conductivity": 81}, {"Timestamp": "2025-04-08 11:27:28", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.7, "Moisture": 55, "Light": 218, "Conductivity": 1945}, {"Timestamp": "2025-04-08 11:27:32", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.8, "Moisture": 55, "Light": 128, "Conductivity": 1172}, {"Timestamp": "2025-04-08 11:37:57", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 23.1, "Moisture": 42, "Light": 61, "Conductivity": 582}, {"Timestamp": "2025-04-08 11:38:03", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.0, "Moisture": 24, "Light": 254, "Conductivity": 81}, {"Timestamp": "2025-04-08 11:38:11", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.6, "Moisture": 55, "Light": 171, "Conductivity": 1967}, {"Timestamp": "2025-04-08 11:38:15", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.7, "Moisture": 55, "Light": 32, "Conductivity": 1174}, {"Timestamp": "2025-04-08 11:48:41", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.9, "Moisture": 42, "Light": 138, "Conductivity": 580}, {"Timestamp": "2025-04-08 11:48:44", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.9, "Moisture": 24, "Light": 269, "Conductivity": 81}, {"Timestamp": "2025-04-08 11:48:49", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.6, "Moisture": 55, "Light": 249, "Conductivity": 1955}, {"Timestamp": "2025-04-08 11:48:53", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.6, "Moisture": 55, "Light": 128, "Conductivity": 1172}, {"Timestamp": "2025-04-08 11:59:18", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.7, "Moisture": 42, "Light": 102, "Conductivity": 583}, {"Timestamp": "2025-04-08 11:59:24", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.8, "Moisture": 24, "Light": 271, "Conductivity": 81}, {"Timestamp": "2025-04-08 11:59:28", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.4, "Moisture": 55, "Light": 268, "Conductivity": 1940}, {"Timestamp": "2025-04-08 11:59:33", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.7, "Moisture": 55, "Light": 16, "Conductivity": 1176}, {"Timestamp": "2025-04-08 12:09:58", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.8, "Moisture": 42, "Light": 139, "Conductivity": 582}, {"Timestamp": "2025-04-08 12:10:00", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.7, "Moisture": 24, "Light": 237, "Conductivity": 81}, {"Timestamp": "2025-04-08 12:10:03", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.4, "Moisture": 55, "Light": 234, "Conductivity": 1943}, {"Timestamp": "2025-04-08 12:10:08", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.5, "Moisture": 55, "Light": 112, "Conductivity": 1169}, {"Timestamp": "2025-04-08 12:20:34", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.7, "Moisture": 41, "Light": 117, "Conductivity": 584}, {"Timestamp": "2025-04-08 12:20:39", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.6, "Moisture": 24, "Light": 237, "Conductivity": 82}, {"Timestamp": "2025-04-08 12:20:44", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.3, "Moisture": 55, "Light": 268, "Conductivity": 1946}, {"Timestamp": "2025-04-08 12:20:48", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.5, "Moisture": 55, "Light": 128, "Conductivity": 1169}, {"Timestamp": "2025-04-08 12:31:12", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.6, "Moisture": 42, "Light": 140, "Conductivity": 579}, {"Timestamp": "2025-04-08 12:31:17", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.7, "Moisture": 24, "Light": 238, "Conductivity": 82}, {"Timestamp": "2025-04-08 12:31:21", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.3, "Moisture": 55, "Light": 218, "Conductivity": 1946}, {"Timestamp": "2025-04-08 12:31:25", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.5, "Moisture": 55, "Light": 108, "Conductivity": 1171}, {"Timestamp": "2025-04-08 12:41:52", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.7, "Moisture": 41, "Light": 118, "Conductivity": 584}, {"Timestamp": "2025-04-08 12:41:55", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.7, "Moisture": 24, "Light": 237, "Conductivity": 82}, {"Timestamp": "2025-04-08 12:41:59", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.3, "Moisture": 55, "Light": 237, "Conductivity": 1934}, {"Timestamp": "2025-04-08 12:42:03", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.4, "Moisture": 55, "Light": 94, "Conductivity": 1161}, {"Timestamp": "2025-04-08 12:52:29", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.7, "Moisture": 41, "Light": 140, "Conductivity": 577}, {"Timestamp": "2025-04-08 12:52:37", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.7, "Moisture": 24, "Light": 256, "Conductivity": 81}, {"Timestamp": "2025-04-08 12:52:40", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.3, "Moisture": 55, "Light": 142, "Conductivity": 1922}, {"Timestamp": "2025-04-08 12:52:43", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.4, "Moisture": 55, "Light": 108, "Conductivity": 1154}, {"Timestamp": "2025-04-08 13:03:11", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.6, "Moisture": 41, "Light": 102, "Conductivity": 579}, {"Timestamp": "2025-04-08 13:03:15", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.7, "Moisture": 24, "Light": 254, "Conductivity": 80}, {"Timestamp": "2025-04-08 13:03:19", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.2, "Moisture": 55, "Light": 268, "Conductivity": 1937}, {"Timestamp": "2025-04-08 13:13:52", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.5, "Moisture": 41, "Light": 120, "Conductivity": 576}, {"Timestamp": "2025-04-08 13:13:55", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.4, "Moisture": 24, "Light": 253, "Conductivity": 82}, {"Timestamp": "2025-04-08 13:14:01", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.2, "Moisture": 54, "Light": 187, "Conductivity": 1913}, {"Timestamp": "2025-04-08 13:14:05", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.3, "Moisture": 55, "Light": 52, "Conductivity": 1147}, {"Timestamp": "2025-04-08 13:24:30", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.4, "Moisture": 41, "Light": 117, "Conductivity": 577}, {"Timestamp": "2025-04-08 13:24:42", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.4, "Moisture": 24, "Light": 238, "Conductivity": 82}, {"Timestamp": "2025-04-08 13:24:45", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.2, "Moisture": 54, "Light": 268, "Conductivity": 1928}, {"Timestamp": "2025-04-08 13:24:47", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.3, "Moisture": 55, "Light": 94, "Conductivity": 1149}, {"Timestamp": "2025-04-08 13:35:17", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.4, "Moisture": 24, "Light": 205, "Conductivity": 82}, {"Timestamp": "2025-04-08 13:35:20", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.1, "Moisture": 54, "Light": 187, "Conductivity": 1904}, {"Timestamp": "2025-04-08 13:35:23", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.1, "Moisture": 55, "Light": 94, "Conductivity": 1140}, {"Timestamp": "2025-04-08 13:45:52", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.5, "Moisture": 41, "Light": 136, "Conductivity": 576}, {"Timestamp": "2025-04-08 13:45:56", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 24, "Light": 238, "Conductivity": 82}, {"Timestamp": "2025-04-08 13:45:59", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.0, "Moisture": 54, "Light": 218, "Conductivity": 1923}, {"Timestamp": "2025-04-08 13:46:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.1, "Moisture": 55, "Light": 110, "Conductivity": 1133}, {"Timestamp": "2025-04-08 13:56:25", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.4, "Moisture": 40, "Light": 97, "Conductivity": 575}, {"Timestamp": "2025-04-08 13:56:28", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 24, "Light": 139, "Conductivity": 82}, {"Timestamp": "2025-04-08 13:56:31", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.0, "Moisture": 54, "Light": 86, "Conductivity": 1919}, {"Timestamp": "2025-04-08 13:56:33", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.1, "Moisture": 55, "Light": 69, "Conductivity": 1142}, {"Timestamp": "2025-04-08 14:06:59", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 41, "Light": 139, "Conductivity": 574}, {"Timestamp": "2025-04-08 14:07:02", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 24, "Light": 254, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:07:04", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.0, "Moisture": 54, "Light": 206, "Conductivity": 1911}, {"Timestamp": "2025-04-08 14:07:08", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.1, "Moisture": 55, "Light": 0, "Conductivity": 1142}, {"Timestamp": "2025-04-08 14:10:36", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 56, "Conductivity": 573}, {"Timestamp": "2025-04-08 14:10:39", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 24, "Light": 139, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:10:43", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.0, "Moisture": 54, "Light": 237, "Conductivity": 1926}, {"Timestamp": "2025-04-08 14:10:48", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.0, "Moisture": 55, "Light": 68, "Conductivity": 1142}, {"Timestamp": "2025-04-08 14:17:04", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 139, "Conductivity": 567}, {"Timestamp": "2025-04-08 14:17:07", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 24, "Light": 238, "Conductivity": 82}, {"Timestamp": "2025-04-08 14:17:12", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.0, "Moisture": 54, "Light": 218, "Conductivity": 1911}, {"Timestamp": "2025-04-08 14:19:35", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 63, "Conductivity": 571}, {"Timestamp": "2025-04-08 14:19:38", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 24, "Light": 222, "Conductivity": 80}, {"Timestamp": "2025-04-08 14:19:41", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 265, "Conductivity": 1911}, {"Timestamp": "2025-04-08 14:19:43", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.1, "Moisture": 55, "Light": 112, "Conductivity": 1137}, {"Timestamp": "2025-04-08 14:25:49", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 41, "Light": 135, "Conductivity": 574}, {"Timestamp": "2025-04-08 14:25:52", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 23, "Light": 222, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:25:56", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 123, "Conductivity": 1911}, {"Timestamp": "2025-04-08 14:26:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.1, "Moisture": 54, "Light": 48, "Conductivity": 1135}, {"Timestamp": "2025-04-08 14:27:16", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.2, "Moisture": 40, "Light": 61, "Conductivity": 571}, {"Timestamp": "2025-04-08 14:27:19", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 24, "Light": 171, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:27:23", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 252, "Conductivity": 1926}, {"Timestamp": "2025-04-08 14:27:28", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.0, "Moisture": 54, "Light": 130, "Conductivity": 1133}, {"Timestamp": "2025-04-08 14:34:41", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 123, "Conductivity": 568}, {"Timestamp": "2025-04-08 14:34:44", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 24, "Light": 254, "Conductivity": 80}, {"Timestamp": "2025-04-08 14:34:47", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 221, "Conductivity": 1911}, {"Timestamp": "2025-04-08 14:34:49", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.0, "Moisture": 54, "Light": 112, "Conductivity": 1133}, {"Timestamp": "2025-04-08 14:36:56", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.2, "Moisture": 40, "Light": 81, "Conductivity": 572}, {"Timestamp": "2025-04-08 14:36:59", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 23, "Light": 256, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:37:03", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 237, "Conductivity": 1899}, {"Timestamp": "2025-04-08 14:37:05", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.0, "Moisture": 55, "Light": 112, "Conductivity": 1126}, {"Timestamp": "2025-04-08 14:38:01", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 140, "Conductivity": 572}, {"Timestamp": "2025-04-08 14:38:06", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 23, "Light": 272, "Conductivity": 80}, {"Timestamp": "2025-04-08 14:38:10", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.7, "Moisture": 54, "Light": 284, "Conductivity": 1914}, {"Timestamp": "2025-04-08 14:38:16", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 21.9, "Moisture": 55, "Light": 112, "Conductivity": 1135}, {"Timestamp": "2025-04-08 14:39:11", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 0, "Conductivity": 568}, {"Timestamp": "2025-04-08 14:39:15", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.1, "Moisture": 23, "Light": 269, "Conductivity": 82}, {"Timestamp": "2025-04-08 14:39:18", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 221, "Conductivity": 1911}, {"Timestamp": "2025-04-08 14:39:20", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 21.9, "Moisture": 54, "Light": 130, "Conductivity": 1144}, {"Timestamp": "2025-04-08 14:40:16", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.1, "Moisture": 40, "Light": 99, "Conductivity": 569}, {"Timestamp": "2025-04-08 14:40:19", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 24, "Light": 237, "Conductivity": 82}, {"Timestamp": "2025-04-08 14:40:23", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.9, "Moisture": 54, "Light": 268, "Conductivity": 1914}, {"Timestamp": "2025-04-08 14:40:25", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 21.9, "Moisture": 54, "Light": 132, "Conductivity": 1135}, {"Timestamp": "2025-04-08 14:41:23", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.3, "Moisture": 40, "Light": 140, "Conductivity": 572}, {"Timestamp": "2025-04-08 14:41:25", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 23, "Light": 257, "Conductivity": 82}, {"Timestamp": "2025-04-08 14:41:34", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.8, "Moisture": 54, "Light": 206, "Conductivity": 1914}, {"Timestamp": "2025-04-08 14:41:37", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 21.9, "Moisture": 54, "Light": 112, "Conductivity": 1137}, {"Timestamp": "2025-04-08 14:42:35", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.1, "Moisture": 40, "Light": 118, "Conductivity": 571}, {"Timestamp": "2025-04-08 14:42:40", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 23, "Light": 206, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:42:42", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.7, "Moisture": 54, "Light": 249, "Conductivity": 1923}, {"Timestamp": "2025-04-08 14:42:45", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 21.9, "Moisture": 54, "Light": 112, "Conductivity": 1126}, {"Timestamp": "2025-04-08 14:43:40", "MAC": "c4:7c:8d:6d:4e:df", "Temperature": 22.2, "Moisture": 40, "Light": 121, "Conductivity": 572}, {"Timestamp": "2025-04-08 14:43:44", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.2, "Moisture": 23, "Light": 240, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:43:48", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 21.7, "Moisture": 54, "Light": 190, "Conductivity": 1914}, {"Timestamp": "2025-04-08 14:55:24", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.3, "Moisture": 23, "Light": 9347, "Conductivity": 81}, {"Timestamp": "2025-04-08 14:55:30", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.0, "Moisture": 54, "Light": 9911, "Conductivity": 1904}, {"Timestamp": "2025-04-08 14:55:34", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.0, "Moisture": 54, "Light": 1776, "Conductivity": 1124}, {"Timestamp": "2025-04-08 14:57:11", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 22.7, "Moisture": 23, "Light": 9378, "Conductivity": 80}, {"Timestamp": "2025-04-08 14:57:14", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.2, "Moisture": 54, "Light": 9911, "Conductivity": 1898}, {"Timestamp": "2025-04-08 14:57:18", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.3, "Moisture": 55, "Light": 1782, "Conductivity": 1110}, {"Timestamp": "2025-04-08 14:58:53", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.0, "Moisture": 23, "Light": 9428, "Conductivity": 79}, {"Timestamp": "2025-04-08 14:58:58", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 22.6, "Moisture": 54, "Light": 9911, "Conductivity": 1879}, {"Timestamp": "2025-04-08 14:59:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.5, "Moisture": 55, "Light": 1775, "Conductivity": 1125}, {"Timestamp": "2025-04-08 15:00:36", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.2, "Moisture": 23, "Light": 9455, "Conductivity": 80}, {"Timestamp": "2025-04-08 15:00:43", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.8, "Moisture": 55, "Light": 1750, "Conductivity": 1114}, {"Timestamp": "2025-04-08 15:02:18", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.4, "Moisture": 24, "Light": 9473, "Conductivity": 80}, {"Timestamp": "2025-04-08 15:02:22", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.1, "Moisture": 54, "Light": 9897, "Conductivity": 1862}, {"Timestamp": "2025-04-08 15:02:24", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 22.9, "Moisture": 55, "Light": 1782, "Conductivity": 1108}, {"Timestamp": "2025-04-08 15:03:59", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 23.9, "Moisture": 24, "Light": 9489, "Conductivity": 79}, {"Timestamp": "2025-04-08 15:04:02", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.3, "Moisture": 54, "Light": 9911, "Conductivity": 1876}, {"Timestamp": "2025-04-08 15:04:05", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.1, "Moisture": 55, "Light": 1734, "Conductivity": 1106}, {"Timestamp": "2025-04-08 15:05:41", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.1, "Moisture": 24, "Light": 9478, "Conductivity": 80}, {"Timestamp": "2025-04-08 15:05:45", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.5, "Moisture": 54, "Light": 9897, "Conductivity": 1861}, {"Timestamp": "2025-04-08 15:05:47", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.1, "Moisture": 55, "Light": 1814, "Conductivity": 1092}, {"Timestamp": "2025-04-08 15:07:23", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.3, "Moisture": 24, "Light": 9492, "Conductivity": 78}, {"Timestamp": "2025-04-08 15:07:31", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.6, "Moisture": 54, "Light": 9911, "Conductivity": 1858}, {"Timestamp": "2025-04-08 15:07:34", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.4, "Moisture": 55, "Light": 1814, "Conductivity": 1090}, {"Timestamp": "2025-04-08 15:09:10", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.6, "Moisture": 24, "Light": 9467, "Conductivity": 78}, {"Timestamp": "2025-04-08 15:09:13", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.9, "Moisture": 54, "Light": 9911, "Conductivity": 1859}, {"Timestamp": "2025-04-08 15:09:16", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.4, "Moisture": 55, "Light": 1814, "Conductivity": 1077}, {"Timestamp": "2025-04-08 15:10:50", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.6, "Moisture": 24, "Light": 9505, "Conductivity": 78}, {"Timestamp": "2025-04-08 15:10:53", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 23.9, "Moisture": 54, "Light": 9884, "Conductivity": 1865}, {"Timestamp": "2025-04-08 15:10:56", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.6, "Moisture": 55, "Light": 1798, "Conductivity": 1094}, {"Timestamp": "2025-04-08 15:12:31", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 24.9, "Moisture": 24, "Light": 9448, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:12:34", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.1, "Moisture": 54, "Light": 9873, "Conductivity": 1861}, {"Timestamp": "2025-04-08 15:12:36", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.8, "Moisture": 55, "Light": 1755, "Conductivity": 1071}, {"Timestamp": "2025-04-08 15:14:11", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.0, "Moisture": 24, "Light": 9467, "Conductivity": 77}, {"Timestamp": "2025-04-08 15:14:16", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.1, "Moisture": 54, "Light": 9884, "Conductivity": 1873}, {"Timestamp": "2025-04-08 15:14:19", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.0, "Moisture": 55, "Light": 1744, "Conductivity": 1080}, {"Timestamp": "2025-04-08 15:15:53", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 24, "Light": 9508, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:15:57", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.1, "Moisture": 54, "Light": 9862, "Conductivity": 1882}, {"Timestamp": "2025-04-08 15:15:59", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 23.9, "Moisture": 55, "Light": 1771, "Conductivity": 1079}, {"Timestamp": "2025-04-08 15:17:34", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.3, "Moisture": 24, "Light": 9508, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:17:37", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.3, "Moisture": 54, "Light": 9884, "Conductivity": 1875}, {"Timestamp": "2025-04-08 15:17:39", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.0, "Moisture": 55, "Light": 1809, "Conductivity": 1068}, {"Timestamp": "2025-04-08 15:19:14", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 24, "Light": 9520, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:19:19", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.4, "Moisture": 55, "Light": 9871, "Conductivity": 1863}, {"Timestamp": "2025-04-08 15:19:21", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.3, "Moisture": 55, "Light": 1809, "Conductivity": 1083}, {"Timestamp": "2025-04-08 15:20:56", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.7, "Moisture": 24, "Light": 9472, "Conductivity": 77}, {"Timestamp": "2025-04-08 15:21:00", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.6, "Moisture": 55, "Light": 9897, "Conductivity": 1871}, {"Timestamp": "2025-04-08 15:21:03", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.4, "Moisture": 55, "Light": 1798, "Conductivity": 1073}, {"Timestamp": "2025-04-08 15:22:41", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.8, "Moisture": 24, "Light": 9508, "Conductivity": 75}, {"Timestamp": "2025-04-08 15:22:44", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.7, "Moisture": 55, "Light": 9884, "Conductivity": 1880}, {"Timestamp": "2025-04-08 15:22:47", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.4, "Moisture": 55, "Light": 1771, "Conductivity": 1071}, {"Timestamp": "2025-04-08 15:24:21", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.9, "Moisture": 24, "Light": 9520, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:24:25", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.8, "Moisture": 55, "Light": 9897, "Conductivity": 1873}, {"Timestamp": "2025-04-08 15:24:29", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.7, "Moisture": 55, "Light": 1739, "Conductivity": 1077}, {"Timestamp": "2025-04-08 15:26:06", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.0, "Moisture": 24, "Light": 9510, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:26:09", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 24.9, "Moisture": 55, "Light": 9884, "Conductivity": 1899}, {"Timestamp": "2025-04-08 15:26:12", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.7, "Moisture": 55, "Light": 1766, "Conductivity": 1065}, {"Timestamp": "2025-04-08 15:28:54", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.2, "Moisture": 24, "Light": 9520, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:29:00", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 55, "Light": 9884, "Conductivity": 1874}, {"Timestamp": "2025-04-08 15:29:03", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 55, "Light": 1809, "Conductivity": 1071}, {"Timestamp": "2025-04-08 15:40:18", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.4, "Moisture": 55, "Light": 9897, "Conductivity": 1902}, {"Timestamp": "2025-04-08 15:40:20", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.0, "Moisture": 55, "Light": 1782, "Conductivity": 1065}, {"Timestamp": "2025-04-08 15:51:25", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.6, "Moisture": 24, "Light": 9512, "Conductivity": 76}, {"Timestamp": "2025-04-08 15:51:30", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.2, "Moisture": 55, "Light": 9886, "Conductivity": 1905}, {"Timestamp": "2025-04-08 15:51:33", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.0, "Moisture": 55, "Light": 1825, "Conductivity": 1076}, {"Timestamp": "2025-04-08 16:02:39", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.8, "Moisture": 24, "Light": 9523, "Conductivity": 76}, {"Timestamp": "2025-04-08 16:02:44", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 55, "Light": 9897, "Conductivity": 1931}, {"Timestamp": "2025-04-08 16:02:46", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 55, "Light": 1787, "Conductivity": 1076}, {"Timestamp": "2025-04-08 16:13:53", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.8, "Moisture": 24, "Light": 9475, "Conductivity": 76}, {"Timestamp": "2025-04-08 16:13:58", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.2, "Moisture": 55, "Light": 9886, "Conductivity": 1924}, {"Timestamp": "2025-04-08 16:14:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.1, "Moisture": 55, "Light": 1803, "Conductivity": 1074}, {"Timestamp": "2025-04-08 16:25:07", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.0, "Moisture": 24, "Light": 9523, "Conductivity": 75}, {"Timestamp": "2025-04-08 16:25:09", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.8, "Moisture": 55, "Light": 9886, "Conductivity": 1907}, {"Timestamp": "2025-04-08 16:25:12", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 55, "Light": 1766, "Conductivity": 1077}, {"Timestamp": "2025-04-08 16:36:16", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.2, "Moisture": 24, "Light": 9475, "Conductivity": 78}, {"Timestamp": "2025-04-08 16:36:21", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.1, "Moisture": 56, "Light": 9862, "Conductivity": 1915}, {"Timestamp": "2025-04-08 16:36:24", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.7, "Moisture": 55, "Light": 1819, "Conductivity": 1078}, {"Timestamp": "2025-04-08 16:47:32", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.4, "Moisture": 56, "Light": 9886, "Conductivity": 1920}, {"Timestamp": "2025-04-08 16:47:35", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.8, "Moisture": 55, "Light": 1782, "Conductivity": 1074}, {"Timestamp": "2025-04-08 16:58:42", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.5, "Moisture": 25, "Light": 9512, "Conductivity": 77}, {"Timestamp": "2025-04-08 16:58:45", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.4, "Moisture": 56, "Light": 9862, "Conductivity": 1912}, {"Timestamp": "2025-04-08 16:58:50", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.8, "Moisture": 55, "Light": 1819, "Conductivity": 1085}, {"Timestamp": "2025-04-08 17:09:54", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 27.4, "Moisture": 24, "Light": 1931, "Conductivity": 79}, {"Timestamp": "2025-04-08 17:09:59", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.2, "Moisture": 56, "Light": 9418, "Conductivity": 1934}, {"Timestamp": "2025-04-08 17:10:01", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.7, "Moisture": 55, "Light": 763, "Conductivity": 1087}, {"Timestamp": "2025-04-08 17:21:07", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.5, "Moisture": 56, "Light": 9407, "Conductivity": 1927}, {"Timestamp": "2025-04-08 17:21:10", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 55, "Light": 784, "Conductivity": 1100}, {"Timestamp": "2025-04-08 17:32:15", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 26.2, "Moisture": 24, "Light": 1947, "Conductivity": 81}, {"Timestamp": "2025-04-08 17:32:18", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.7, "Moisture": 57, "Light": 9418, "Conductivity": 1934}, {"Timestamp": "2025-04-08 17:32:21", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.5, "Moisture": 55, "Light": 747, "Conductivity": 1110}, {"Timestamp": "2025-04-08 17:43:25", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.9, "Moisture": 24, "Light": 1920, "Conductivity": 80}, {"Timestamp": "2025-04-08 17:43:30", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.7, "Moisture": 57, "Light": 9385, "Conductivity": 1934}, {"Timestamp": "2025-04-08 17:43:32", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.4, "Moisture": 55, "Light": 768, "Conductivity": 1110}, {"Timestamp": "2025-04-08 17:54:40", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 26.0, "Moisture": 57, "Light": 250, "Conductivity": 1956}, {"Timestamp": "2025-04-08 17:54:43", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.1, "Moisture": 55, "Light": 9, "Conductivity": 1108}, {"Timestamp": "2025-04-08 18:05:48", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.1, "Moisture": 24, "Light": 236, "Conductivity": 82}, {"Timestamp": "2025-04-08 18:05:52", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.4, "Moisture": 56, "Light": 126, "Conductivity": 1948}, {"Timestamp": "2025-04-08 18:05:55", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 55, "Light": 105, "Conductivity": 1122}, {"Timestamp": "2025-04-08 18:17:03", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 56, "Light": 250, "Conductivity": 1947}, {"Timestamp": "2025-04-08 18:17:06", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.8, "Moisture": 55, "Light": 86, "Conductivity": 1110}, {"Timestamp": "2025-04-08 18:28:14", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.2, "Moisture": 55, "Light": 158, "Conductivity": 1935}, {"Timestamp": "2025-04-08 18:28:17", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 24.9, "Moisture": 55, "Light": 108, "Conductivity": 1085}, {"Timestamp": "2025-04-08 18:39:24", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.2, "Moisture": 24, "Light": 139, "Conductivity": 83}, {"Timestamp": "2025-04-08 18:39:27", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 55, "Light": 237, "Conductivity": 1894}, {"Timestamp": "2025-04-08 18:39:30", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.1, "Moisture": 55, "Light": 128, "Conductivity": 1086}, {"Timestamp": "2025-04-08 18:50:35", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.4, "Moisture": 24, "Light": 237, "Conductivity": 82}, {"Timestamp": "2025-04-08 18:50:38", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 55, "Light": 126, "Conductivity": 1882}, {"Timestamp": "2025-04-08 18:50:41", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.2, "Moisture": 55, "Light": 66, "Conductivity": 1114}, {"Timestamp": "2025-04-08 19:01:45", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.5, "Moisture": 24, "Light": 171, "Conductivity": 82}, {"Timestamp": "2025-04-08 19:01:48", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.3, "Moisture": 55, "Light": 220, "Conductivity": 1878}, {"Timestamp": "2025-04-08 19:01:51", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 55, "Light": 105, "Conductivity": 1095}, {"Timestamp": "2025-04-08 19:12:57", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.6, "Moisture": 24, "Light": 205, "Conductivity": 82}, {"Timestamp": "2025-04-08 19:12:59", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.4, "Moisture": 55, "Light": 126, "Conductivity": 1878}, {"Timestamp": "2025-04-08 19:13:02", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.4, "Moisture": 55, "Light": 0, "Conductivity": 1108}, {"Timestamp": "2025-04-08 19:24:06", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.7, "Moisture": 24, "Light": 139, "Conductivity": 82}, {"Timestamp": "2025-04-08 19:24:11", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.3, "Moisture": 55, "Light": 234, "Conductivity": 1867}, {"Timestamp": "2025-04-08 19:24:14", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.4, "Moisture": 55, "Light": 86, "Conductivity": 1112}, {"Timestamp": "2025-04-08 19:35:18", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.3, "Moisture": 24, "Light": 205, "Conductivity": 81}, {"Timestamp": "2025-04-08 19:35:22", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.1, "Moisture": 55, "Light": 87, "Conductivity": 1874}, {"Timestamp": "2025-04-08 19:35:25", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.2, "Moisture": 55, "Light": 66, "Conductivity": 1106}, {"Timestamp": "2025-04-08 19:46:30", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.3, "Moisture": 24, "Light": 139, "Conductivity": 83}, {"Timestamp": "2025-04-08 19:46:34", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 55, "Light": 250, "Conductivity": 1863}, {"Timestamp": "2025-04-08 19:46:37", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.2, "Moisture": 55, "Light": 108, "Conductivity": 1116}, {"Timestamp": "2025-04-08 19:56:16", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.4, "Moisture": 24, "Light": 237, "Conductivity": 81}, {"Timestamp": "2025-04-08 19:56:19", "MAC": "c4:7c:8d:6d:28:fa", "Temperature": 25.0, "Moisture": 55, "Light": 104, "Conductivity": 1851}, {"Timestamp": "2025-04-08 19:56:23", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.3, "Moisture": 55, "Light": 65, "Conductivity": 1095}, {"Timestamp": "2025-04-08 20:08:31", "MAC": "c4:7c:8d:6d:26:c9", "Temperature": 25.6, "Moisture": 24, "Light": 186, "Conductivity": 82}, {"Timestamp": "2025-04-08 20:08:41", "MAC": "c4:7c:8d:6d:24:ed", "Temperature": 25.4, "Moisture": 55, "Light": 30, "Conductivity": 1100}]
+[
+    {
+        "Timestamp": "2025-04-08 00:09:27",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.2,
+        "Moisture": 46,
+        "Light": 14,
+        "Conductivity": 648
+    },
+    {
+        "Timestamp": "2025-04-08 00:09:30",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.9,
+        "Moisture": 27,
+        "Light": 205,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 00:09:33",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.4,
+        "Moisture": 58,
+        "Light": 126,
+        "Conductivity": 1986
+    },
+    {
+        "Timestamp": "2025-04-08 00:09:37",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.7,
+        "Moisture": 60,
+        "Light": 86,
+        "Conductivity": 1271
+    },
+    {
+        "Timestamp": "2025-04-08 00:20:02",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.0,
+        "Moisture": 46,
+        "Light": 113,
+        "Conductivity": 649
+    },
+    {
+        "Timestamp": "2025-04-08 00:20:05",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.8,
+        "Moisture": 27,
+        "Light": 205,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 00:20:07",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.3,
+        "Moisture": 58,
+        "Light": 206,
+        "Conductivity": 1997
+    },
+    {
+        "Timestamp": "2025-04-08 00:20:11",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.7,
+        "Moisture": 60,
+        "Light": 105,
+        "Conductivity": 1274
+    },
+    {
+        "Timestamp": "2025-04-08 00:30:37",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.8,
+        "Moisture": 46,
+        "Light": 0,
+        "Conductivity": 650
+    },
+    {
+        "Timestamp": "2025-04-08 00:30:40",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.7,
+        "Moisture": 27,
+        "Light": 99,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 00:30:42",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.2,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1997
+    },
+    {
+        "Timestamp": "2025-04-08 00:30:46",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.7,
+        "Moisture": 60,
+        "Light": 63,
+        "Conductivity": 1274
+    },
+    {
+        "Timestamp": "2025-04-08 00:41:11",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.8,
+        "Moisture": 46,
+        "Light": 0,
+        "Conductivity": 647
+    },
+    {
+        "Timestamp": "2025-04-08 00:41:14",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.8,
+        "Moisture": 27,
+        "Light": 237,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 00:41:16",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.2,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1997
+    },
+    {
+        "Timestamp": "2025-04-08 00:41:20",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 60,
+        "Light": 87,
+        "Conductivity": 1276
+    },
+    {
+        "Timestamp": "2025-04-08 00:51:45",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.9,
+        "Moisture": 46,
+        "Light": 78,
+        "Conductivity": 644
+    },
+    {
+        "Timestamp": "2025-04-08 00:51:48",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.8,
+        "Moisture": 27,
+        "Light": 138,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 00:51:50",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.2,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 2001
+    },
+    {
+        "Timestamp": "2025-04-08 00:51:54",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 59,
+        "Light": 63,
+        "Conductivity": 1267
+    },
+    {
+        "Timestamp": "2025-04-08 01:02:20",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.7,
+        "Moisture": 46,
+        "Light": 118,
+        "Conductivity": 639
+    },
+    {
+        "Timestamp": "2025-04-08 01:02:24",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.7,
+        "Moisture": 27,
+        "Light": 236,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 01:02:26",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1986
+    },
+    {
+        "Timestamp": "2025-04-08 01:02:29",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 60,
+        "Light": 86,
+        "Conductivity": 1262
+    },
+    {
+        "Timestamp": "2025-04-08 01:12:54",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.7,
+        "Moisture": 46,
+        "Light": 58,
+        "Conductivity": 639
+    },
+    {
+        "Timestamp": "2025-04-08 01:12:56",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.6,
+        "Moisture": 27,
+        "Light": 99,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 01:12:58",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 87,
+        "Conductivity": 2005
+    },
+    {
+        "Timestamp": "2025-04-08 01:13:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 59,
+        "Light": 105,
+        "Conductivity": 1281
+    },
+    {
+        "Timestamp": "2025-04-08 01:23:25",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.5,
+        "Moisture": 45,
+        "Light": 117,
+        "Conductivity": 648
+    },
+    {
+        "Timestamp": "2025-04-08 01:23:28",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 26,
+        "Light": 217,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 01:23:30",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 237,
+        "Conductivity": 1993
+    },
+    {
+        "Timestamp": "2025-04-08 01:23:33",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 59,
+        "Light": 43,
+        "Conductivity": 1264
+    },
+    {
+        "Timestamp": "2025-04-08 01:33:57",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.6,
+        "Moisture": 45,
+        "Light": 58,
+        "Conductivity": 648
+    },
+    {
+        "Timestamp": "2025-04-08 01:33:59",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 27,
+        "Light": 155,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 01:34:01",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 58,
+        "Light": 87,
+        "Conductivity": 1981
+    },
+    {
+        "Timestamp": "2025-04-08 01:34:04",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.2,
+        "Moisture": 59,
+        "Light": 0,
+        "Conductivity": 1272
+    },
+    {
+        "Timestamp": "2025-04-08 01:44:29",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.8,
+        "Moisture": 45,
+        "Light": 117,
+        "Conductivity": 640
+    },
+    {
+        "Timestamp": "2025-04-08 01:44:32",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 26,
+        "Light": 236,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 01:44:34",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 58,
+        "Light": 234,
+        "Conductivity": 1993
+    },
+    {
+        "Timestamp": "2025-04-08 01:44:37",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 59,
+        "Light": 105,
+        "Conductivity": 1272
+    },
+    {
+        "Timestamp": "2025-04-08 01:55:01",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.5,
+        "Moisture": 45,
+        "Light": 74,
+        "Conductivity": 639
+    },
+    {
+        "Timestamp": "2025-04-08 01:55:04",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 26,
+        "Light": 136,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 01:55:06",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 58,
+        "Light": 87,
+        "Conductivity": 1967
+    },
+    {
+        "Timestamp": "2025-04-08 01:55:09",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 59,
+        "Light": 47,
+        "Conductivity": 1281
+    },
+    {
+        "Timestamp": "2025-04-08 02:05:34",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.5,
+        "Moisture": 46,
+        "Light": 94,
+        "Conductivity": 639
+    },
+    {
+        "Timestamp": "2025-04-08 02:05:37",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 26,
+        "Light": 205,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 02:05:39",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1993
+    },
+    {
+        "Timestamp": "2025-04-08 02:05:42",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.2,
+        "Moisture": 59,
+        "Light": 107,
+        "Conductivity": 1267
+    },
+    {
+        "Timestamp": "2025-04-08 02:16:06",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.8,
+        "Moisture": 45,
+        "Light": 1666,
+        "Conductivity": 635
+    },
+    {
+        "Timestamp": "2025-04-08 02:16:09",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.1,
+        "Moisture": 26,
+        "Light": 8212,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 02:16:12",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 2422,
+        "Conductivity": 1974
+    },
+    {
+        "Timestamp": "2025-04-08 02:16:16",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 59,
+        "Light": 1064,
+        "Conductivity": 1267
+    },
+    {
+        "Timestamp": "2025-04-08 02:26:40",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.0,
+        "Moisture": 45,
+        "Light": 1743,
+        "Conductivity": 634
+    },
+    {
+        "Timestamp": "2025-04-08 02:26:44",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.7,
+        "Moisture": 26,
+        "Light": 8372,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 02:26:46",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.3,
+        "Moisture": 58,
+        "Light": 2660,
+        "Conductivity": 1986
+    },
+    {
+        "Timestamp": "2025-04-08 02:26:49",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.8,
+        "Moisture": 59,
+        "Light": 1120,
+        "Conductivity": 1258
+    },
+    {
+        "Timestamp": "2025-04-08 02:37:13",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.2,
+        "Moisture": 45,
+        "Light": 1681,
+        "Conductivity": 633
+    },
+    {
+        "Timestamp": "2025-04-08 02:37:16",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.1,
+        "Moisture": 26,
+        "Light": 8286,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 02:37:19",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.4,
+        "Moisture": 58,
+        "Light": 2541,
+        "Conductivity": 1975
+    },
+    {
+        "Timestamp": "2025-04-08 02:37:24",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 26.1,
+        "Moisture": 60,
+        "Light": 1084,
+        "Conductivity": 1246
+    },
+    {
+        "Timestamp": "2025-04-08 02:47:48",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.3,
+        "Moisture": 45,
+        "Light": 1718,
+        "Conductivity": 628
+    },
+    {
+        "Timestamp": "2025-04-08 02:47:52",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.5,
+        "Moisture": 26,
+        "Light": 8407,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 02:47:55",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.6,
+        "Moisture": 58,
+        "Light": 2614,
+        "Conductivity": 1975
+    },
+    {
+        "Timestamp": "2025-04-08 02:47:59",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 26.1,
+        "Moisture": 60,
+        "Light": 1132,
+        "Conductivity": 1253
+    },
+    {
+        "Timestamp": "2025-04-08 02:58:23",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.2,
+        "Moisture": 45,
+        "Light": 1708,
+        "Conductivity": 632
+    },
+    {
+        "Timestamp": "2025-04-08 02:58:27",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.5,
+        "Moisture": 26,
+        "Light": 8461,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 02:58:29",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.6,
+        "Moisture": 58,
+        "Light": 2482,
+        "Conductivity": 1959
+    },
+    {
+        "Timestamp": "2025-04-08 02:58:32",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 26.1,
+        "Moisture": 59,
+        "Light": 1072,
+        "Conductivity": 1246
+    },
+    {
+        "Timestamp": "2025-04-08 03:08:58",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.2,
+        "Moisture": 45,
+        "Light": 1759,
+        "Conductivity": 628
+    },
+    {
+        "Timestamp": "2025-04-08 03:09:01",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.7,
+        "Moisture": 26,
+        "Light": 8335,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 03:09:04",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.5,
+        "Moisture": 58,
+        "Light": 2732,
+        "Conductivity": 1959
+    },
+    {
+        "Timestamp": "2025-04-08 03:09:10",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 26.3,
+        "Moisture": 59,
+        "Light": 1136,
+        "Conductivity": 1224
+    },
+    {
+        "Timestamp": "2025-04-08 03:19:35",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 26.1,
+        "Moisture": 45,
+        "Light": 74,
+        "Conductivity": 629
+    },
+    {
+        "Timestamp": "2025-04-08 03:19:39",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.0,
+        "Moisture": 26,
+        "Light": 220,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 03:19:42",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.4,
+        "Moisture": 58,
+        "Light": 158,
+        "Conductivity": 1970
+    },
+    {
+        "Timestamp": "2025-04-08 03:19:47",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.9,
+        "Moisture": 59,
+        "Light": 105,
+        "Conductivity": 1239
+    },
+    {
+        "Timestamp": "2025-04-08 03:30:11",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.5,
+        "Moisture": 45,
+        "Light": 56,
+        "Conductivity": 625
+    },
+    {
+        "Timestamp": "2025-04-08 03:30:14",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.1,
+        "Moisture": 26,
+        "Light": 202,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 03:30:16",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1978
+    },
+    {
+        "Timestamp": "2025-04-08 03:30:20",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 59,
+        "Light": 47,
+        "Conductivity": 1251
+    },
+    {
+        "Timestamp": "2025-04-08 03:40:46",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.5,
+        "Moisture": 45,
+        "Light": 0,
+        "Conductivity": 626
+    },
+    {
+        "Timestamp": "2025-04-08 03:40:49",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.8,
+        "Moisture": 26,
+        "Light": 102,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 03:40:51",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 58,
+        "Light": 104,
+        "Conductivity": 1981
+    },
+    {
+        "Timestamp": "2025-04-08 03:40:54",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 59,
+        "Light": 105,
+        "Conductivity": 1264
+    },
+    {
+        "Timestamp": "2025-04-08 03:51:19",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.3,
+        "Moisture": 45,
+        "Light": 135,
+        "Conductivity": 622
+    },
+    {
+        "Timestamp": "2025-04-08 03:51:22",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.6,
+        "Moisture": 26,
+        "Light": 221,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 03:51:24",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.9,
+        "Moisture": 58,
+        "Light": 218,
+        "Conductivity": 1997
+    },
+    {
+        "Timestamp": "2025-04-08 03:51:28",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 58,
+        "Light": 107,
+        "Conductivity": 1255
+    },
+    {
+        "Timestamp": "2025-04-08 04:01:52",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.3,
+        "Moisture": 45,
+        "Light": 95,
+        "Conductivity": 625
+    },
+    {
+        "Timestamp": "2025-04-08 04:01:56",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.4,
+        "Moisture": 26,
+        "Light": 79,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 04:01:58",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.9,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1988
+    },
+    {
+        "Timestamp": "2025-04-08 04:02:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.2,
+        "Moisture": 58,
+        "Light": 68,
+        "Conductivity": 1269
+    },
+    {
+        "Timestamp": "2025-04-08 04:12:28",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.3,
+        "Moisture": 45,
+        "Light": 117,
+        "Conductivity": 619
+    },
+    {
+        "Timestamp": "2025-04-08 04:12:31",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.4,
+        "Moisture": 26,
+        "Light": 221,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 04:12:33",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.7,
+        "Moisture": 58,
+        "Light": 87,
+        "Conductivity": 1978
+    },
+    {
+        "Timestamp": "2025-04-08 04:12:36",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 89,
+        "Conductivity": 1269
+    },
+    {
+        "Timestamp": "2025-04-08 04:23:00",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.3,
+        "Moisture": 45,
+        "Light": 55,
+        "Conductivity": 621
+    },
+    {
+        "Timestamp": "2025-04-08 04:23:03",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.4,
+        "Moisture": 26,
+        "Light": 118,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 04:23:05",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.8,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1974
+    },
+    {
+        "Timestamp": "2025-04-08 04:23:08",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.1,
+        "Moisture": 58,
+        "Light": 108,
+        "Conductivity": 1260
+    },
+    {
+        "Timestamp": "2025-04-08 04:33:32",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 45,
+        "Light": 117,
+        "Conductivity": 608
+    },
+    {
+        "Timestamp": "2025-04-08 04:33:36",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 26,
+        "Light": 221,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 04:33:38",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.7,
+        "Moisture": 58,
+        "Light": 126,
+        "Conductivity": 1992
+    },
+    {
+        "Timestamp": "2025-04-08 04:33:41",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.0,
+        "Moisture": 58,
+        "Light": 86,
+        "Conductivity": 1262
+    },
+    {
+        "Timestamp": "2025-04-08 04:44:05",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 45,
+        "Light": 74,
+        "Conductivity": 614
+    },
+    {
+        "Timestamp": "2025-04-08 04:44:08",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 26,
+        "Light": 82,
+        "Conductivity": 86
+    },
+    {
+        "Timestamp": "2025-04-08 04:44:11",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 220,
+        "Conductivity": 1992
+    },
+    {
+        "Timestamp": "2025-04-08 04:44:16",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 58,
+        "Light": 86,
+        "Conductivity": 1254
+    },
+    {
+        "Timestamp": "2025-04-08 04:54:39",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 45,
+        "Light": 115,
+        "Conductivity": 612
+    },
+    {
+        "Timestamp": "2025-04-08 04:54:42",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 26,
+        "Light": 237,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 04:54:44",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 104,
+        "Conductivity": 1992
+    },
+    {
+        "Timestamp": "2025-04-08 04:54:47",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 58,
+        "Light": 0,
+        "Conductivity": 1256
+    },
+    {
+        "Timestamp": "2025-04-08 05:05:10",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.2,
+        "Moisture": 45,
+        "Light": 97,
+        "Conductivity": 614
+    },
+    {
+        "Timestamp": "2025-04-08 05:05:13",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 25,
+        "Light": 171,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 05:05:15",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.7,
+        "Moisture": 58,
+        "Light": 203,
+        "Conductivity": 1969
+    },
+    {
+        "Timestamp": "2025-04-08 05:05:18",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 58,
+        "Light": 89,
+        "Conductivity": 1254
+    },
+    {
+        "Timestamp": "2025-04-08 05:15:42",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.2,
+        "Moisture": 45,
+        "Light": 117,
+        "Conductivity": 610
+    },
+    {
+        "Timestamp": "2025-04-08 05:15:46",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.1,
+        "Moisture": 25,
+        "Light": 236,
+        "Conductivity": 86
+    },
+    {
+        "Timestamp": "2025-04-08 05:15:48",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 104,
+        "Conductivity": 1988
+    },
+    {
+        "Timestamp": "2025-04-08 05:15:51",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 58,
+        "Light": 108,
+        "Conductivity": 1248
+    },
+    {
+        "Timestamp": "2025-04-08 05:26:14",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.2,
+        "Moisture": 45,
+        "Light": 99,
+        "Conductivity": 605
+    },
+    {
+        "Timestamp": "2025-04-08 05:26:20",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 25,
+        "Light": 120,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 05:26:22",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 250,
+        "Conductivity": 1985
+    },
+    {
+        "Timestamp": "2025-04-08 05:26:25",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 58,
+        "Light": 68,
+        "Conductivity": 1248
+    },
+    {
+        "Timestamp": "2025-04-08 05:36:49",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 44,
+        "Light": 136,
+        "Conductivity": 614
+    },
+    {
+        "Timestamp": "2025-04-08 05:36:52",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 25,
+        "Light": 205,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 05:36:54",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 58,
+        "Light": 123,
+        "Conductivity": 1977
+    },
+    {
+        "Timestamp": "2025-04-08 05:36:57",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 58,
+        "Light": 89,
+        "Conductivity": 1248
+    },
+    {
+        "Timestamp": "2025-04-08 05:47:21",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.2,
+        "Moisture": 44,
+        "Light": 118,
+        "Conductivity": 610
+    },
+    {
+        "Timestamp": "2025-04-08 05:47:25",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.1,
+        "Moisture": 25,
+        "Light": 79,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 05:47:27",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 58,
+        "Light": 236,
+        "Conductivity": 1965
+    },
+    {
+        "Timestamp": "2025-04-08 05:47:30",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.7,
+        "Moisture": 58,
+        "Light": 107,
+        "Conductivity": 1241
+    },
+    {
+        "Timestamp": "2025-04-08 05:57:53",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 44,
+        "Light": 95,
+        "Conductivity": 610
+    },
+    {
+        "Timestamp": "2025-04-08 05:57:56",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 25,
+        "Light": 202,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 05:57:59",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 87,
+        "Conductivity": 1961
+    },
+    {
+        "Timestamp": "2025-04-08 05:58:04",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 58,
+        "Light": 66,
+        "Conductivity": 1237
+    },
+    {
+        "Timestamp": "2025-04-08 06:08:28",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 44,
+        "Light": 94,
+        "Conductivity": 601
+    },
+    {
+        "Timestamp": "2025-04-08 06:08:31",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 25,
+        "Light": 203,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 06:08:33",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 56,
+        "Light": 220,
+        "Conductivity": 1992
+    },
+    {
+        "Timestamp": "2025-04-08 06:08:35",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 58,
+        "Light": 108,
+        "Conductivity": 1231
+    },
+    {
+        "Timestamp": "2025-04-08 06:18:59",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.0,
+        "Moisture": 44,
+        "Light": 136,
+        "Conductivity": 606
+    },
+    {
+        "Timestamp": "2025-04-08 06:19:03",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.0,
+        "Moisture": 25,
+        "Light": 100,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 06:19:05",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 56,
+        "Light": 104,
+        "Conductivity": 1977
+    },
+    {
+        "Timestamp": "2025-04-08 06:19:08",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.7,
+        "Moisture": 58,
+        "Light": 66,
+        "Conductivity": 1236
+    },
+    {
+        "Timestamp": "2025-04-08 06:29:41",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.1,
+        "Moisture": 44,
+        "Light": 58,
+        "Conductivity": 604
+    },
+    {
+        "Timestamp": "2025-04-08 06:29:46",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.1,
+        "Moisture": 25,
+        "Light": 205,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 06:29:49",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 56,
+        "Light": 220,
+        "Conductivity": 1953
+    },
+    {
+        "Timestamp": "2025-04-08 06:29:54",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 58,
+        "Light": 108,
+        "Conductivity": 1233
+    },
+    {
+        "Timestamp": "2025-04-08 06:40:17",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.0,
+        "Moisture": 44,
+        "Light": 81,
+        "Conductivity": 597
+    },
+    {
+        "Timestamp": "2025-04-08 06:40:21",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.0,
+        "Moisture": 25,
+        "Light": 205,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 06:40:23",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 56,
+        "Light": 104,
+        "Conductivity": 1965
+    },
+    {
+        "Timestamp": "2025-04-08 06:40:25",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.7,
+        "Moisture": 58,
+        "Light": 66,
+        "Conductivity": 1222
+    },
+    {
+        "Timestamp": "2025-04-08 06:50:50",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.0,
+        "Moisture": 44,
+        "Light": 17,
+        "Conductivity": 602
+    },
+    {
+        "Timestamp": "2025-04-08 06:50:53",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.1,
+        "Moisture": 25,
+        "Light": 118,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 06:50:57",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.3,
+        "Moisture": 56,
+        "Light": 220,
+        "Conductivity": 1956
+    },
+    {
+        "Timestamp": "2025-04-08 06:51:03",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 108,
+        "Conductivity": 1246
+    },
+    {
+        "Timestamp": "2025-04-08 07:01:26",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 25.0,
+        "Moisture": 43,
+        "Light": 135,
+        "Conductivity": 600
+    },
+    {
+        "Timestamp": "2025-04-08 07:01:30",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.8,
+        "Moisture": 25,
+        "Light": 236,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 07:01:33",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 56,
+        "Light": 87,
+        "Conductivity": 1956
+    },
+    {
+        "Timestamp": "2025-04-08 07:01:37",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 68,
+        "Conductivity": 1227
+    },
+    {
+        "Timestamp": "2025-04-08 07:12:01",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.6,
+        "Moisture": 43,
+        "Light": 19,
+        "Conductivity": 606
+    },
+    {
+        "Timestamp": "2025-04-08 07:12:07",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.7,
+        "Moisture": 25,
+        "Light": 205,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 07:12:09",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.3,
+        "Moisture": 57,
+        "Light": 202,
+        "Conductivity": 1979
+    },
+    {
+        "Timestamp": "2025-04-08 07:12:11",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.6,
+        "Moisture": 58,
+        "Light": 108,
+        "Conductivity": 1229
+    },
+    {
+        "Timestamp": "2025-04-08 07:22:35",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.6,
+        "Moisture": 43,
+        "Light": 118,
+        "Conductivity": 603
+    },
+    {
+        "Timestamp": "2025-04-08 07:22:39",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.7,
+        "Moisture": 25,
+        "Light": 100,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 07:22:41",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.2,
+        "Moisture": 56,
+        "Light": 104,
+        "Conductivity": 1967
+    },
+    {
+        "Timestamp": "2025-04-08 07:22:43",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.4,
+        "Moisture": 58,
+        "Light": 63,
+        "Conductivity": 1234
+    },
+    {
+        "Timestamp": "2025-04-08 07:33:07",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.6,
+        "Moisture": 43,
+        "Light": 74,
+        "Conductivity": 603
+    },
+    {
+        "Timestamp": "2025-04-08 07:33:09",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.6,
+        "Moisture": 25,
+        "Light": 187,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 07:33:12",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.0,
+        "Moisture": 56,
+        "Light": 250,
+        "Conductivity": 1955
+    },
+    {
+        "Timestamp": "2025-04-08 07:33:15",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.3,
+        "Moisture": 58,
+        "Light": 105,
+        "Conductivity": 1225
+    },
+    {
+        "Timestamp": "2025-04-08 07:43:40",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.6,
+        "Moisture": 43,
+        "Light": 115,
+        "Conductivity": 599
+    },
+    {
+        "Timestamp": "2025-04-08 07:43:42",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.6,
+        "Moisture": 25,
+        "Light": 99,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 07:43:46",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.0,
+        "Moisture": 56,
+        "Light": 217,
+        "Conductivity": 1971
+    },
+    {
+        "Timestamp": "2025-04-08 07:43:50",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.4,
+        "Moisture": 58,
+        "Light": 84,
+        "Conductivity": 1238
+    },
+    {
+        "Timestamp": "2025-04-08 07:54:14",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.5,
+        "Moisture": 43,
+        "Light": 74,
+        "Conductivity": 600
+    },
+    {
+        "Timestamp": "2025-04-08 07:54:17",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.4,
+        "Moisture": 25,
+        "Light": 203,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 07:54:20",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.9,
+        "Moisture": 56,
+        "Light": 87,
+        "Conductivity": 1962
+    },
+    {
+        "Timestamp": "2025-04-08 07:54:22",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.2,
+        "Moisture": 58,
+        "Light": 107,
+        "Conductivity": 1229
+    },
+    {
+        "Timestamp": "2025-04-08 08:04:46",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.5,
+        "Moisture": 43,
+        "Light": 138,
+        "Conductivity": 591
+    },
+    {
+        "Timestamp": "2025-04-08 08:04:50",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.5,
+        "Moisture": 25,
+        "Light": 138,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 08:04:52",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.0,
+        "Moisture": 56,
+        "Light": 220,
+        "Conductivity": 1974
+    },
+    {
+        "Timestamp": "2025-04-08 08:04:55",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.2,
+        "Moisture": 56,
+        "Light": 65,
+        "Conductivity": 1229
+    },
+    {
+        "Timestamp": "2025-04-08 08:15:20",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.6,
+        "Moisture": 43,
+        "Light": 0,
+        "Conductivity": 594
+    },
+    {
+        "Timestamp": "2025-04-08 08:15:22",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.6,
+        "Moisture": 25,
+        "Light": 220,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 08:15:25",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.0,
+        "Moisture": 56,
+        "Light": 220,
+        "Conductivity": 1959
+    },
+    {
+        "Timestamp": "2025-04-08 08:15:28",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.3,
+        "Moisture": 56,
+        "Light": 73,
+        "Conductivity": 1219
+    },
+    {
+        "Timestamp": "2025-04-08 08:25:53",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.5,
+        "Moisture": 43,
+        "Light": 115,
+        "Conductivity": 591
+    },
+    {
+        "Timestamp": "2025-04-08 08:25:56",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.4,
+        "Moisture": 25,
+        "Light": 154,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 08:25:59",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.0,
+        "Moisture": 56,
+        "Light": 250,
+        "Conductivity": 1971
+    },
+    {
+        "Timestamp": "2025-04-08 08:26:02",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.1,
+        "Moisture": 56,
+        "Light": 65,
+        "Conductivity": 1210
+    },
+    {
+        "Timestamp": "2025-04-08 08:36:27",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.3,
+        "Moisture": 43,
+        "Light": 0,
+        "Conductivity": 593
+    },
+    {
+        "Timestamp": "2025-04-08 08:36:30",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.3,
+        "Moisture": 25,
+        "Light": 220,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 08:36:32",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.8,
+        "Moisture": 56,
+        "Light": 220,
+        "Conductivity": 1962
+    },
+    {
+        "Timestamp": "2025-04-08 08:36:34",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.0,
+        "Moisture": 56,
+        "Light": 107,
+        "Conductivity": 1205
+    },
+    {
+        "Timestamp": "2025-04-08 08:46:59",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.3,
+        "Moisture": 43,
+        "Light": 115,
+        "Conductivity": 590
+    },
+    {
+        "Timestamp": "2025-04-08 08:47:03",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.1,
+        "Moisture": 25,
+        "Light": 120,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 08:47:06",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.7,
+        "Moisture": 56,
+        "Light": 126,
+        "Conductivity": 1966
+    },
+    {
+        "Timestamp": "2025-04-08 08:47:08",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.9,
+        "Moisture": 56,
+        "Light": 107,
+        "Conductivity": 1219
+    },
+    {
+        "Timestamp": "2025-04-08 08:57:33",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.0,
+        "Moisture": 43,
+        "Light": 74,
+        "Conductivity": 588
+    },
+    {
+        "Timestamp": "2025-04-08 08:57:36",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.0,
+        "Moisture": 25,
+        "Light": 236,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 08:57:39",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.6,
+        "Moisture": 56,
+        "Light": 234,
+        "Conductivity": 1976
+    },
+    {
+        "Timestamp": "2025-04-08 08:57:41",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.7,
+        "Moisture": 57,
+        "Light": 110,
+        "Conductivity": 1223
+    },
+    {
+        "Timestamp": "2025-04-08 09:08:05",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.0,
+        "Moisture": 43,
+        "Light": 43,
+        "Conductivity": 590
+    },
+    {
+        "Timestamp": "2025-04-08 09:08:08",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.9,
+        "Moisture": 25,
+        "Light": 155,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 09:08:11",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.6,
+        "Moisture": 56,
+        "Light": 158,
+        "Conductivity": 1965
+    },
+    {
+        "Timestamp": "2025-04-08 09:08:14",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.6,
+        "Moisture": 57,
+        "Light": 66,
+        "Conductivity": 1223
+    },
+    {
+        "Timestamp": "2025-04-08 09:18:39",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.2,
+        "Moisture": 43,
+        "Light": 1,
+        "Conductivity": 591
+    },
+    {
+        "Timestamp": "2025-04-08 09:18:41",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.0,
+        "Moisture": 25,
+        "Light": 267,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 09:18:45",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.6,
+        "Moisture": 56,
+        "Light": 217,
+        "Conductivity": 1962
+    },
+    {
+        "Timestamp": "2025-04-08 09:18:48",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.9,
+        "Moisture": 57,
+        "Light": 110,
+        "Conductivity": 1202
+    },
+    {
+        "Timestamp": "2025-04-08 09:29:13",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.1,
+        "Moisture": 43,
+        "Light": 42,
+        "Conductivity": 584
+    },
+    {
+        "Timestamp": "2025-04-08 09:29:16",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.6,
+        "Moisture": 56,
+        "Light": 87,
+        "Conductivity": 1962
+    },
+    {
+        "Timestamp": "2025-04-08 09:29:20",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.0,
+        "Moisture": 57,
+        "Light": 108,
+        "Conductivity": 1197
+    },
+    {
+        "Timestamp": "2025-04-08 09:39:44",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.0,
+        "Moisture": 43,
+        "Light": 1,
+        "Conductivity": 590
+    },
+    {
+        "Timestamp": "2025-04-08 09:39:47",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.0,
+        "Moisture": 25,
+        "Light": 221,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 09:39:50",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.6,
+        "Moisture": 56,
+        "Light": 249,
+        "Conductivity": 1949
+    },
+    {
+        "Timestamp": "2025-04-08 09:39:52",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.9,
+        "Moisture": 57,
+        "Light": 43,
+        "Conductivity": 1204
+    },
+    {
+        "Timestamp": "2025-04-08 09:50:17",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 24.0,
+        "Moisture": 43,
+        "Light": 40,
+        "Conductivity": 587
+    },
+    {
+        "Timestamp": "2025-04-08 09:50:20",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.9,
+        "Moisture": 25,
+        "Light": 120,
+        "Conductivity": 85
+    },
+    {
+        "Timestamp": "2025-04-08 09:50:23",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.4,
+        "Moisture": 56,
+        "Light": 172,
+        "Conductivity": 1941
+    },
+    {
+        "Timestamp": "2025-04-08 09:50:26",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.6,
+        "Moisture": 57,
+        "Light": 110,
+        "Conductivity": 1208
+    },
+    {
+        "Timestamp": "2025-04-08 10:00:50",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.8,
+        "Moisture": 42,
+        "Light": 1,
+        "Conductivity": 592
+    },
+    {
+        "Timestamp": "2025-04-08 10:00:53",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.6,
+        "Moisture": 25,
+        "Light": 220,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 10:00:56",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.3,
+        "Moisture": 55,
+        "Light": 218,
+        "Conductivity": 1972
+    },
+    {
+        "Timestamp": "2025-04-08 10:00:59",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.6,
+        "Moisture": 57,
+        "Light": 86,
+        "Conductivity": 1190
+    },
+    {
+        "Timestamp": "2025-04-08 10:11:24",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.8,
+        "Moisture": 42,
+        "Light": 136,
+        "Conductivity": 585
+    },
+    {
+        "Timestamp": "2025-04-08 10:11:27",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.6,
+        "Moisture": 25,
+        "Light": 138,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 10:11:31",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.3,
+        "Moisture": 55,
+        "Light": 218,
+        "Conductivity": 1948
+    },
+    {
+        "Timestamp": "2025-04-08 10:11:35",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.3,
+        "Moisture": 56,
+        "Light": 13,
+        "Conductivity": 1206
+    },
+    {
+        "Timestamp": "2025-04-08 10:22:00",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.5,
+        "Moisture": 42,
+        "Light": 1,
+        "Conductivity": 586
+    },
+    {
+        "Timestamp": "2025-04-08 10:22:03",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.6,
+        "Moisture": 24,
+        "Light": 220,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 10:22:06",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.1,
+        "Moisture": 55,
+        "Light": 140,
+        "Conductivity": 1955
+    },
+    {
+        "Timestamp": "2025-04-08 10:32:31",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.5,
+        "Moisture": 42,
+        "Light": 138,
+        "Conductivity": 587
+    },
+    {
+        "Timestamp": "2025-04-08 10:32:34",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.0,
+        "Moisture": 55,
+        "Light": 249,
+        "Conductivity": 1967
+    },
+    {
+        "Timestamp": "2025-04-08 10:32:37",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.2,
+        "Moisture": 56,
+        "Light": 128,
+        "Conductivity": 1210
+    },
+    {
+        "Timestamp": "2025-04-08 10:43:00",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.5,
+        "Moisture": 42,
+        "Light": 74,
+        "Conductivity": 587
+    },
+    {
+        "Timestamp": "2025-04-08 10:43:03",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.3,
+        "Moisture": 24,
+        "Light": 140,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 10:43:06",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.0,
+        "Moisture": 55,
+        "Light": 107,
+        "Conductivity": 1946
+    },
+    {
+        "Timestamp": "2025-04-08 10:43:11",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.1,
+        "Moisture": 56,
+        "Light": 87,
+        "Conductivity": 1193
+    },
+    {
+        "Timestamp": "2025-04-08 10:53:35",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.2,
+        "Moisture": 42,
+        "Light": 63,
+        "Conductivity": 583
+    },
+    {
+        "Timestamp": "2025-04-08 10:53:40",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.2,
+        "Moisture": 24,
+        "Light": 254,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 10:53:43",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.9,
+        "Moisture": 55,
+        "Light": 249,
+        "Conductivity": 1958
+    },
+    {
+        "Timestamp": "2025-04-08 10:53:46",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.1,
+        "Moisture": 55,
+        "Light": 130,
+        "Conductivity": 1203
+    },
+    {
+        "Timestamp": "2025-04-08 11:04:10",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.3,
+        "Moisture": 42,
+        "Light": 42,
+        "Conductivity": 587
+    },
+    {
+        "Timestamp": "2025-04-08 11:04:13",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.1,
+        "Moisture": 24,
+        "Light": 156,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 11:04:16",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.8,
+        "Moisture": 55,
+        "Light": 249,
+        "Conductivity": 1953
+    },
+    {
+        "Timestamp": "2025-04-08 11:04:18",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.0,
+        "Moisture": 55,
+        "Light": 66,
+        "Conductivity": 1203
+    },
+    {
+        "Timestamp": "2025-04-08 11:14:42",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.2,
+        "Moisture": 42,
+        "Light": 139,
+        "Conductivity": 588
+    },
+    {
+        "Timestamp": "2025-04-08 11:14:46",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.1,
+        "Moisture": 24,
+        "Light": 220,
+        "Conductivity": 84
+    },
+    {
+        "Timestamp": "2025-04-08 11:14:49",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.8,
+        "Moisture": 55,
+        "Light": 107,
+        "Conductivity": 1956
+    },
+    {
+        "Timestamp": "2025-04-08 11:14:52",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.9,
+        "Moisture": 55,
+        "Light": 107,
+        "Conductivity": 1195
+    },
+    {
+        "Timestamp": "2025-04-08 11:25:17",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.1,
+        "Moisture": 42,
+        "Light": 115,
+        "Conductivity": 585
+    },
+    {
+        "Timestamp": "2025-04-08 11:25:20",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.0,
+        "Moisture": 24,
+        "Light": 100,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 11:25:23",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.7,
+        "Moisture": 55,
+        "Light": 252,
+        "Conductivity": 1956
+    },
+    {
+        "Timestamp": "2025-04-08 11:25:27",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.8,
+        "Moisture": 55,
+        "Light": 68,
+        "Conductivity": 1190
+    },
+    {
+        "Timestamp": "2025-04-08 11:27:21",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.1,
+        "Moisture": 42,
+        "Light": 139,
+        "Conductivity": 585
+    },
+    {
+        "Timestamp": "2025-04-08 11:27:24",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.1,
+        "Moisture": 24,
+        "Light": 220,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 11:27:28",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.7,
+        "Moisture": 55,
+        "Light": 218,
+        "Conductivity": 1945
+    },
+    {
+        "Timestamp": "2025-04-08 11:27:32",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.8,
+        "Moisture": 55,
+        "Light": 128,
+        "Conductivity": 1172
+    },
+    {
+        "Timestamp": "2025-04-08 11:37:57",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 23.1,
+        "Moisture": 42,
+        "Light": 61,
+        "Conductivity": 582
+    },
+    {
+        "Timestamp": "2025-04-08 11:38:03",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.0,
+        "Moisture": 24,
+        "Light": 254,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 11:38:11",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.6,
+        "Moisture": 55,
+        "Light": 171,
+        "Conductivity": 1967
+    },
+    {
+        "Timestamp": "2025-04-08 11:38:15",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.7,
+        "Moisture": 55,
+        "Light": 32,
+        "Conductivity": 1174
+    },
+    {
+        "Timestamp": "2025-04-08 11:48:41",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.9,
+        "Moisture": 42,
+        "Light": 138,
+        "Conductivity": 580
+    },
+    {
+        "Timestamp": "2025-04-08 11:48:44",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.9,
+        "Moisture": 24,
+        "Light": 269,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 11:48:49",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.6,
+        "Moisture": 55,
+        "Light": 249,
+        "Conductivity": 1955
+    },
+    {
+        "Timestamp": "2025-04-08 11:48:53",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.6,
+        "Moisture": 55,
+        "Light": 128,
+        "Conductivity": 1172
+    },
+    {
+        "Timestamp": "2025-04-08 11:59:18",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.7,
+        "Moisture": 42,
+        "Light": 102,
+        "Conductivity": 583
+    },
+    {
+        "Timestamp": "2025-04-08 11:59:24",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.8,
+        "Moisture": 24,
+        "Light": 271,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 11:59:28",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.4,
+        "Moisture": 55,
+        "Light": 268,
+        "Conductivity": 1940
+    },
+    {
+        "Timestamp": "2025-04-08 11:59:33",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.7,
+        "Moisture": 55,
+        "Light": 16,
+        "Conductivity": 1176
+    },
+    {
+        "Timestamp": "2025-04-08 12:09:58",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.8,
+        "Moisture": 42,
+        "Light": 139,
+        "Conductivity": 582
+    },
+    {
+        "Timestamp": "2025-04-08 12:10:00",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.7,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 12:10:03",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.4,
+        "Moisture": 55,
+        "Light": 234,
+        "Conductivity": 1943
+    },
+    {
+        "Timestamp": "2025-04-08 12:10:08",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.5,
+        "Moisture": 55,
+        "Light": 112,
+        "Conductivity": 1169
+    },
+    {
+        "Timestamp": "2025-04-08 12:20:34",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.7,
+        "Moisture": 41,
+        "Light": 117,
+        "Conductivity": 584
+    },
+    {
+        "Timestamp": "2025-04-08 12:20:39",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.6,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 12:20:44",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 268,
+        "Conductivity": 1946
+    },
+    {
+        "Timestamp": "2025-04-08 12:20:48",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.5,
+        "Moisture": 55,
+        "Light": 128,
+        "Conductivity": 1169
+    },
+    {
+        "Timestamp": "2025-04-08 12:31:12",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.6,
+        "Moisture": 42,
+        "Light": 140,
+        "Conductivity": 579
+    },
+    {
+        "Timestamp": "2025-04-08 12:31:17",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.7,
+        "Moisture": 24,
+        "Light": 238,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 12:31:21",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 218,
+        "Conductivity": 1946
+    },
+    {
+        "Timestamp": "2025-04-08 12:31:25",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.5,
+        "Moisture": 55,
+        "Light": 108,
+        "Conductivity": 1171
+    },
+    {
+        "Timestamp": "2025-04-08 12:41:52",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.7,
+        "Moisture": 41,
+        "Light": 118,
+        "Conductivity": 584
+    },
+    {
+        "Timestamp": "2025-04-08 12:41:55",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.7,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 12:41:59",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 237,
+        "Conductivity": 1934
+    },
+    {
+        "Timestamp": "2025-04-08 12:42:03",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.4,
+        "Moisture": 55,
+        "Light": 94,
+        "Conductivity": 1161
+    },
+    {
+        "Timestamp": "2025-04-08 12:52:29",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.7,
+        "Moisture": 41,
+        "Light": 140,
+        "Conductivity": 577
+    },
+    {
+        "Timestamp": "2025-04-08 12:52:37",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.7,
+        "Moisture": 24,
+        "Light": 256,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 12:52:40",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 142,
+        "Conductivity": 1922
+    },
+    {
+        "Timestamp": "2025-04-08 12:52:43",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.4,
+        "Moisture": 55,
+        "Light": 108,
+        "Conductivity": 1154
+    },
+    {
+        "Timestamp": "2025-04-08 13:03:11",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.6,
+        "Moisture": 41,
+        "Light": 102,
+        "Conductivity": 579
+    },
+    {
+        "Timestamp": "2025-04-08 13:03:15",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.7,
+        "Moisture": 24,
+        "Light": 254,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 13:03:19",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.2,
+        "Moisture": 55,
+        "Light": 268,
+        "Conductivity": 1937
+    },
+    {
+        "Timestamp": "2025-04-08 13:13:52",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.5,
+        "Moisture": 41,
+        "Light": 120,
+        "Conductivity": 576
+    },
+    {
+        "Timestamp": "2025-04-08 13:13:55",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.4,
+        "Moisture": 24,
+        "Light": 253,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 13:14:01",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.2,
+        "Moisture": 54,
+        "Light": 187,
+        "Conductivity": 1913
+    },
+    {
+        "Timestamp": "2025-04-08 13:14:05",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 52,
+        "Conductivity": 1147
+    },
+    {
+        "Timestamp": "2025-04-08 13:24:30",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.4,
+        "Moisture": 41,
+        "Light": 117,
+        "Conductivity": 577
+    },
+    {
+        "Timestamp": "2025-04-08 13:24:42",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.4,
+        "Moisture": 24,
+        "Light": 238,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 13:24:45",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.2,
+        "Moisture": 54,
+        "Light": 268,
+        "Conductivity": 1928
+    },
+    {
+        "Timestamp": "2025-04-08 13:24:47",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 94,
+        "Conductivity": 1149
+    },
+    {
+        "Timestamp": "2025-04-08 13:35:17",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.4,
+        "Moisture": 24,
+        "Light": 205,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 13:35:20",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.1,
+        "Moisture": 54,
+        "Light": 187,
+        "Conductivity": 1904
+    },
+    {
+        "Timestamp": "2025-04-08 13:35:23",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.1,
+        "Moisture": 55,
+        "Light": 94,
+        "Conductivity": 1140
+    },
+    {
+        "Timestamp": "2025-04-08 13:45:52",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.5,
+        "Moisture": 41,
+        "Light": 136,
+        "Conductivity": 576
+    },
+    {
+        "Timestamp": "2025-04-08 13:45:56",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 24,
+        "Light": 238,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 13:45:59",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 218,
+        "Conductivity": 1923
+    },
+    {
+        "Timestamp": "2025-04-08 13:46:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.1,
+        "Moisture": 55,
+        "Light": 110,
+        "Conductivity": 1133
+    },
+    {
+        "Timestamp": "2025-04-08 13:56:25",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.4,
+        "Moisture": 40,
+        "Light": 97,
+        "Conductivity": 575
+    },
+    {
+        "Timestamp": "2025-04-08 13:56:28",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 24,
+        "Light": 139,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 13:56:31",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 86,
+        "Conductivity": 1919
+    },
+    {
+        "Timestamp": "2025-04-08 13:56:33",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.1,
+        "Moisture": 55,
+        "Light": 69,
+        "Conductivity": 1142
+    },
+    {
+        "Timestamp": "2025-04-08 14:06:59",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 41,
+        "Light": 139,
+        "Conductivity": 574
+    },
+    {
+        "Timestamp": "2025-04-08 14:07:02",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 24,
+        "Light": 254,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:07:04",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 206,
+        "Conductivity": 1911
+    },
+    {
+        "Timestamp": "2025-04-08 14:07:08",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.1,
+        "Moisture": 55,
+        "Light": 0,
+        "Conductivity": 1142
+    },
+    {
+        "Timestamp": "2025-04-08 14:10:36",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 56,
+        "Conductivity": 573
+    },
+    {
+        "Timestamp": "2025-04-08 14:10:39",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 24,
+        "Light": 139,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:10:43",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 237,
+        "Conductivity": 1926
+    },
+    {
+        "Timestamp": "2025-04-08 14:10:48",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.0,
+        "Moisture": 55,
+        "Light": 68,
+        "Conductivity": 1142
+    },
+    {
+        "Timestamp": "2025-04-08 14:17:04",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 139,
+        "Conductivity": 567
+    },
+    {
+        "Timestamp": "2025-04-08 14:17:07",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 24,
+        "Light": 238,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 14:17:12",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 218,
+        "Conductivity": 1911
+    },
+    {
+        "Timestamp": "2025-04-08 14:19:35",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 63,
+        "Conductivity": 571
+    },
+    {
+        "Timestamp": "2025-04-08 14:19:38",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 24,
+        "Light": 222,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 14:19:41",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 265,
+        "Conductivity": 1911
+    },
+    {
+        "Timestamp": "2025-04-08 14:19:43",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.1,
+        "Moisture": 55,
+        "Light": 112,
+        "Conductivity": 1137
+    },
+    {
+        "Timestamp": "2025-04-08 14:25:49",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 41,
+        "Light": 135,
+        "Conductivity": 574
+    },
+    {
+        "Timestamp": "2025-04-08 14:25:52",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 23,
+        "Light": 222,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:25:56",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 123,
+        "Conductivity": 1911
+    },
+    {
+        "Timestamp": "2025-04-08 14:26:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.1,
+        "Moisture": 54,
+        "Light": 48,
+        "Conductivity": 1135
+    },
+    {
+        "Timestamp": "2025-04-08 14:27:16",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.2,
+        "Moisture": 40,
+        "Light": 61,
+        "Conductivity": 571
+    },
+    {
+        "Timestamp": "2025-04-08 14:27:19",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 24,
+        "Light": 171,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:27:23",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 252,
+        "Conductivity": 1926
+    },
+    {
+        "Timestamp": "2025-04-08 14:27:28",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 130,
+        "Conductivity": 1133
+    },
+    {
+        "Timestamp": "2025-04-08 14:34:41",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 123,
+        "Conductivity": 568
+    },
+    {
+        "Timestamp": "2025-04-08 14:34:44",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 24,
+        "Light": 254,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 14:34:47",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 221,
+        "Conductivity": 1911
+    },
+    {
+        "Timestamp": "2025-04-08 14:34:49",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 112,
+        "Conductivity": 1133
+    },
+    {
+        "Timestamp": "2025-04-08 14:36:56",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.2,
+        "Moisture": 40,
+        "Light": 81,
+        "Conductivity": 572
+    },
+    {
+        "Timestamp": "2025-04-08 14:36:59",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 23,
+        "Light": 256,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:37:03",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 237,
+        "Conductivity": 1899
+    },
+    {
+        "Timestamp": "2025-04-08 14:37:05",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.0,
+        "Moisture": 55,
+        "Light": 112,
+        "Conductivity": 1126
+    },
+    {
+        "Timestamp": "2025-04-08 14:38:01",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 140,
+        "Conductivity": 572
+    },
+    {
+        "Timestamp": "2025-04-08 14:38:06",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 23,
+        "Light": 272,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 14:38:10",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.7,
+        "Moisture": 54,
+        "Light": 284,
+        "Conductivity": 1914
+    },
+    {
+        "Timestamp": "2025-04-08 14:38:16",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 21.9,
+        "Moisture": 55,
+        "Light": 112,
+        "Conductivity": 1135
+    },
+    {
+        "Timestamp": "2025-04-08 14:39:11",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 0,
+        "Conductivity": 568
+    },
+    {
+        "Timestamp": "2025-04-08 14:39:15",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.1,
+        "Moisture": 23,
+        "Light": 269,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 14:39:18",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 221,
+        "Conductivity": 1911
+    },
+    {
+        "Timestamp": "2025-04-08 14:39:20",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 130,
+        "Conductivity": 1144
+    },
+    {
+        "Timestamp": "2025-04-08 14:40:16",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.1,
+        "Moisture": 40,
+        "Light": 99,
+        "Conductivity": 569
+    },
+    {
+        "Timestamp": "2025-04-08 14:40:19",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 14:40:23",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 268,
+        "Conductivity": 1914
+    },
+    {
+        "Timestamp": "2025-04-08 14:40:25",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 132,
+        "Conductivity": 1135
+    },
+    {
+        "Timestamp": "2025-04-08 14:41:23",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.3,
+        "Moisture": 40,
+        "Light": 140,
+        "Conductivity": 572
+    },
+    {
+        "Timestamp": "2025-04-08 14:41:25",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 23,
+        "Light": 257,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 14:41:34",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.8,
+        "Moisture": 54,
+        "Light": 206,
+        "Conductivity": 1914
+    },
+    {
+        "Timestamp": "2025-04-08 14:41:37",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 112,
+        "Conductivity": 1137
+    },
+    {
+        "Timestamp": "2025-04-08 14:42:35",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.1,
+        "Moisture": 40,
+        "Light": 118,
+        "Conductivity": 571
+    },
+    {
+        "Timestamp": "2025-04-08 14:42:40",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 23,
+        "Light": 206,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:42:42",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.7,
+        "Moisture": 54,
+        "Light": 249,
+        "Conductivity": 1923
+    },
+    {
+        "Timestamp": "2025-04-08 14:42:45",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 21.9,
+        "Moisture": 54,
+        "Light": 112,
+        "Conductivity": 1126
+    },
+    {
+        "Timestamp": "2025-04-08 14:43:40",
+        "MAC": "c4:7c:8d:6d:4e:df",
+        "Temperature": 22.2,
+        "Moisture": 40,
+        "Light": 121,
+        "Conductivity": 572
+    },
+    {
+        "Timestamp": "2025-04-08 14:43:44",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.2,
+        "Moisture": 23,
+        "Light": 240,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:43:48",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 21.7,
+        "Moisture": 54,
+        "Light": 190,
+        "Conductivity": 1914
+    },
+    {
+        "Timestamp": "2025-04-08 14:55:24",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.3,
+        "Moisture": 23,
+        "Light": 9347,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 14:55:30",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 9911,
+        "Conductivity": 1904
+    },
+    {
+        "Timestamp": "2025-04-08 14:55:34",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.0,
+        "Moisture": 54,
+        "Light": 1776,
+        "Conductivity": 1124
+    },
+    {
+        "Timestamp": "2025-04-08 14:57:11",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 22.7,
+        "Moisture": 23,
+        "Light": 9378,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 14:57:14",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.2,
+        "Moisture": 54,
+        "Light": 9911,
+        "Conductivity": 1898
+    },
+    {
+        "Timestamp": "2025-04-08 14:57:18",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.3,
+        "Moisture": 55,
+        "Light": 1782,
+        "Conductivity": 1110
+    },
+    {
+        "Timestamp": "2025-04-08 14:58:53",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.0,
+        "Moisture": 23,
+        "Light": 9428,
+        "Conductivity": 79
+    },
+    {
+        "Timestamp": "2025-04-08 14:58:58",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 22.6,
+        "Moisture": 54,
+        "Light": 9911,
+        "Conductivity": 1879
+    },
+    {
+        "Timestamp": "2025-04-08 14:59:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.5,
+        "Moisture": 55,
+        "Light": 1775,
+        "Conductivity": 1125
+    },
+    {
+        "Timestamp": "2025-04-08 15:00:36",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.2,
+        "Moisture": 23,
+        "Light": 9455,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 15:00:43",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.8,
+        "Moisture": 55,
+        "Light": 1750,
+        "Conductivity": 1114
+    },
+    {
+        "Timestamp": "2025-04-08 15:02:18",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.4,
+        "Moisture": 24,
+        "Light": 9473,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 15:02:22",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.1,
+        "Moisture": 54,
+        "Light": 9897,
+        "Conductivity": 1862
+    },
+    {
+        "Timestamp": "2025-04-08 15:02:24",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 22.9,
+        "Moisture": 55,
+        "Light": 1782,
+        "Conductivity": 1108
+    },
+    {
+        "Timestamp": "2025-04-08 15:03:59",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 23.9,
+        "Moisture": 24,
+        "Light": 9489,
+        "Conductivity": 79
+    },
+    {
+        "Timestamp": "2025-04-08 15:04:02",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.3,
+        "Moisture": 54,
+        "Light": 9911,
+        "Conductivity": 1876
+    },
+    {
+        "Timestamp": "2025-04-08 15:04:05",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.1,
+        "Moisture": 55,
+        "Light": 1734,
+        "Conductivity": 1106
+    },
+    {
+        "Timestamp": "2025-04-08 15:05:41",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.1,
+        "Moisture": 24,
+        "Light": 9478,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 15:05:45",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.5,
+        "Moisture": 54,
+        "Light": 9897,
+        "Conductivity": 1861
+    },
+    {
+        "Timestamp": "2025-04-08 15:05:47",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.1,
+        "Moisture": 55,
+        "Light": 1814,
+        "Conductivity": 1092
+    },
+    {
+        "Timestamp": "2025-04-08 15:07:23",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.3,
+        "Moisture": 24,
+        "Light": 9492,
+        "Conductivity": 78
+    },
+    {
+        "Timestamp": "2025-04-08 15:07:31",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.6,
+        "Moisture": 54,
+        "Light": 9911,
+        "Conductivity": 1858
+    },
+    {
+        "Timestamp": "2025-04-08 15:07:34",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.4,
+        "Moisture": 55,
+        "Light": 1814,
+        "Conductivity": 1090
+    },
+    {
+        "Timestamp": "2025-04-08 15:09:10",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.6,
+        "Moisture": 24,
+        "Light": 9467,
+        "Conductivity": 78
+    },
+    {
+        "Timestamp": "2025-04-08 15:09:13",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.9,
+        "Moisture": 54,
+        "Light": 9911,
+        "Conductivity": 1859
+    },
+    {
+        "Timestamp": "2025-04-08 15:09:16",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.4,
+        "Moisture": 55,
+        "Light": 1814,
+        "Conductivity": 1077
+    },
+    {
+        "Timestamp": "2025-04-08 15:10:50",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.6,
+        "Moisture": 24,
+        "Light": 9505,
+        "Conductivity": 78
+    },
+    {
+        "Timestamp": "2025-04-08 15:10:53",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 23.9,
+        "Moisture": 54,
+        "Light": 9884,
+        "Conductivity": 1865
+    },
+    {
+        "Timestamp": "2025-04-08 15:10:56",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.6,
+        "Moisture": 55,
+        "Light": 1798,
+        "Conductivity": 1094
+    },
+    {
+        "Timestamp": "2025-04-08 15:12:31",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 24.9,
+        "Moisture": 24,
+        "Light": 9448,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:12:34",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.1,
+        "Moisture": 54,
+        "Light": 9873,
+        "Conductivity": 1861
+    },
+    {
+        "Timestamp": "2025-04-08 15:12:36",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.8,
+        "Moisture": 55,
+        "Light": 1755,
+        "Conductivity": 1071
+    },
+    {
+        "Timestamp": "2025-04-08 15:14:11",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.0,
+        "Moisture": 24,
+        "Light": 9467,
+        "Conductivity": 77
+    },
+    {
+        "Timestamp": "2025-04-08 15:14:16",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.1,
+        "Moisture": 54,
+        "Light": 9884,
+        "Conductivity": 1873
+    },
+    {
+        "Timestamp": "2025-04-08 15:14:19",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.0,
+        "Moisture": 55,
+        "Light": 1744,
+        "Conductivity": 1080
+    },
+    {
+        "Timestamp": "2025-04-08 15:15:53",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 24,
+        "Light": 9508,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:15:57",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.1,
+        "Moisture": 54,
+        "Light": 9862,
+        "Conductivity": 1882
+    },
+    {
+        "Timestamp": "2025-04-08 15:15:59",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 23.9,
+        "Moisture": 55,
+        "Light": 1771,
+        "Conductivity": 1079
+    },
+    {
+        "Timestamp": "2025-04-08 15:17:34",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.3,
+        "Moisture": 24,
+        "Light": 9508,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:17:37",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.3,
+        "Moisture": 54,
+        "Light": 9884,
+        "Conductivity": 1875
+    },
+    {
+        "Timestamp": "2025-04-08 15:17:39",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.0,
+        "Moisture": 55,
+        "Light": 1809,
+        "Conductivity": 1068
+    },
+    {
+        "Timestamp": "2025-04-08 15:19:14",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 24,
+        "Light": 9520,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:19:19",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.4,
+        "Moisture": 55,
+        "Light": 9871,
+        "Conductivity": 1863
+    },
+    {
+        "Timestamp": "2025-04-08 15:19:21",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.3,
+        "Moisture": 55,
+        "Light": 1809,
+        "Conductivity": 1083
+    },
+    {
+        "Timestamp": "2025-04-08 15:20:56",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.7,
+        "Moisture": 24,
+        "Light": 9472,
+        "Conductivity": 77
+    },
+    {
+        "Timestamp": "2025-04-08 15:21:00",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.6,
+        "Moisture": 55,
+        "Light": 9897,
+        "Conductivity": 1871
+    },
+    {
+        "Timestamp": "2025-04-08 15:21:03",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.4,
+        "Moisture": 55,
+        "Light": 1798,
+        "Conductivity": 1073
+    },
+    {
+        "Timestamp": "2025-04-08 15:22:41",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.8,
+        "Moisture": 24,
+        "Light": 9508,
+        "Conductivity": 75
+    },
+    {
+        "Timestamp": "2025-04-08 15:22:44",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.7,
+        "Moisture": 55,
+        "Light": 9884,
+        "Conductivity": 1880
+    },
+    {
+        "Timestamp": "2025-04-08 15:22:47",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.4,
+        "Moisture": 55,
+        "Light": 1771,
+        "Conductivity": 1071
+    },
+    {
+        "Timestamp": "2025-04-08 15:24:21",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.9,
+        "Moisture": 24,
+        "Light": 9520,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:24:25",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.8,
+        "Moisture": 55,
+        "Light": 9897,
+        "Conductivity": 1873
+    },
+    {
+        "Timestamp": "2025-04-08 15:24:29",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.7,
+        "Moisture": 55,
+        "Light": 1739,
+        "Conductivity": 1077
+    },
+    {
+        "Timestamp": "2025-04-08 15:26:06",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.0,
+        "Moisture": 24,
+        "Light": 9510,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:26:09",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 24.9,
+        "Moisture": 55,
+        "Light": 9884,
+        "Conductivity": 1899
+    },
+    {
+        "Timestamp": "2025-04-08 15:26:12",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.7,
+        "Moisture": 55,
+        "Light": 1766,
+        "Conductivity": 1065
+    },
+    {
+        "Timestamp": "2025-04-08 15:28:54",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.2,
+        "Moisture": 24,
+        "Light": 9520,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:29:00",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 9884,
+        "Conductivity": 1874
+    },
+    {
+        "Timestamp": "2025-04-08 15:29:03",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 55,
+        "Light": 1809,
+        "Conductivity": 1071
+    },
+    {
+        "Timestamp": "2025-04-08 15:40:18",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 9897,
+        "Conductivity": 1902
+    },
+    {
+        "Timestamp": "2025-04-08 15:40:20",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.0,
+        "Moisture": 55,
+        "Light": 1782,
+        "Conductivity": 1065
+    },
+    {
+        "Timestamp": "2025-04-08 15:51:25",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.6,
+        "Moisture": 24,
+        "Light": 9512,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 15:51:30",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.2,
+        "Moisture": 55,
+        "Light": 9886,
+        "Conductivity": 1905
+    },
+    {
+        "Timestamp": "2025-04-08 15:51:33",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.0,
+        "Moisture": 55,
+        "Light": 1825,
+        "Conductivity": 1076
+    },
+    {
+        "Timestamp": "2025-04-08 16:02:39",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.8,
+        "Moisture": 24,
+        "Light": 9523,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 16:02:44",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 9897,
+        "Conductivity": 1931
+    },
+    {
+        "Timestamp": "2025-04-08 16:02:46",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 55,
+        "Light": 1787,
+        "Conductivity": 1076
+    },
+    {
+        "Timestamp": "2025-04-08 16:13:53",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.8,
+        "Moisture": 24,
+        "Light": 9475,
+        "Conductivity": 76
+    },
+    {
+        "Timestamp": "2025-04-08 16:13:58",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.2,
+        "Moisture": 55,
+        "Light": 9886,
+        "Conductivity": 1924
+    },
+    {
+        "Timestamp": "2025-04-08 16:14:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 1803,
+        "Conductivity": 1074
+    },
+    {
+        "Timestamp": "2025-04-08 16:25:07",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.0,
+        "Moisture": 24,
+        "Light": 9523,
+        "Conductivity": 75
+    },
+    {
+        "Timestamp": "2025-04-08 16:25:09",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.8,
+        "Moisture": 55,
+        "Light": 9886,
+        "Conductivity": 1907
+    },
+    {
+        "Timestamp": "2025-04-08 16:25:12",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 55,
+        "Light": 1766,
+        "Conductivity": 1077
+    },
+    {
+        "Timestamp": "2025-04-08 16:36:16",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.2,
+        "Moisture": 24,
+        "Light": 9475,
+        "Conductivity": 78
+    },
+    {
+        "Timestamp": "2025-04-08 16:36:21",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.1,
+        "Moisture": 56,
+        "Light": 9862,
+        "Conductivity": 1915
+    },
+    {
+        "Timestamp": "2025-04-08 16:36:24",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.7,
+        "Moisture": 55,
+        "Light": 1819,
+        "Conductivity": 1078
+    },
+    {
+        "Timestamp": "2025-04-08 16:47:32",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.4,
+        "Moisture": 56,
+        "Light": 9886,
+        "Conductivity": 1920
+    },
+    {
+        "Timestamp": "2025-04-08 16:47:35",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.8,
+        "Moisture": 55,
+        "Light": 1782,
+        "Conductivity": 1074
+    },
+    {
+        "Timestamp": "2025-04-08 16:58:42",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.5,
+        "Moisture": 25,
+        "Light": 9512,
+        "Conductivity": 77
+    },
+    {
+        "Timestamp": "2025-04-08 16:58:45",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.4,
+        "Moisture": 56,
+        "Light": 9862,
+        "Conductivity": 1912
+    },
+    {
+        "Timestamp": "2025-04-08 16:58:50",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.8,
+        "Moisture": 55,
+        "Light": 1819,
+        "Conductivity": 1085
+    },
+    {
+        "Timestamp": "2025-04-08 17:09:54",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 27.4,
+        "Moisture": 24,
+        "Light": 1931,
+        "Conductivity": 79
+    },
+    {
+        "Timestamp": "2025-04-08 17:09:59",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.2,
+        "Moisture": 56,
+        "Light": 9418,
+        "Conductivity": 1934
+    },
+    {
+        "Timestamp": "2025-04-08 17:10:01",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.7,
+        "Moisture": 55,
+        "Light": 763,
+        "Conductivity": 1087
+    },
+    {
+        "Timestamp": "2025-04-08 17:21:07",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.5,
+        "Moisture": 56,
+        "Light": 9407,
+        "Conductivity": 1927
+    },
+    {
+        "Timestamp": "2025-04-08 17:21:10",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 55,
+        "Light": 784,
+        "Conductivity": 1100
+    },
+    {
+        "Timestamp": "2025-04-08 17:32:15",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 26.2,
+        "Moisture": 24,
+        "Light": 1947,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 17:32:18",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.7,
+        "Moisture": 57,
+        "Light": 9418,
+        "Conductivity": 1934
+    },
+    {
+        "Timestamp": "2025-04-08 17:32:21",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.5,
+        "Moisture": 55,
+        "Light": 747,
+        "Conductivity": 1110
+    },
+    {
+        "Timestamp": "2025-04-08 17:43:25",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.9,
+        "Moisture": 24,
+        "Light": 1920,
+        "Conductivity": 80
+    },
+    {
+        "Timestamp": "2025-04-08 17:43:30",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.7,
+        "Moisture": 57,
+        "Light": 9385,
+        "Conductivity": 1934
+    },
+    {
+        "Timestamp": "2025-04-08 17:43:32",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 768,
+        "Conductivity": 1110
+    },
+    {
+        "Timestamp": "2025-04-08 17:54:40",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 26.0,
+        "Moisture": 57,
+        "Light": 250,
+        "Conductivity": 1956
+    },
+    {
+        "Timestamp": "2025-04-08 17:54:43",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 9,
+        "Conductivity": 1108
+    },
+    {
+        "Timestamp": "2025-04-08 18:05:48",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.1,
+        "Moisture": 24,
+        "Light": 236,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 18:05:52",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.4,
+        "Moisture": 56,
+        "Light": 126,
+        "Conductivity": 1948
+    },
+    {
+        "Timestamp": "2025-04-08 18:05:55",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 55,
+        "Light": 105,
+        "Conductivity": 1122
+    },
+    {
+        "Timestamp": "2025-04-08 18:17:03",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 56,
+        "Light": 250,
+        "Conductivity": 1947
+    },
+    {
+        "Timestamp": "2025-04-08 18:17:06",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.8,
+        "Moisture": 55,
+        "Light": 86,
+        "Conductivity": 1110
+    },
+    {
+        "Timestamp": "2025-04-08 18:28:14",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.2,
+        "Moisture": 55,
+        "Light": 158,
+        "Conductivity": 1935
+    },
+    {
+        "Timestamp": "2025-04-08 18:28:17",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 24.9,
+        "Moisture": 55,
+        "Light": 108,
+        "Conductivity": 1085
+    },
+    {
+        "Timestamp": "2025-04-08 18:39:24",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.2,
+        "Moisture": 24,
+        "Light": 139,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 18:39:27",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 237,
+        "Conductivity": 1894
+    },
+    {
+        "Timestamp": "2025-04-08 18:39:30",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 128,
+        "Conductivity": 1086
+    },
+    {
+        "Timestamp": "2025-04-08 18:50:35",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.4,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 18:50:38",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 126,
+        "Conductivity": 1882
+    },
+    {
+        "Timestamp": "2025-04-08 18:50:41",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.2,
+        "Moisture": 55,
+        "Light": 66,
+        "Conductivity": 1114
+    },
+    {
+        "Timestamp": "2025-04-08 19:01:45",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.5,
+        "Moisture": 24,
+        "Light": 171,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 19:01:48",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.3,
+        "Moisture": 55,
+        "Light": 220,
+        "Conductivity": 1878
+    },
+    {
+        "Timestamp": "2025-04-08 19:01:51",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 55,
+        "Light": 105,
+        "Conductivity": 1095
+    },
+    {
+        "Timestamp": "2025-04-08 19:12:57",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.6,
+        "Moisture": 24,
+        "Light": 205,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 19:12:59",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 126,
+        "Conductivity": 1878
+    },
+    {
+        "Timestamp": "2025-04-08 19:13:02",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 0,
+        "Conductivity": 1108
+    },
+    {
+        "Timestamp": "2025-04-08 19:24:06",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.7,
+        "Moisture": 24,
+        "Light": 139,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 19:24:11",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.3,
+        "Moisture": 55,
+        "Light": 234,
+        "Conductivity": 1867
+    },
+    {
+        "Timestamp": "2025-04-08 19:24:14",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 86,
+        "Conductivity": 1112
+    },
+    {
+        "Timestamp": "2025-04-08 19:35:18",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.3,
+        "Moisture": 24,
+        "Light": 205,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 19:35:22",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.1,
+        "Moisture": 55,
+        "Light": 87,
+        "Conductivity": 1874
+    },
+    {
+        "Timestamp": "2025-04-08 19:35:25",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.2,
+        "Moisture": 55,
+        "Light": 66,
+        "Conductivity": 1106
+    },
+    {
+        "Timestamp": "2025-04-08 19:46:30",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.3,
+        "Moisture": 24,
+        "Light": 139,
+        "Conductivity": 83
+    },
+    {
+        "Timestamp": "2025-04-08 19:46:34",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 55,
+        "Light": 250,
+        "Conductivity": 1863
+    },
+    {
+        "Timestamp": "2025-04-08 19:46:37",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.2,
+        "Moisture": 55,
+        "Light": 108,
+        "Conductivity": 1116
+    },
+    {
+        "Timestamp": "2025-04-08 19:56:16",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.4,
+        "Moisture": 24,
+        "Light": 237,
+        "Conductivity": 81
+    },
+    {
+        "Timestamp": "2025-04-08 19:56:19",
+        "MAC": "c4:7c:8d:6d:28:fa",
+        "Temperature": 25.0,
+        "Moisture": 55,
+        "Light": 104,
+        "Conductivity": 1851
+    },
+    {
+        "Timestamp": "2025-04-08 19:56:23",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.3,
+        "Moisture": 55,
+        "Light": 65,
+        "Conductivity": 1095
+    },
+    {
+        "Timestamp": "2025-04-08 20:08:31",
+        "MAC": "c4:7c:8d:6d:26:c9",
+        "Temperature": 25.6,
+        "Moisture": 24,
+        "Light": 186,
+        "Conductivity": 82
+    },
+    {
+        "Timestamp": "2025-04-08 20:08:41",
+        "MAC": "c4:7c:8d:6d:24:ed",
+        "Temperature": 25.4,
+        "Moisture": 55,
+        "Light": 30,
+        "Conductivity": 1100
+    }
+]
