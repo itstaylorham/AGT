@@ -89,7 +89,7 @@ for i in range(intervals):
     formatted_timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S')
     
     # Define a placeholder MAC address (XX:XX:XX:XX:XX:XX)
-    mac_address = "XX:XX:XX:XX:XX:XX"
+    mac_address = "c4:7c:8d:6d:26:c9"
     
     row = {
         "Timestamp": formatted_timestamp,
