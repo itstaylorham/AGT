@@ -27,109 +27,79 @@ This report covers the past seven days of session data. If there are missing rec
 
 This section examines the relationships between sensor variables from the past week and the initial input data we're comparing the session data to. 
 
-``` {r preprocess-data, include=FALSE}
+```{r preprocess-data, include=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 
-# Read the latest exported data from main.py
-# Location is tentative
+# Load data
 session_data <- read.csv("data/session.csv")
 training_data <- read.csv("data/training.csv")
 
-# Convert Timestamp to POSIXct for proper datetime comparison
+# Convert timestamps (if needed for other use)
 session_data$Timestamp <- as.POSIXct(session_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
 training_data$Timestamp <- as.POSIXct(training_data$Timestamp, format = "%Y-%m-%d %H:%M:%S")
 
-# Create shortened MAC addresses (last 5 characters)
-session_data$ShortMAC <- substr(session_data$MAC, nchar(session_data$MAC) - 4, nchar(session_data$MAC))
-training_data$ShortMAC <- substr(training_data$MAC, nchar(training_data$MAC) - 4, nchar(training_data$MAC))
 
-# Merge the two datasets on ShortMAC
-merged_data <- merge(session_data, training_data, by = "ShortMAC", suffixes = c("_1", "_2"))
-
-# Display the results
-summary(merged_data$Timestamp)
-names(merged_data)
 ```
 
 ``` {r plot-sensor-data, echo=FALSE}
-# Convert Timestamps to POSIXct
-merged_data$Timestamp_1 <- as.POSIXct(merged_data$Timestamp_1, format = "%Y-%m-%d %H:%M:%S")
+# Sort both datasets by time to ensure chronological order
+training_data <- training_data[order(training_data$Timestamp), ]
+session_data  <- session_data[order(session_data$Timestamp), ]
 
-placeholder <- "Lorem ipsum dolor sit amet..."  # Shorten for clarity
+# Find the earliest start date from both datasets
+start_date <- min(min(training_data$Timestamp), min(session_data$Timestamp))
 
-# Define color palettes for dataset 1 and dataset 2
-temperature_colors_1 <- colorRampPalette(c("#5B9BD5", "#003366"))(length(unique(merged_data$ShortMAC)))
-temperature_colors_2 <- colorRampPalette(c("#ADD8E6", "#00008B"))(length(unique(merged_data$ShortMAC)))
+# Filter both datasets to start from the chosen start date
+training_data <- training_data[training_data$Timestamp >= start_date, ]
+session_data  <- session_data[session_data$Timestamp >= start_date, ]
 
-moisture_colors_1 <- colorRampPalette(c("#70AD47", "#2F6A21"))(length(unique(merged_data$ShortMAC)))
-moisture_colors_2 <- colorRampPalette(c("#98FB98", "#006400"))(length(unique(merged_data$ShortMAC)))
+# Color setup
+train_col <- "green"  # blue
+sess_col  <- "#5B9BD5"  # orange
 
-light_colors_1 <- colorRampPalette(c("#FFC000", "#FF7F00"))(length(unique(merged_data$ShortMAC)))
-light_colors_2 <- colorRampPalette(c("#FFD700", "#FF4500"))(length(unique(merged_data$ShortMAC)))
+# -------------------
+# Helper plotting function using timestamps
+plot_overlay <- function(train_y, train_time, sess_y, sess_time, ylabel, title) {
+  # Ensure the data aligns based on time
+  len <- min(length(train_y), length(sess_y))
+  
+  plot(train_time[1:len], train_y[1:len],
+       type = "l", col = train_col, lwd = 2,
+       xlab = "Timestamp",
+       ylab = ylabel,
+       main = title)
+  
+  lines(sess_time[1:len], sess_y[1:len],
+        col = sess_col, lwd = 2, lty = 2)
+  
+  legend("topright",
+         legend = c("Training", "Session"),
+         col = c(train_col, sess_col),
+         lty = c(1, 2),
+         lwd = 2)
+}
 
-conductivity_colors_1 <- colorRampPalette(c("#ED7D31", "#9C4A2F"))(length(unique(merged_data$ShortMAC)))
-conductivity_colors_2 <- colorRampPalette(c("#FF6347", "#8B0000"))(length(unique(merged_data$ShortMAC)))
+# -------------------
+# Temperature Plot using Timestamp
+plot_overlay(training_data$Temperature, training_data$Timestamp, 
+             session_data$Temperature, session_data$Timestamp,
+             ylabel = "Temperature", title = "Temperature: Training vs Session")
 
-# Assign color maps for 1 and 2 datasets
-color_map_temperature_1 <- setNames(temperature_colors_1, unique(merged_data$ShortMAC))
-color_map_temperature_2 <- setNames(temperature_colors_2, unique(merged_data$ShortMAC))
+# -------------------
+# Moisture Plot using Timestamp for both Training and Session
+plot_overlay(training_data$Moisture, training_data$Timestamp, 
+             session_data$Moisture, session_data$Timestamp,
+             ylabel = "Moisture", title = "Moisture: Training vs Session")
 
-color_map_moisture_1 <- setNames(moisture_colors_1, unique(merged_data$ShortMAC))
-color_map_moisture_2 <- setNames(moisture_colors_2, unique(merged_data$ShortMAC))
+# Light Plot using Timestamp
+plot_overlay(training_data$Light, training_data$Timestamp,
+             session_data$Light, session_data$Timestamp,
+             ylabel = "Light", title = "Light: Training vs Session")
 
-color_map_light_1 <- setNames(light_colors_1, unique(merged_data$ShortMAC))
-color_map_light_2 <- setNames(light_colors_2, unique(merged_data$ShortMAC))
-
-color_map_conductivity_1 <- setNames(conductivity_colors_1, unique(merged_data$ShortMAC))
-color_map_conductivity_2 <- setNames(conductivity_colors_2, unique(merged_data$ShortMAC))
-
-### Plot Temperature
-plot(merged_data$Timestamp_1, merged_data$Temperature_1,
-     col = color_map_temperature_1[merged_data$ShortMAC],
-     pch = 16,
-     xlab = "Time",
-     ylab = "Temperature",
-     main = "Weekly Temperature")
-points(merged_data$Timestamp_1, merged_data$Temperature_2,
-       col = color_map_temperature_2[merged_data$ShortMAC],
-       pch = 1)
-mtext(placeholder, side = 1, line = 2, cex = 0.8)
-
-### Plot Moisture
-plot(merged_data$Timestamp_1, merged_data$Moisture_1,
-     col = color_map_moisture_1[merged_data$ShortMAC],
-     pch = 16,
-     xlab = "Time",
-     ylab = "Moisture",
-     main = "Weekly Moisture")
-points(merged_data$Timestamp_1, merged_data$Moisture_2,
-       col = color_map_moisture_2[merged_data$ShortMAC],
-       pch = 1)
-mtext(placeholder, side = 1, line = 2, cex = 0.8)
-
-### Plot Light
-plot(merged_data$Timestamp_1, merged_data$Light_1,
-     col = color_map_light_1[merged_data$ShortMAC],
-     pch = 16,
-     xlab = "Time",
-     ylab = "Light",
-     main = "Weekly Light")
-points(merged_data$Timestamp_1, merged_data$Light_2,
-       col = color_map_light_2[merged_data$ShortMAC],
-       pch = 1)
-mtext(placeholder, side = 1, line = 2, cex = 0.8)
-
-### Plot Conductivity
-plot(merged_data$Timestamp_1, merged_data$Conductivity_1,
-     col = color_map_conductivity_1[merged_data$ShortMAC],
-     pch = 16,
-     xlab = "Time",
-     ylab = "Conductivity",
-     main = "Weekly Conductivity")
-points(merged_data$Timestamp_1, merged_data$Conductivity_2,
-       col = color_map_conductivity_2[merged_data$ShortMAC],
-       pch = 1)
-mtext(placeholder, side = 1, line = 2, cex = 0.8)
+# Conductivity Plot using Timestamp
+plot_overlay(training_data$Conductivity, training_data$Timestamp,
+             session_data$Conductivity, session_data$Timestamp,
+             ylabel = "Conductivity", title = "Conductivity: Training vs Session")
 
 ```
 
@@ -163,14 +133,14 @@ colors <- c(
     conductivity = "#ED7D31"  # Muted orange
 )
 
-# Assuming session_data is your data frame
-pairs(session_data[, c("Temperature", "Moisture", "Light", "Conductivity")],
+# Assuming merged_data is your data frame
+pairs(merged_data[, c("Temperature", "Moisture", "Light", "Conductivity")],
       col = colors["temperature"],  
       pch = 16,          
       main = "Scatter Plot Matrix")
 
 # Plot Temperature vs Moisture
-plot(session_data$Temperature, session_data$Moisture,
+plot(merged_data$Temperature, merged_data$Moisture,
      col = adjustcolor(colors[c("temperature", "moisture")], alpha=0.7),
      xlab = "Temperature",
      ylab = "Moisture",
@@ -178,7 +148,7 @@ plot(session_data$Temperature, session_data$Moisture,
      pch = 16)
 
 # Plot Temperature vs Light
-plot(session_data$Temperature, session_data$Light,
+plot(merged_data$Temperature, merged_data$Light,
      col = adjustcolor(colors[c("temperature", "light")], alpha=0.7),
      xlab = "Temperature",
      ylab = "Light",
@@ -186,7 +156,7 @@ plot(session_data$Temperature, session_data$Light,
      pch = 16)
 
 # Plot Temperature vs Conductivity
-plot(session_data$Temperature, session_data$Conductivity,
+plot(merged_data$Temperature, merged_data$Conductivity,
      col = adjustcolor(colors[c("temperature", "conductivity")], alpha=0.7),
      xlab = "Temperature",
      ylab = "Conductivity",
@@ -194,7 +164,7 @@ plot(session_data$Temperature, session_data$Conductivity,
      pch = 16)
 
 # Plot Moisture vs Light
-plot(session_data$Moisture, session_data$Light,
+plot(merged_data$Moisture, merged_data$Light,
      col = adjustcolor(colors[c("moisture", "light")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Light",
@@ -202,7 +172,7 @@ plot(session_data$Moisture, session_data$Light,
      pch = 16)
 
 # Plot Moisture vs Conductivity
-plot(session_data$Moisture, session_data$Conductivity,
+plot(merged_data$Moisture, merged_data$Conductivity,
      col = adjustcolor(colors[c("moisture", "conductivity")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Conductivity",
@@ -210,7 +180,7 @@ plot(session_data$Moisture, session_data$Conductivity,
      pch = 16)
 
 # Plot Light vs Conductivity
-plot(session_data$Moisture, session_data$Temperature,
+plot(merged_data$Moisture, merged_data$Temperature,
      col = adjustcolor(colors[c("moisture", "temperature")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Temperature",
@@ -218,7 +188,7 @@ plot(session_data$Moisture, session_data$Temperature,
      pch = 16)
 
 # Plot Moisture vs Light
-plot(session_data$Light, session_data$Moisture,
+plot(merged_data$Light, merged_data$Moisture,
      col = adjustcolor(colors[c("moisture", "light")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Light",
@@ -226,7 +196,7 @@ plot(session_data$Light, session_data$Moisture,
      pch = 16)
 
 # Plot Moisture vs Conductivity
-plot(session_data$Light, session_data$Conductivity,
+plot(merged_data$Light, merged_data$Conductivity,
      col = adjustcolor(colors[c("moisture", "conductivity")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Conductivity",
@@ -234,7 +204,7 @@ plot(session_data$Light, session_data$Conductivity,
      pch = 16)
 
 # Plot Light vs Conductivity
-plot(session_data$Light, session_data$Temperature,
+plot(merged_data$Light, merged_data$Temperature,
      col = adjustcolor(colors[c("moisture", "temperature")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Temperature",
@@ -242,7 +212,7 @@ plot(session_data$Light, session_data$Temperature,
      pch = 16)
 
 # Plot Moisture vs Light
-plot(session_data$Conductivity, session_data$Moisture,
+plot(merged_data$Conductivity, merged_data$Moisture,
      col = adjustcolor(colors[c("moisture", "light")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Light",
@@ -250,7 +220,7 @@ plot(session_data$Conductivity, session_data$Moisture,
      pch = 16)
 
 # Plot Moisture vs Conductivity
-plot(session_data$Conductivity, session_data$Light,
+plot(merged_data$Conductivity, merged_data$Light,
      col = adjustcolor(colors[c("moisture", "conductivity")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Conductivity",
@@ -258,7 +228,7 @@ plot(session_data$Conductivity, session_data$Light,
      pch = 16)
 
 # Plot Light vs Conductivity
-plot(session_data$Conductivity, session_data$Temperature,
+plot(merged_data$Conductivity, merged_data$Temperature,
      col = adjustcolor(colors[c("moisture", "temperature")], alpha=0.7),
      xlab = "Moisture",
      ylab = "Temperature",
