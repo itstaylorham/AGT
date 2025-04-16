@@ -1,7 +1,7 @@
 ---
 title: "Monthly Progress Report"
 author: "Agrotech Live"
-url: "
+url: "https://github.com/itstaylorham/AGT"
 date: "`r Sys.Date()`"
 output: pdf_document
 header-includes:
@@ -201,7 +201,7 @@ ggplot(cross_cor_long, aes(x = Training_Variable, y = Session_Variable, fill = C
 
 # Stage 2: Similarities and RSME
 
-In this stage the goal is to measure the similarities and differences between our session and training data. From there, we'll ba able to classify and label the features for K means clustering in Stage 3.
+In this stage the goal is to measure the similarities and differences between our session and training data. From there, we'll b3 able to classify and label the features for K means clustering in Stage 3.
 
 ### Preprocessing
 
@@ -217,7 +217,7 @@ session_dt <- as.data.table(session_data)
 
 ### Cleaning the Data
 
-To clean up the data, we'll do some indexing by setting up keys. Then to organize it, we put the fields we want to use for our analysis into their own data frames. Converting sq_ft_lot and sale_price to numeric will ensure no problems when plotting.
+To clean up the data, we'll do some indexing by setting up keys. Then to organize it, we put the fields we want to use for our analysis into their own data frames. Converting Temperature, Moisture, Light and Conductivitry to numeric will ensure no problems when plotting.
 
 ``` {r cleanup, echo=FALSE}
 
@@ -336,13 +336,13 @@ stargazer(conductivity_model_simple, temp_model_full,
 ```
 
 ### Residual Standard Error
-Residuals represent the differences between the actual and predicted values of our dependent (response) variable, sq_ft_lot. A high RSE indicates a weak model for this prediction.
+Residuals represent the differences between the actual and predicted values of our dependent (response) variable. A high RSE indicates a weak model for this prediction.
 
 ### Multiple R
 Multiple R, also called the correlation coefficient, measures the strength and direction of a relationship between variables. On a scale of -1 to +1, values closer to -1 or +1 represent perfect negative or positive correlation. 0 means no correlation at all.
 
 ### Multiple R2 Error
-R squared tells us the proportion for variance in sq_ft_lot explained by sale_price, the predictor variable. It can be on a scale of 0 to 1. A value closer to 1 represents greater variance, while closer to 0 represents less variance. Returning a whole 0 or 1 means none or perfect variance respectively.
+R squared tells us the proportion for variance in the dependent variable explained by the predictor variable. It can be on a scale of 0 to 1. A value closer to 1 represents greater variance, while closer to 0 represents less variance. Returning a whole 0 or 1 means none or perfect variance respectively.
 
 ### Adjusted R2 Error
 This error is a modified version of the above R-squared error that is able to accommodate for multiple predictors in a regression model.
@@ -508,7 +508,7 @@ euc_dis <- function(p1, p2) {
 
 ```
 
-In this next section we're implementing the KNN Classifier manually to train the binary classifier data. At this stage, the classifier logic is being defined below.
+In this next section we're implementing the KNN Classifier manually to train the target data. At this stage, the classifier logic is being defined below.
 
 Here is where we'll compute accuracy for the session data using manual KNN.
 
