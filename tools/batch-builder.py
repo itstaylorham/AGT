@@ -12,7 +12,7 @@ assert days > 0, "Number of days must be greater than 0."
 
 # Ask for the desired file name
 file_name = input("Enter the name of the output CSV file (without extension): ")
-file_name = f"./files/batches/{file_name}.csv"
+file_name = f"/home/jeremy/Documents/GitHub/AGT/files/batches/{file_name}.csv"
 
 # Define the time range
 interval_duration = 10 * 60  # 10 minutes in seconds

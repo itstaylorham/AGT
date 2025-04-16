@@ -1,6 +1,7 @@
 ---
-title: "Weekly Progress Report"
-author: "Agrotech Live :: Wiggle Labs"
+title: "Monthly Progress Report"
+author: "Agrotech Live"
+url: "
 date: "`r Sys.Date()`"
 output: pdf_document
 header-includes:
@@ -34,7 +35,7 @@ suppressPackageStartupMessages(library(dplyr))
 
 # Load data
 session_data <- read.csv("data/session.csv")
-training_data <- read.csv("data/training.csv")
+training_data <- read.csv("data/tomato-grown.csv")
 
 # Resizing training data if needed
 min_len <- min(nrow(training_data), nrow(session_data))
@@ -101,7 +102,7 @@ par(mfrow = c(1, 1))
 
 ## Correlation and Covariance Matrices
 
-In this correlation matrix, score of 1.0 or -1.0 represents a perfect (positive or negative) self-correlation and values closer to 0 show less to no correlation. The matrix above reflects the same relationships as the covariance matrix above.
+In this correlation matrix, score of 1.0 or -1.0 represents a perfect (positive or negative) self-correlation and values closer to 0 show less to no correlation. The matrix above reflects the same relationships as the covariance matrix.
 
 ``` {r correlation-covariance,  echo=FALSE}
 # Step 1: Match lengths
@@ -170,7 +171,7 @@ legend("bottomright", legend = c("Session", "Training"),
 
 ```
 
-Up until this point (excluding the matrecies) we have been treating the session and training data as independent data sets for comparison purposes. Instead of running similarity algorithms within each variable, both the independent (`session_data`) and the dependent (`training_data`) must be used together in order to produce valuable insights about their relationship.
+Up until this point (excluding the matrices) we have been treating the session and training data as independent data sets for comparison purposes. Instead of running similarity algorithms within each variable, both the independent (`session_data`) and the dependent (`training_data`) must be used together in order to produce valuable insights about their relationship.
 
 ## Cross Correlation Heat Map
 
