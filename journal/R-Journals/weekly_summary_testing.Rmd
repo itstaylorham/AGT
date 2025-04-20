@@ -19,22 +19,34 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 # Abstract
-In an ongoing effort to achieve food sovereignty, Wiggle Labs has developed Agrotech Live to monitor the soil health of different plants and crops. This tool collects four data points; Temperature, Moisture, Light and Conductivity from sensors placed near a subject. The training data for this program are the ideal conditions for the subject, and the performance of the experiment is based on how close the collected sensor (testing) data is to the input care training data. Input data is identical in structure the testing data (collected during a session), except it represents only perfect conditions for the subject. A score is generated (along with other statistical results) periodically to communicate how well the experiment is performing.
+In an ongoing effort to achieve food sovereignty, Wiggle Labs has developed Agrotech Live to monitor soil health of different plants and crops. This tool collects four data points; Temperature, Moisture, Light and Conductivity from sensors placed near a subject. Training data for this program are ideal conditions for the subject, and performance of the experiment is based on how close collected sensor (testing) data is to the input care training data. Input data is identical in structure to the testing data (collected during a session), except it represents only ideal conditions for a subject.
 
-This report examines the relationships between the session and training data features over the past 7 days, and forecasts the next 3 days. Clustering will be used to prepare the data for classification, enabling the communication of health quality thresholds (e.g., ideal, good, OK, fair, poor).
+This report examines relationships between the session and training data features over the past 7 days, and forecasts the next 3 days. Knowing these insights can advise on how to better adjust an environment for a subject during the session. Clustering will be used to prepare experiment data for classifying the analyzed session as "Above, "Below" or "Within" and ideal range.
 
-# Stage 1: Time Series, Correlation, Covariance and Heatmap
+# System Understanding
+
+The program collects feature data via BLE (Bluetooth Low Energy) through the sensors mentioned previously. This feature data is used to generate raw session data in `sesh.json`. It is also saved to individual daily files in `/files/read_files`.
+
+Using `batch-builder.py` found in `/tools`, input parameters for a subjects' ideal environment can be generated. If any input file is loaded to the `tools`, it can also be auto-inserted with the command `batch-builder.py < input-file.txt`.
+
+# Data Understanding
+
+Temperature is measured in Celsius (°C) and includes a tenth decimal (eg. "17.5"). It generally affects soil activity and how nutrients are absorbed. Moisture is measured as a percentage, and depending on the subject's needs, thresholds will vary. Light is collected in lux where 1 =lux is equal to 1 lumen/m². Conductivity is measured in µS/cm which is a electrical conductivity. It is essentially how easily a current passes through the soil. 
+
+There are often patterns such as Temperature increasing as light does, or decreasing as Moisture increases. These kinds of relationships are to be expected from the laws of nature In later versions of this report, it is planned to train this analysis to learn these patterns so that insights are more clearly visible.
+
+# Stage I: Time Series, Correlation, Covariance and Heatmap
 
 ## Time Series Comparison
 
-This section shows the session and training data features on top of one another to understand how they compare over time.
+The following graphs represent how the session and training data has changed over time. They are aligned with each other on Timestamp over the past 7 days. Input data determines the shape of training graph in this time series analysis. 
 
 
 ```{r preprocess-data, include=FALSE}
 suppressPackageStartupMessages(library(dplyr))
 
 # Load data
-session_data <- read.csv("data/session.csv")
+session_data <- read.csv("data/session-2025-04-20.csv")
 training_data <- read.csv("data/tomato-grown.csv")
 
 # Resizing training data if needed
@@ -100,6 +112,7 @@ par(mfrow = c(1, 1))
 
 ```
 
+\pagebreak
 ## Correlation and Covariance Matrices
 
 In this correlation matrix, score of 1.0 or -1.0 represents a perfect (positive or negative) self-correlation and values closer to 0 show less to no correlation. The matrix above reflects the same relationships as the covariance matrix.
@@ -171,9 +184,11 @@ legend("bottomright", legend = c("Session", "Training"),
 
 ```
 
-Up until this point (excluding the matrices) we have been treating the session and training data as independent data sets for comparison purposes. Instead of running similarity algorithms within each variable, both the independent (`session_data`) and the dependent (`training_data`) must be used together in order to produce valuable insights about their relationship.
+Up until this point (excluding the matrices) we have been treating the session and training data as independent data sets for comparison purposes. In the next stage, instead of running similarity algorithms within each variable, both the independent (`session_data`) and the dependent (`training_data`) must be used together in order to produce valuable insights about their relationship.
 
 ## Cross Correlation Heat Map
+
+The heatmap below shows cross-correlations between session variables (y-axis) and training variables (x-axis). The color scale represents correlation strength, with red indicating positive correlation (up to +1.0), blue indicating negative correlation (down to -1.0), and white/pale colors representing weak or no correlation (around 0).
 
 ``` {r heatmap,  echo=FALSE}
 library(reshape2)
@@ -199,7 +214,7 @@ ggplot(cross_cor_long, aes(x = Training_Variable, y = Session_Variable, fill = C
 
 ```
 
-# Stage 2: Similarities and RSME
+# Stage II: Similarities and RSME
 
 In this stage the goal is to measure the similarities and differences between our session and training data. From there, we'll b3 able to classify and label the features for K means clustering in Stage 3.
 
@@ -300,10 +315,6 @@ This plot is nice, but can only tell us so much about the data. Running a `summa
 AGT session data
 
 ``` {r summary-session, echo=FALSE}
-# Install and load stargazer package if needed
-# install.packages("stargazer")
-library(stargazer)
-
 # Simple (one-to-one) models
 temp_model_simple <- lm(training_data$Temperature ~ session_data$Temperature)
 moisture_model_simple <- lm(training_data$Moisture ~ session_data$Moisture)
@@ -315,23 +326,19 @@ temp_model_full <- lm(training_data$Temperature ~ session_data$Temperature + ses
 moisture_model_full <- lm(training_data$Moisture ~ session_data$Temperature + session_data$Moisture + session_data$Light + session_data$Conductivity)
 light_model_full <- lm(training_data$Light ~ session_data$Temperature + session_data$Moisture + session_data$Light + session_data$Conductivity)
 conductivity_model_full <- lm(training_data$Conductivity ~ session_data$Temperature + session_data$Moisture + session_data$Light + session_data$Conductivity)
+# View summaries for your models
+summary(moisture_model_simple)
+# summary(temp_model_full)
 
-stargazer(temp_model_simple, temp_model_full,
-          title = "Temperature Model: Simple vs Full",
-          type = "text")
+#summary(temp_model_simple)
+#summary(moisture_model_simple)
+#summary(light_model_simple)
+#summary(conductivity_model_simple)
 
-stargazer(moisture_model_simple, temp_model_full,
-          title = "Moisture Model: Simple vs Full",
-          type = "text")
-
-stargazer(light_model_simple, temp_model_full,
-          title = "Light Model: Simple vs Full",
-          type = "text")
-
-stargazer(conductivity_model_simple, temp_model_full,
-          title = "Conductivity Model: Simple vs Full",
-          type = "text")
-
+#summary(temp_model_full)
+#summary(moisture_model_full)
+#summary(light_model_full)
+#summary(conductivity_model_full)
 
 ```
 
@@ -347,7 +354,7 @@ R squared tells us the proportion for variance in the dependent variable explain
 ### Adjusted R2 Error
 This error is a modified version of the above R-squared error that is able to accommodate for multiple predictors in a regression model.
 
-# Stage 3: Modeling, Classification and Metrics
+# Stage III: Modeling, Classification and Metrics
 
 In this next section, we will use the KNN algorithm to find the best K for a label. As this is a placeholder for future use, a good question to use this for is: 
 
@@ -547,7 +554,7 @@ ggplot(accuracy_data, aes(x = k_values, y = accuracy)) +
 
 ```
 
-# Stage 4: Forecasting
+# Stage IV: Forecasting
 
 ## Time Series Analysis and Forecasting
 
@@ -852,6 +859,7 @@ knitr::kable(forecast_summary,
 ```
 
 ## Comparison to Training (Ideal) Data
+Below are four plots showing the session data features compared to the ideal training data. The dotted line is a threshold which influences the status.
 
 ```{r ideal-comparison, echo=FALSE}
 # Calculate the average values of the training data (ideal conditions)
@@ -907,4 +915,4 @@ ggplot(forecast_comparison, aes(x = as.factor(Day), y = Mean, color = Status)) +
   theme_minimal()
 ```
 
-# Stage 5: Discussion
+# Stage V: Discussion

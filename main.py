@@ -12,9 +12,9 @@ class CommandManager:
     """Handles command validation and execution."""
     VALID_COMMANDS = [
         "scan", "read", "find", "trend", "update", "sesh", "train", "testing model", "push", 
-        "live", "new sesh", "avg", "cluster", "weather", "full anal", "fcast", "fcast 3d", 
+        "live", "new sesh", "report", "avg", "cluster", "weather", "full anal", "fcast", "fcast 3d", 
         "build", "summary", "corr", "pred", "cleaner", "nn", "export", "export csv", 
-        "export xl", "dbconn"
+        "export xl", "dbconn", "batch"
     ]
 
     def validate_command(self, command):
@@ -45,6 +45,23 @@ class DataManager:
         data['Conductivity'] = pd.to_numeric(data['Conductivity'], errors='coerce').fillna(0)
         
         return data
+        
+    @staticmethod
+    def run_report():
+        rmd_path = "journal/R-Journals/weekly_summary_testing.Rmd"
+        output_format = "html_document"  # Could be "pdf_document" if LaTeX is set up
+        command = [
+            "Rscript", "-e",
+            f"rmarkdown::render('{rmd_path}', output_format = '{output_format}')"
+        ]
+        
+        try:
+            print("Generating report...")
+            subprocess.run(command, check=True)
+            print("Report generated successfully.")
+        except subprocess.CalledProcessError as e:
+            print("Error generating report:", e)
+    
 
     @staticmethod
     def export_data(data, file_format, timestamp):
@@ -226,6 +243,10 @@ class App:
             self.start_new_session()
         elif command in ["avg", "trend", "fcast", "fcast 3d", "summary", "corr", "pred", "cleaner", "nn"]:
             subprocess.run([f"python", f"tools/plot/{command}.py"])
+        elif command == "batch":
+            subprocess.run(["python", "tools/batch-builder.py"])
+        elif command == "report":
+            run_report()
         elif command in ["export", "export csv", "export xl"]:
             self.export_session_data(command)
         elif command == "build":
