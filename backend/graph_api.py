@@ -8,13 +8,17 @@ import time
 
 def image_graph():
     # Load the JSON data from the file
-    with open('/home/jeremy/Documents/AGT/sesh.json') as f:
+    with open('/home/jerremy/Documents/GitHub/AGT/sesh.json') as f:
         data = json.load(f)
 
     # Convert timestamp to integer if necessary and filter the data for the last 12 hours
     current_time = time.time() * 1e9  # convert current time to nanoseconds
     twelve_hours_in_nanoseconds = 48 * 60 * 60 * 1e9
-    filtered_data = [item for item in data if current_time - item['Timestamp'][0] <= twelve_hours_in_nanoseconds]
+    filtered_data = [
+    item for item in data
+    if current_time - int(item['Timestamp'][0]) <= twelve_hours_in_nanoseconds
+]
+
 
     # Extract data from the JSON into separate lists
     timestamps = [i['Timestamp'][0] for i in filtered_data]

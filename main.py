@@ -155,7 +155,7 @@ class Session:
 
         if input("\nGo live? (Y/N) \n>>> ").strip().upper() == "Y":
             print("Starting live monitoring session...")
-            subprocess.run(["python", "web_ui/app.py"])
+            subprocess.run(["python", "backend/app.py"])
 
         print("Session configured with applied settings.")
         return True
