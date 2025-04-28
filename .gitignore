@@ -11,7 +11,7 @@ webui_beta/
 version/
 
 # Ignore files and subdirectories under the 'files' directory
-files/export/
+# files/export/
 files/metrics/
 files/predict/
 # files/read_files/
