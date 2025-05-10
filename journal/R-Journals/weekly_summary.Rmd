@@ -46,7 +46,7 @@ The following graphs represent how the session and training data has changed ove
 suppressPackageStartupMessages(library(dplyr))
 
 # Load data
-session_data <- read.csv("data/session-2025-04-20.csv")
+session_data <- read.csv("data/session-2025-05-10.csv")
 training_data <- read.csv("data/ideal-training.csv")
 
 # Resizing training data if needed
