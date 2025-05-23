@@ -30,3 +30,4 @@ files/db_insert_test.py
 sesh.json
 #Terminal User Interface
 /tui/target
+/files
