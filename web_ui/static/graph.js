@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async function () {
     let lineGraph;  // Chart.js instance
-    const ctx = document.getElementById('main-dash');
+    const ctx = document.getElementById('main-dash').getContext('2d');;
 
     // Fetch sensor data and initialize the chart
     try {
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         const initialMac = Object.keys(deviceDataMap)[0];
         if (initialMac) {
             lineGraph = createLineGraph(ctx, deviceDataMap[initialMac]);
+            console.log('Device changed to:', this.value);
         }
 
         // Update graph on device selection change
@@ -35,7 +36,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Listen to window resize events
     window.addEventListener('resize', toggleGraphLabels);
 
-    // Transform raw data into a structured format
     function transformData(rawData) {
         const deviceDataMap = {};
         rawData.forEach(entry => {
@@ -51,8 +51,10 @@ document.addEventListener('DOMContentLoaded', async function () {
                 Conductivity: entry.conductivity,
             });
         });
+        console.log('Device Data Map:', deviceDataMap); // ← moved inside
         return deviceDataMap;
     }
+    
 
     // Populate the dropdown with device options
     function populateDeviceDropdown(deviceDataMap) {
@@ -62,6 +64,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             .join('');
         dropdown.dispatchEvent(new Event('change')); // Trigger change event to show the initial data
     }
+    
 
     // Create a line graph using Chart.js
     function createLineGraph(ctx, deviceData) {
