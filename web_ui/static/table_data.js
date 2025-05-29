@@ -4,23 +4,24 @@ function sortData(data) {
 
 function addNewRow(item) {
     let table = document.getElementById('data-table');
-    let row = table.insertRow();
-
+    let tbody = table.querySelector('tbody'); // Target tbody specifically
+    let row = tbody.insertRow(); // Insert into tbody, not table
+    
     let timestampCell = row.insertCell();
     timestampCell.textContent = item.Timestamp;
-
+    
     let macCell = row.insertCell();
     macCell.textContent = item.MAC;
-
+    
     let temperatureCell = row.insertCell();
     temperatureCell.textContent = item.Temperature;
-
+    
     let moistureCell = row.insertCell();
     moistureCell.textContent = item.Moisture;
-
+    
     let lightCell = row.insertCell();
     lightCell.textContent = item.Light;
-
+    
     let conductivityCell = row.insertCell();
     conductivityCell.textContent = item.Conductivity;
 }
@@ -30,10 +31,13 @@ async function fetchSensorData() {
         const response = await fetch('http://192.168.1.146:5000/api/sensor_data');
         const data = await response.json();
         const sortedData = sortData(data).slice(0, 144);
-
+        
         const table = document.getElementById('data-table');
-        table.innerHTML = ''; // Clear existing rows
-
+        const tbody = table.querySelector('tbody');
+        
+        // Clear only the tbody content, NOT the entire table
+        tbody.innerHTML = ''; 
+        
         sortedData.forEach(deviceData => {
             let formattedTimestamp = new Date(deviceData.timestamp).toLocaleString();
             let item = {

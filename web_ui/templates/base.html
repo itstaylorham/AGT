@@ -26,7 +26,7 @@
         <nav class="slide-menu" id="slide-menu">
             <a href="{{ url_for('base') }}">Dashboard</a>
             <a href="{{ url_for('analysis') }}">Analytics</a>
-            <a href="{{ url_for('journal') }}">Journal</a>
+            <a href="{{ url_for('journal') }}">Reports</a>
             <a href="{{ url_for('api') }}">API</a>  
             <a href="{{ url_for('settings') }}">Settings</a>  
         </nav>
@@ -36,7 +36,7 @@
         <div class="dashboard-main">
             <div class="tool-item">
                 <div class="normalize-data">
-                    <label for="normalize-data">Normalize Data</label>
+                    <label for="normalize-data">Normalize</label>
                     <input type="checkbox" id="normalize-data" />
                     <select id="device-selector">
                         </select>
@@ -46,12 +46,14 @@
             <canvas id="main-dash"></canvas>
             <hr>
 
-            <div class="tools">
+            
+            <div class="tool-item">
                 <div id="health-score-api-data">Loading data...</div>
                 <div class="tool-item">
                     <button id="download-graph">Take Snapshot</button>
                 </div>
             </div>
+
         </div>
         
         <div class="table-container">
