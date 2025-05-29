@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', async function () {
             .map(mac => `<option value="${mac}">${mac}</option>`)
             .join('');
         
-        // Set initial device and trigger change
+        // Set initial device and create initial chart
         if (dropdown.options.length > 0) {
             currentSelectedDevice = dropdown.value;
-            dropdown.dispatchEvent(new Event('change'));
+            updateChart(); // Create the initial chart immediately
         }
     }
 
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             conductivityData = normalizeArray(conductivityData);
         }
 
-        const suffix = normalize ? ' *' : '';
+        const suffix = normalize ? ' (Normalized)' : '';
         const units = normalize ? '' : ' (°C|lux|%|µS/cm)';
 
         return {
