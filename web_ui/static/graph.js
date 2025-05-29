@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             conductivityData = normalizeArray(conductivityData);
         }
 
-        const suffix = normalize ? ' (Normalized)' : '';
+        const suffix = normalize ? ' *' : '';
         const units = normalize ? '' : ' (°C|lux|%|µS/cm)';
 
         return {
