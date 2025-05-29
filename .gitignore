@@ -31,3 +31,6 @@ sesh.json
 #Terminal User Interface
 /tui/target
 /files
+/node_modules
+web-ui/package-lock.json
+web-ui/package.json
