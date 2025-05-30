@@ -147,7 +147,7 @@ function updateStatisticalSummary(data) {
 
 async function fetchSensorData() {
     try {
-        const response = await fetch('http://192.168.1.146:5000/api/sensor_data');
+        const response = await fetch('/api/sensor_data');
         const data = await response.json();
         const sortedData = sortData(data).slice(0, 144);
         
