@@ -19,6 +19,9 @@ files/reports/
 files/scan_files/
 files/db_insert_test.py
 
+# Ignore journal entires
+journal
+
 # Ignore model and prediction-related files
 .test_predictions.npy
 .trained_model.pth
